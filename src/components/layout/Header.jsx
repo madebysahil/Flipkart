@@ -34,9 +34,6 @@ const Header = () => {
           </div>
 
           <div className="flex items-center gap-6">
-            <Link to={user ? "/profile" : "/login"} className="flex items-center gap-1 hover:text-gray-200 transition-colors bg-white text-primary px-6 py-1 rounded-sm font-semibold">
-              <span>{user ? user.name : 'Login'}</span>
-            </Link>
 
             <Link to="/cart" className="flex items-center gap-1 hover:text-gray-200 transition-colors">
               <div className="relative">

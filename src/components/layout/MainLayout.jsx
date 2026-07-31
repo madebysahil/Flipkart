@@ -6,6 +6,17 @@ import BottomNavigation from './BottomNavigation';
 const MainLayout = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const isCheckoutPage = location.pathname.startsWith('/checkout');
+
+  if (isCheckoutPage) {
+    return (
+      <div className="flex flex-col min-h-screen bg-background">
+        <main className="flex-grow">
+          <Outlet />
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
