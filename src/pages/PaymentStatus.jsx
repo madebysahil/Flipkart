@@ -1,21 +1,29 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams, Link, useNavigate } from 'react-router-dom';
 import api from '../services/api';
-import { CheckCircle, XCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowLeft } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 
 const PaymentStatus = () => {
   const [searchParams] = useSearchParams();
   const orderId = searchParams.get('order_id');
-  const [status, setStatus] = useState('loading'); // loading, success, failed
+  const isSuccess = searchParams.get('success');
+  const amountStr = searchParams.get('amount');
+  const amount = amountStr ? parseFloat(amountStr) : 490;
+  
+  const [status, setStatus] = useState(isSuccess === 'true' ? 'success' : 'loading');
   const [orderDetails, setOrderDetails] = useState(null);
+  const navigate = useNavigate();
+  const { user } = useAuth();
 
   useEffect(() => {
-    if (orderId) {
+    if (orderId && !isSuccess) {
       verifyPayment(orderId);
-    } else {
+    } else if (isSuccess !== 'true' && !orderId) {
       setStatus('failed');
     }
-  }, [orderId]);
+  }, [orderId, isSuccess]);
 
   const verifyPayment = async (order_id) => {
     try {
@@ -33,32 +41,81 @@ const PaymentStatus = () => {
   };
 
   if (status === 'loading') {
-    return <div className="min-h-screen flex items-center justify-center bg-background">Verifying your payment...</div>;
+    return <div className="min-h-screen flex items-center justify-center bg-[#f1f3f6]">Verifying your payment...</div>;
   }
 
+  const superCoins = Math.floor(amount / 100 * 4); // Fake Flipkart logic for SuperCoins
+
   return (
-    <div className="bg-background min-h-[80vh] py-12 px-4 sm:px-6 flex items-center justify-center">
-      <div className="bg-white max-w-lg w-full rounded-sm shadow-sm p-8 text-center">
+    <div className="bg-[#f1f3f6] min-h-screen font-sans">
+      {/* Blue Header */}
+      <div className="bg-[#2874f0] text-white px-4 py-3 flex items-center gap-3 shadow-sm sticky top-0 z-50">
+        <ArrowLeft className="h-6 w-6 cursor-pointer" onClick={() => navigate('/')} />
+        <h1 className="text-[18px] font-medium">Order Details</h1>
+      </div>
+
+      <div className="max-w-md mx-auto mt-2">
         {status === 'success' ? (
           <>
-            <CheckCircle className="h-20 w-20 text-green-500 mx-auto mb-6" />
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Payment Successful!</h2>
-            <p className="text-gray-500 mb-6">Your order has been placed successfully.</p>
-            {orderDetails && (
-              <div className="bg-gray-50 p-4 rounded-sm text-left mb-6 border">
-                <p className="text-sm"><span className="text-gray-500">Order ID:</span> {orderDetails._id}</p>
-                <p className="text-sm"><span className="text-gray-500">Amount:</span> ₹{orderDetails.totalPrice}</p>
+            {/* Success Card */}
+            <div className="bg-white p-6 flex flex-col items-center justify-center border-b border-gray-200">
+              <motion.div 
+                initial={{ scale: 0 }} 
+                animate={{ scale: 1 }} 
+                transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                className="w-16 h-16 rounded-full bg-[#26a541] flex items-center justify-center mb-4 shadow-md"
+              >
+                <motion.svg 
+                  initial={{ pathLength: 0 }} 
+                  animate={{ pathLength: 1 }} 
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="w-8 h-8 text-white" 
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}
+                >
+                  <motion.path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </motion.svg>
+              </motion.div>
+
+              <h2 className="text-xl font-medium text-gray-900 mb-1">Order placed for ₹{amount}</h2>
+              <p className="text-sm text-gray-500">Your order has been placed successfully.</p>
+            </div>
+
+            {/* SuperCoin Card */}
+            <div className="bg-white mt-2 p-4 flex items-center gap-4">
+              <div className="w-10 h-10 rounded-full bg-[#fffcf5] flex items-center justify-center shadow-[0_0_8px_rgba(255,200,0,0.3)]">
+                <img src="https://rukminim1.flixcart.com/lockin/32/32/images/super_coin_icon_22x22.png" alt="SuperCoin" className="w-6 h-6 object-contain" />
               </div>
-            )}
-            <Link to="/profile" className="inline-block bg-primary text-white px-8 py-3 rounded-sm font-medium">View Orders</Link>
+              <div className="flex-1">
+                <p className="font-medium text-gray-900 text-sm">You earned {superCoins} SuperCoins!</p>
+                <p className="text-[11px] text-gray-500 mt-0.5">Will be credited after the return period is over</p>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="mt-4 px-4 space-y-3">
+              {user ? (
+                <Link to="/profile" className="block w-full text-center bg-[#2874f0] text-white py-3 rounded-sm font-medium shadow-sm hover:bg-[#1a5fcd] transition-colors">
+                  View Order Details
+                </Link>
+              ) : null}
+              <Link to="/" className="block w-full text-center bg-white text-[#2874f0] border border-[#2874f0] py-3 rounded-sm font-medium shadow-sm hover:bg-gray-50 transition-colors">
+                Continue Shopping
+              </Link>
+            </div>
           </>
         ) : (
-          <>
-            <XCircle className="h-20 w-20 text-red-500 mx-auto mb-6" />
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Payment Failed</h2>
-            <p className="text-gray-500 mb-6">Something went wrong with your transaction. Please try again.</p>
-            <Link to="/checkout" className="inline-block bg-[#fb641b] text-white px-8 py-3 rounded-sm font-medium">Retry Payment</Link>
-          </>
+          <div className="bg-white p-8 text-center mt-2 border-b border-gray-200">
+            <div className="w-16 h-16 rounded-full bg-red-500 flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <h2 className="text-xl font-medium text-gray-900 mb-2">Payment Failed</h2>
+            <p className="text-sm text-gray-500 mb-6">Something went wrong with your transaction. Please try again.</p>
+            <Link to="/checkout" className="inline-block w-full bg-[#fb641b] text-white py-3 rounded-sm font-medium shadow-sm">
+              Retry Payment
+            </Link>
+          </div>
         )}
       </div>
     </div>

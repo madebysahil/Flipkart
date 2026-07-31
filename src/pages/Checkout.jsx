@@ -40,6 +40,7 @@ const Checkout = () => {
   const [createdOrder, setCreatedOrder] = useState(null);
   const [transactionId, setTransactionId] = useState('');
   const [showQRPage, setShowQRPage] = useState(false);
+  const [utr, setUtr] = useState('');
   
   const [selectedPayment, setSelectedPayment] = useState(''); 
   const [timeLeft, setTimeLeft] = useState(6 * 60 + 20);
@@ -117,14 +118,25 @@ const Checkout = () => {
             window.dispatchEvent(new Event('storage'));
           }
           setIsProcessing(false);
-          alert('Payment Successful! Your order has been placed.');
-          navigate('/');
+          navigate('/payment/status?success=true');
        }
     } catch (error) {
        console.error('Payment verification failed:', error);
        setIsProcessing(false);
        alert('Payment verification failed. Please try again.');
     }
+  };
+
+  const handleSubmitUTR = () => {
+    if (utr.trim().length < 10) {
+      alert("Must put minimum 10 digit UTR number");
+      return;
+    }
+    if (!user) {
+      localStorage.removeItem('cartItems');
+      window.dispatchEvent(new Event('storage'));
+    }
+    navigate(`/payment/status?success=true&amount=${finalPayable}`);
   };
   
   const handlePayNow = () => {
@@ -170,11 +182,13 @@ const Checkout = () => {
           </h3>
           <input 
             type="text" 
+            value={utr}
+            onChange={(e) => setUtr(e.target.value)}
             placeholder="Enter Your UTR No." 
             className="w-full border border-gray-300 rounded-sm px-3 py-2.5 mb-5 focus:outline-none focus:border-gray-400 text-gray-700 placeholder-gray-400"
           />
           <button 
-            onClick={handleVerify}
+            onClick={handleSubmitUTR}
             className="bg-[#f25c27] hover:bg-[#d85020] text-white px-8 py-2.5 rounded-sm font-medium mb-8"
           >
             Submit UTR
