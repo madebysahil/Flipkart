@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import { useCart } from '../context/CartContext';
@@ -17,8 +17,24 @@ const Product = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [activeImage, setActiveImage] = useState(0);
+  const scrollRef = useRef(null);
 
-  useEffect(() => {
+  const handleThumbnailClick = (idx) => {
+    setActiveImage(idx);
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({ left: idx * scrollRef.current.offsetWidth, behavior: 'smooth' });
+    }
+  };
+
+  const handleScroll = (e) => {
+    const scrollPosition = e.target.scrollLeft;
+    const itemWidth = e.target.offsetWidth;
+    const newIndex = Math.round(scrollPosition / itemWidth);
+    if (newIndex !== activeImage) {
+      setActiveImage(newIndex);
+    }
+  };
+
     const fetchProduct = async () => {
       try {
         const { data } = await api.get(`/products/${id}`);
@@ -51,12 +67,22 @@ const Product = () => {
         
         {/* Left Side - Image Gallery */}
         <div className="sm:w-2/5 p-4 sm:p-8 flex flex-col items-center bg-white border-b sm:border-b-0 sm:border-r border-gray-200 sm:sticky sm:top-20 sm:h-[calc(100vh-80px)] overflow-y-auto">
-          <div className="w-full flex justify-center mb-4 h-64 sm:h-96 relative">
-            <img 
-              src={product.images?.[activeImage] || 'https://via.placeholder.com/400'} 
-              alt={product.title} 
-              className="max-h-full object-contain cursor-crosshair"
-            />
+          <div 
+            ref={scrollRef}
+            onScroll={handleScroll}
+            className="w-full flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] mb-4 h-64 sm:h-96 relative scroll-smooth"
+          >
+            {product.images && product.images.length > 0 ? (
+              product.images.map((img, idx) => (
+                <div key={idx} className="w-full shrink-0 flex justify-center snap-center relative">
+                  <img src={img} alt={product.title} className="max-h-full object-contain cursor-crosshair" />
+                </div>
+              ))
+            ) : (
+              <div className="w-full shrink-0 flex justify-center snap-center relative">
+                <img src="https://via.placeholder.com/400" alt={product.title} className="max-h-full object-contain" />
+              </div>
+            )}
           </div>
           
           {product.images && product.images.length > 1 && (
@@ -64,7 +90,7 @@ const Product = () => {
               {product.images.map((img, idx) => (
                 <button 
                   key={idx} 
-                  onClick={() => setActiveImage(idx)}
+                  onClick={() => handleThumbnailClick(idx)}
                   className={`border-2 p-1 rounded-sm ${activeImage === idx ? 'border-primary' : 'border-transparent hover:border-gray-300'}`}
                 >
                   <img src={img} alt="" className="h-12 w-12 object-contain" />

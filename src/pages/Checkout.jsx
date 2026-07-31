@@ -369,7 +369,7 @@ const Checkout = () => {
                       <CreditCard className="h-9 w-9 text-gray-700" strokeWidth={1.5} />
                       <span className="font-bold text-gray-900 text-lg">Scan to Pay</span>
                     </div>
-                    <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 5% OFF</div>
+                    <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
                   </div>
                   
                   {selectedPayment === 'qr' && (
