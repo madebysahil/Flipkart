@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p>© 2007-{new Date().getFullYear()} FlipkartClone.com</p>
+        <p>© 2007-2026 FlipkartPro.com</p>
         <div className="flex gap-4">
           <span className="text-yellow-500 font-bold">Advertise</span>
           <span className="text-yellow-500 font-bold">Gift Cards</span>

@@ -16,7 +16,7 @@ const Header = () => {
           
           <div className="flex-shrink-0 flex items-center gap-1 cursor-pointer">
             <Link to="/">
-              <span className="font-bold text-2xl tracking-tight italic">Flipkart<span className="text-yellow-400 text-sm ml-1 not-italic">Clone</span></span>
+              <span className="font-bold text-2xl tracking-tight italic">Flipkart<span className="text-yellow-400 text-sm ml-1 not-italic">Plus</span></span>
             </Link>
           </div>
 
