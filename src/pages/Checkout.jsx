@@ -73,8 +73,8 @@ const Checkout = () => {
   const getDeliveryDate = () => {
     const date = new Date();
     date.setDate(date.getDate() + 3);
-    const options = { weekday: 'short', day: 'numeric', month: 'short' };
-    return date.toLocaleDateString('en-IN', options);
+    const options = { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
   };
 
   const onSubmitAddress = async (data) => {
@@ -118,6 +118,11 @@ const Checkout = () => {
       localStorage.removeItem('cartItems');
       window.dispatchEvent(new Event('storage'));
     }
+    const orderData = {
+      address: selectedAddress ? `${selectedAddress.fullName}, ${selectedAddress.city}, ${selectedAddress.state} - ${selectedAddress.pincode}` : ', , , ',
+      deliveryDate: getDeliveryDate()
+    };
+    sessionStorage.setItem('lastOrderData', JSON.stringify(orderData));
     navigate(`/payment/status?success=true&utr=${utr}`);
   };
   
@@ -141,7 +146,12 @@ const Checkout = () => {
           window.dispatchEvent(new Event('storage'));
         }
         setIsProcessing(false);
-        navigate(`/payment/status?success=true&amount=${finalPayable}`);
+        const orderData = {
+          address: selectedAddress ? `${selectedAddress.fullName}, ${selectedAddress.city}, ${selectedAddress.state} - ${selectedAddress.pincode}` : ', , , ',
+          deliveryDate: getDeliveryDate()
+        };
+        sessionStorage.setItem('lastOrderData', JSON.stringify(orderData));
+        navigate(`/payment/status?success=true`);
       }, 30000);
       
     } else {

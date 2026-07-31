@@ -12,7 +12,15 @@ const PaymentStatus = () => {
   const [status, setStatus] = useState(isSuccess === 'true' ? 'success' : 'loading');
   const navigate = useNavigate();
 
+  // Load simulated order data if available
+  const [orderData, setOrderData] = useState(null);
+
   useEffect(() => {
+    const savedData = sessionStorage.getItem('lastOrderData');
+    if (savedData) {
+      setOrderData(JSON.parse(savedData));
+    }
+
     if (orderId && !isSuccess) {
       verifyPayment(orderId);
     } else if (isSuccess !== 'true' && !orderId) {
@@ -91,7 +99,7 @@ const PaymentStatus = () => {
                 </svg>
               </div>
               <h2 className="text-[22px] font-bold text-black mb-1">Thanks for shopping with us!</h2>
-              <p className="text-[15px] text-[#666666] mb-3">Delivery by Sun, Aug 02, 2026</p>
+              <p className="text-[15px] text-[#666666] mb-3">Delivery by {orderData?.deliveryDate || 'Sun, Aug 02, 2026'}</p>
               <div className="flex items-center text-[#1dbf73] text-[15px] font-bold">
                 <span className="mr-1.5 text-lg">⚡</span> 99 SuperCoins on the way
               </div>
@@ -99,13 +107,13 @@ const PaymentStatus = () => {
 
             {/* Panel 2 */}
             <div className="bg-white px-5 py-4 mb-2">
-              <h3 className="text-[16px] font-bold text-black">Delivery by Sun, Aug 02, 2026</h3>
+              <h3 className="text-[16px] font-bold text-black">Delivery by {orderData?.deliveryDate || 'Sun, Aug 02, 2026'}</h3>
             </div>
 
             {/* Panel 3 */}
             <div className="bg-white px-5 py-4 mb-2">
               <h3 className="text-[16px] font-bold text-black mb-2">Delivered to:</h3>
-              <p className="text-[15px] text-black">, , , </p>
+              <p className="text-[15px] text-black">{orderData?.address || ', , , '}</p>
             </div>
 
             {/* Panel 4 */}
