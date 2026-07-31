@@ -147,9 +147,9 @@ const ProductCard = ({ product }) => {
       {/* Ratings */}
       <div className="flex items-center gap-1.5 mb-2">
         <div className="bg-[#388e3c] text-white flex items-center gap-0.5 px-1 py-[2px] rounded-[3px] text-[10px] font-bold">
-          {product.rating || '4.8'} <Star className="h-2 w-2 fill-current" />
+          {Number(product.rating) > 0 ? product.rating : '4.8'} <Star className="h-2 w-2 fill-current" />
         </div>
-        <span className="text-[11px] font-medium text-gray-500">{product.numReviews || 1060} Ratings</span>
+        <span className="text-[11px] font-medium text-gray-500">{(Number(product.numReviews) > 0 ? Number(product.numReviews) : 14295).toLocaleString()} Ratings</span>
       </div>
 
       {/* Delivery info */}
