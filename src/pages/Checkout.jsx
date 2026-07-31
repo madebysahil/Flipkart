@@ -65,9 +65,7 @@ const Checkout = () => {
   const deliveryCharge = 0;
   
   let extraDiscount = 0;
-  if (selectedPayment === 'phonepe') extraDiscount = Math.floor(currentPrice * 0.10);
-  else if (selectedPayment === 'gpay') extraDiscount = Math.floor(currentPrice * 0.05);
-  else if (selectedPayment === 'qr') extraDiscount = Math.floor(currentPrice * 0.05);
+  // Extra discount is shown but not calculated as per user request
 
   const totalAmount = currentPrice + deliveryCharge;
   const finalPayable = totalAmount - extraDiscount;
@@ -343,7 +341,7 @@ const Checkout = () => {
                     <img src="/payment/phonepe.svg" alt="PhonePe" className="h-9 w-9 object-contain" />
                     <span className="font-bold text-gray-900 text-lg">PhonePe</span>
                   </div>
-                  <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 10% OFF</div>
+                  <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
                 </div>
 
                 {/* Google Pay */}
@@ -352,7 +350,7 @@ const Checkout = () => {
                     <img src="/payment/gpay.svg" alt="Google Pay" className="h-9 w-9 object-contain" />
                     <span className="font-bold text-gray-900 text-lg">Google Pay</span>
                   </div>
-                  <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 5% OFF</div>
+                  <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
                 </div>
 
                 {/* Paytm */}
@@ -361,7 +359,7 @@ const Checkout = () => {
                     <img src="/payment/paytm.svg" alt="Paytm" className="h-9 w-12 object-contain" />
                     <span className="font-bold text-gray-900 text-lg">Paytm</span>
                   </div>
-                  <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 0% OFF</div>
+                  <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
                 </div>
 
                 {/* Scan to Pay */}
