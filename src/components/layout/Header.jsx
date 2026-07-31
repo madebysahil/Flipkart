@@ -1,10 +1,8 @@
-import { Search, ShoppingCart, User as UserIcon } from 'lucide-react';
+import { Search, ShoppingCart } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext';
 import { useCart } from '../../context/CartContext';
 
 const Header = () => {
-  const { user } = useAuth();
   const { cartItems } = useCart();
 
   const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);

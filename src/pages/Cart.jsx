@@ -1,10 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
-import { useAuth } from '../context/AuthContext';
 
 const Cart = () => {
   const { cartItems, removeFromCart, addToCart } = useCart();
-  const { user } = useAuth();
   const navigate = useNavigate();
 
 
