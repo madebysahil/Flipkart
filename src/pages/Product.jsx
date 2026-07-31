@@ -4,11 +4,45 @@ import api from '../services/api';
 import { useCart } from '../context/CartContext';
 import { ShoppingCart, Zap, Star, ThumbsUp, ThumbsDown, CheckCircle, Heart } from 'lucide-react';
 
-const dummyReviews = [
-  { rating: 5, title: "Terrific purchase", comment: "Awesome phone, camera quality is superb. Battery backup is also very good. Delivery was on time.", author: "Ramesh Kumar", location: "New Delhi", date: "1 month ago", likes: 234, dislikes: 12 },
-  { rating: 4, title: "Good quality product", comment: "Everything is good but the charger could have been faster. Display is buttery smooth.", author: "Priya Sharma", location: "Mumbai", date: "2 months ago", likes: 145, dislikes: 5 },
-  { rating: 5, title: "Simply awesome", comment: "Best in this price segment. Value for money. Highly recommended!", author: "Suresh", location: "Bengaluru", date: "15 days ago", likes: 89, dislikes: 2 },
-];
+const getCategoryReviews = (product) => {
+  if (product?.reviews && product.reviews.length > 0) return product.reviews;
+  
+  const title = (product?.title || '').toLowerCase();
+  const cat = (product?.category || '').toLowerCase();
+  
+  if (title.includes('tv') || title.includes('television') || cat.includes('tv')) {
+    return [
+      { rating: 5, title: "Terrific purchase", comment: "Awesome picture quality and sound. The display colors are very vibrant. Delivery was on time.", author: "Ramesh Kumar", location: "New Delhi", date: "1 month ago", likes: 234, dislikes: 12 },
+      { rating: 4, title: "Good quality product", comment: "Installation was quick. The viewing angles are good but the remote feels a bit cheap.", author: "Priya Sharma", location: "Mumbai", date: "2 months ago", likes: 145, dislikes: 5 },
+      { rating: 5, title: "Simply awesome", comment: "Best TV in this price segment. Value for money. Highly recommended!", author: "Suresh", location: "Bengaluru", date: "15 days ago", likes: 89, dislikes: 2 },
+    ];
+  } else if (title.includes('phone') || title.includes('mobile') || cat.includes('mobile')) {
+    return [
+      { rating: 5, title: "Terrific purchase", comment: "Awesome phone, camera quality is superb. Battery backup is also very good. Delivery was on time.", author: "Ramesh Kumar", location: "New Delhi", date: "1 month ago", likes: 234, dislikes: 12 },
+      { rating: 4, title: "Good quality product", comment: "Everything is good but the charger could have been faster. Display is buttery smooth.", author: "Priya Sharma", location: "Mumbai", date: "2 months ago", likes: 145, dislikes: 5 },
+      { rating: 5, title: "Simply awesome", comment: "Best in this price segment. Value for money. Highly recommended!", author: "Suresh", location: "Bengaluru", date: "15 days ago", likes: 89, dislikes: 2 },
+    ];
+  } else if (title.includes('laptop') || cat.includes('laptop')) {
+    return [
+      { rating: 5, title: "Terrific purchase", comment: "Super fast performance and great battery life. Boot time is just a few seconds.", author: "Ramesh Kumar", location: "New Delhi", date: "1 month ago", likes: 234, dislikes: 12 },
+      { rating: 4, title: "Good quality product", comment: "Display is very nice and keyboard is smooth. Heating issue while gaming but overall a good laptop.", author: "Priya Sharma", location: "Mumbai", date: "2 months ago", likes: 145, dislikes: 5 },
+      { rating: 5, title: "Simply awesome", comment: "Best laptop in this price segment for students. Highly recommended!", author: "Suresh", location: "Bengaluru", date: "15 days ago", likes: 89, dislikes: 2 },
+    ];
+  } else if (title.includes('kettle') || cat.includes('appliance')) {
+    return [
+      { rating: 5, title: "Great product", comment: "Looking so beautiful good. Water boils very quickly. Worth the money.", author: "Pragyan Ranjani Sethy", location: "New Delhi", date: "18 Mar 2024", likes: 45, dislikes: 2 },
+      { rating: 5, title: "Excellent", comment: "Beautiful product. Worth every penny. The built quality is also top notch.", author: "Rupak Kumar Dandpat", location: "Mumbai", date: "27 Jan 2024", likes: 34, dislikes: 0 },
+      { rating: 5, title: "Highly recommended", comment: "Very sophisticated tech. Looks very premium in my kitchen.", author: "Naresh Karela", location: "Bengaluru", date: "21 Jan 2024", likes: 12, dislikes: 1 }
+    ];
+  }
+  
+  // Generic Fallback
+  return [
+    { rating: 5, title: "Terrific purchase", comment: "Awesome product, totally satisfied with the quality. Delivery was on time.", author: "Ramesh Kumar", location: "New Delhi", date: "1 month ago", likes: 234, dislikes: 12 },
+    { rating: 4, title: "Good quality product", comment: "Everything is good and working perfectly as described.", author: "Priya Sharma", location: "Mumbai", date: "2 months ago", likes: 145, dislikes: 5 },
+    { rating: 5, title: "Simply awesome", comment: "Best in this price segment. Value for money. Highly recommended!", author: "Suresh", location: "Bengaluru", date: "15 days ago", likes: 89, dislikes: 2 },
+  ];
+};
 
 const Product = () => {
   const { id } = useParams();
@@ -272,7 +306,7 @@ const Product = () => {
             </div>
             
             <div className="flex flex-col">
-              {(product.reviews && product.reviews.length > 0 ? product.reviews : dummyReviews).map((review, idx) => (
+              {getCategoryReviews(product).map((review, idx) => (
                 <div key={idx} className="p-4 sm:p-6 border-b border-gray-100 last:border-b-0">
                   <div className="flex items-center gap-3 mb-3">
                     <div className={`${review.rating >= 4 ? 'bg-[#388e3c]' : 'bg-[#ff9f00]'} text-white text-xs font-bold px-1.5 py-0.5 rounded-sm flex items-center gap-1`}>
