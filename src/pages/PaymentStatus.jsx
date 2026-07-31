@@ -11,6 +11,7 @@ const PaymentStatus = () => {
   const isSuccess = searchParams.get('success');
   const amountStr = searchParams.get('amount');
   const amount = amountStr ? parseFloat(amountStr) : 490;
+  const utr = searchParams.get('utr');
   
   const [status, setStatus] = useState(isSuccess === 'true' ? 'success' : 'loading');
   const [orderDetails, setOrderDetails] = useState(null);
@@ -45,6 +46,39 @@ const PaymentStatus = () => {
   }
 
   const superCoins = Math.floor(amount / 100 * 4); // Fake Flipkart logic for SuperCoins
+
+  if (utr) {
+    return (
+      <div className="bg-[#f1f3f6] min-h-screen flex items-center justify-center p-4 font-sans">
+        <div className="bg-white max-w-[360px] w-full rounded-xl shadow-sm p-6 text-center shadow-lg">
+          <div className="w-16 h-16 rounded-full bg-[#e6f4ea] flex items-center justify-center mx-auto mb-4">
+            <div className="w-10 h-10 rounded-full bg-[#34a853] flex items-center justify-center">
+              <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+          </div>
+          
+          <h2 className="text-xl font-bold text-gray-900 mb-2">UTR Submitted!</h2>
+          <p className="text-[13px] text-gray-500 mb-6 leading-tight">
+            Your payment details have been received. We will verify and confirm your order shortly.
+          </p>
+
+          <div className="bg-[#f3f4f6] py-3 rounded-lg mb-4 text-sm font-medium text-gray-700">
+            UTR Number: <span className="text-[#2874f0]">{utr}</span>
+          </div>
+
+          <div className="bg-[#fff8e1] border-l-4 border-[#ffc107] p-3 text-left mb-6 text-[12px] text-gray-700 rounded-r-sm">
+            Please allow 5-10 minutes for payment verification. You will receive a confirmation once your order is confirmed.
+          </div>
+
+          <Link to="/" className="block w-full text-center bg-[#2874f0] text-white py-3 rounded-md font-medium hover:bg-[#1a5fcd] transition-colors">
+            Back to Home
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-[#f1f3f6] min-h-screen font-sans">

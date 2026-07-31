@@ -136,7 +136,7 @@ const Checkout = () => {
       localStorage.removeItem('cartItems');
       window.dispatchEvent(new Event('storage'));
     }
-    navigate(`/payment/status?success=true&amount=${finalPayable}`);
+    navigate(`/payment/status?success=true&utr=${utr}`);
   };
   
   const handlePayNow = () => {
