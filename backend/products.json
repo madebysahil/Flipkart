@@ -1254,7 +1254,7 @@
       "/images/products/televisions/vw60tv/3.jpg",
       "/images/products/televisions/vw60tv/4.jpg"
     ],
-    "category": "Television",
+    "category": "Electronics",
     "brand": "VW",
     "countInStock": 100,
     "rating": 4.3,
@@ -1368,7 +1368,7 @@
       "/images/products/televisions/samsung-crystal-4k-vision-ai-138/3.jpg",
       "/images/products/televisions/samsung-crystal-4k-vision-ai-138/4.jpg"
     ],
-    "category": "Television",
+    "category": "Electronics",
     "brand": "Samsung",
     "countInStock": 100,
     "rating": 4.7,
@@ -1481,7 +1481,7 @@
       "/images/products/televisions/lg139/3.jpg",
       "/images/products/televisions/lg139/4.jpg"
     ],
-    "category": "Television",
+    "category": "Electronics",
     "brand": "LG",
     "countInStock": 100,
     "rating": 4.8,
@@ -1594,7 +1594,7 @@
       "/images/products/televisions/tcl-t6d189.31/3.jpg",
       "/images/products/televisions/tcl-t6d189.31/4.jpg"
     ],
-    "category": "Television",
+    "category": "Electronics",
     "brand": "TCL",
     "countInStock": 100,
     "rating": 4.6,
