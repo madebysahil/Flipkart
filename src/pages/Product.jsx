@@ -2,7 +2,13 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import { useCart } from '../context/CartContext';
-import { ShoppingCart, Zap, Star } from 'lucide-react';
+import { ShoppingCart, Zap, Star, ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
+
+const dummyReviews = [
+  { rating: 5, title: "Terrific purchase", comment: "Awesome phone, camera quality is superb. Battery backup is also very good. Delivery was on time.", author: "Ramesh Kumar", location: "New Delhi", date: "1 month ago", likes: 234, dislikes: 12 },
+  { rating: 4, title: "Good quality product", comment: "Everything is good but the charger could have been faster. Display is buttery smooth.", author: "Priya Sharma", location: "Mumbai", date: "2 months ago", likes: 145, dislikes: 5 },
+  { rating: 5, title: "Simply awesome", comment: "Best in this price segment. Value for money. Highly recommended!", author: "Suresh", location: "Bengaluru", date: "15 days ago", likes: 89, dislikes: 2 },
+];
 
 const Product = () => {
   const { id } = useParams();
@@ -140,6 +146,47 @@ const Product = () => {
               </div>
             </div>
           )}
+
+          {/* Ratings & Reviews */}
+          <div className="mt-6 border border-gray-200 rounded-sm mb-4">
+            <div className="p-4 sm:p-6 border-b border-gray-200 flex justify-between items-center">
+              <h3 className="text-[20px] font-medium text-[#212121]">Ratings & Reviews</h3>
+              <button className="bg-white text-[#2874f0] text-[14px] font-medium px-4 py-2 rounded-sm shadow-[0_1px_2px_0_rgba(0,0,0,0.2)]">Rate Product</button>
+            </div>
+            
+            <div className="flex flex-col">
+              {dummyReviews.map((review, idx) => (
+                <div key={idx} className="p-4 sm:p-6 border-b border-gray-100 last:border-b-0">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className={`${review.rating >= 4 ? 'bg-[#388e3c]' : 'bg-[#ff9f00]'} text-white text-xs font-bold px-1.5 py-0.5 rounded-sm flex items-center gap-1`}>
+                      {review.rating} <Star className="h-3 w-3 fill-current" />
+                    </div>
+                    <span className="font-medium text-[#212121]">{review.title}</span>
+                  </div>
+                  <p className="text-[#212121] text-[14px] mb-4">{review.comment}</p>
+                  
+                  <div className="flex items-center justify-between mt-4">
+                    <div className="flex items-center gap-2 text-[12px] text-[#878787]">
+                      <span>{review.author}</span>
+                      <CheckCircle className="h-3 w-3 text-[#878787] ml-1 hidden sm:block" />
+                      <span className="hidden sm:inline">Certified Buyer, {review.location}</span>
+                      <span className="mx-1 hidden sm:inline">•</span>
+                      <span>{review.date}</span>
+                    </div>
+                    
+                    <div className="flex items-center gap-4 text-[#878787] text-[12px]">
+                      <div className="flex items-center gap-1 cursor-pointer hover:text-[#212121]">
+                        <ThumbsUp className="h-4 w-4" /> {review.likes}
+                      </div>
+                      <div className="flex items-center gap-1 cursor-pointer hover:text-[#212121]">
+                        <ThumbsDown className="h-4 w-4" /> {review.dislikes}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       
