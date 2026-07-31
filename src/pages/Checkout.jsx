@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import api from '../services/api';
 import { QRCodeSVG } from 'qrcode.react';
-import { Check, ChevronRight, CreditCard, Info, Lock, Truck, ArrowLeft, ShieldCheck, Loader2 } from 'lucide-react';
+import { CreditCard, Info, Lock, Truck, ArrowLeft, ShieldCheck, Loader2 } from 'lucide-react';
 
 const InputField = ({ name, label, type="text", required = true, pattern, maxLength, className="w-full", register, errors, clearErrors }) => (
   <div className={`relative ${className}`}>
@@ -37,7 +37,6 @@ const Checkout = () => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [selectedAddress, setSelectedAddress] = useState(user?.addresses?.[0] || null);
-  const [createdOrder, setCreatedOrder] = useState(null);
   const [transactionId, setTransactionId] = useState('');
   const [showQRPage, setShowQRPage] = useState(false);
   const [utr, setUtr] = useState('');
@@ -100,7 +99,6 @@ const Checkout = () => {
         : { guestAddress: selectedAddress, guestCartItems: cartItems, guestEmail: selectedAddress.email };
       
       const { data } = await api.post('/payment/create', payload);
-      setCreatedOrder(data);
       setTransactionId(`TR_${data.order_id}_${Date.now()}`);
       setStep(3);
     } catch (error) {
@@ -109,23 +107,7 @@ const Checkout = () => {
     }
   };
 
-  const handleVerify = async () => {
-    try {
-       const { data } = await api.post('/payment/verify', { order_id: createdOrder.order_id });
-       if (data.success) {
-          if (!user) {
-            localStorage.removeItem('cartItems');
-            window.dispatchEvent(new Event('storage'));
-          }
-          setIsProcessing(false);
-          navigate('/payment/status?success=true');
-       }
-    } catch (error) {
-       console.error('Payment verification failed:', error);
-       setIsProcessing(false);
-       alert('Payment verification failed. Please try again.');
-    }
-  };
+
 
   const handleSubmitUTR = () => {
     if (utr.trim().length < 10) {

@@ -14,7 +14,6 @@ const PaymentStatus = () => {
   const utr = searchParams.get('utr');
   
   const [status, setStatus] = useState(isSuccess === 'true' ? 'success' : 'loading');
-  const [orderDetails, setOrderDetails] = useState(null);
   const navigate = useNavigate();
   const { user } = useAuth();
 
@@ -31,7 +30,6 @@ const PaymentStatus = () => {
       const { data } = await api.post('/payment/verify', { order_id });
       if (data.success) {
         setStatus('success');
-        setOrderDetails(data.order);
       } else {
         setStatus('failed');
       }
