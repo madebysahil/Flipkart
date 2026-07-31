@@ -73,6 +73,13 @@ const Checkout = () => {
   const finalPayable = totalAmount - extraDiscount;
   const totalSavings = discount + extraDiscount + (deliveryCharge === 0 ? 40 : 0);
 
+  const getDeliveryDate = () => {
+    const date = new Date();
+    date.setDate(date.getDate() + 3);
+    const options = { weekday: 'short', day: 'numeric', month: 'short' };
+    return date.toLocaleDateString('en-IN', options);
+  };
+
   const onSubmitAddress = async (data) => {
     try {
       if (user) {
@@ -259,7 +266,7 @@ const Checkout = () => {
 
               <div className="bg-white px-4 py-3 mb-2 flex items-center gap-2 border-y border-gray-200">
                 <Truck className="h-5 w-5 text-green-700" />
-                <span className="text-green-700 font-bold text-sm">Delivery by Fri, 31 Jul</span>
+                <span className="text-green-700 font-bold text-sm">Delivery by {getDeliveryDate()}</span>
               </div>
 
               <div className="bg-white mb-2">
