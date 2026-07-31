@@ -16,17 +16,7 @@ const paymentRoutes = require('../backend/routes/paymentRoutes');
 const app = express();
 
 // Connect DB
-connectDB().then(() => {
-  // If no products exist, seed them automatically
-  const Product = require('../backend/models/Product');
-  Product.countDocuments().then(async count => {
-    if (count === 0) {
-      console.log('No products found, seeding from extra/products.js...');
-      const seedProducts = require('../backend/seed');
-      await seedProducts();
-    }
-  });
-});
+connectDB();
 
 // Middlewares
 app.use(express.json());
