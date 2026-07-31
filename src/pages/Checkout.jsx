@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import api from '../services/api';
 import { QRCodeSVG } from 'qrcode.react';
-import { ArrowLeft, Info, Truck, Lock, ShieldCheck, CreditCard, Loader2 } from 'lucide-react';
+import { Check, ChevronRight, CreditCard, Info, Lock, Truck, ArrowLeft, ShieldCheck, Loader2 } from 'lucide-react';
 
 const InputField = ({ name, label, type="text", required = true, pattern, maxLength, className="w-full", register, errors, clearErrors }) => (
   <div className={`relative ${className}`}>
@@ -39,9 +39,9 @@ const Checkout = () => {
   const [selectedAddress, setSelectedAddress] = useState(user?.addresses?.[0] || null);
   const [createdOrder, setCreatedOrder] = useState(null);
   const [transactionId, setTransactionId] = useState('');
+  const [showQRPage, setShowQRPage] = useState(false);
   
   const [selectedPayment, setSelectedPayment] = useState(''); 
-  const [showQR, setShowQR] = useState(false);
   const [timeLeft, setTimeLeft] = useState(6 * 60 + 20);
   const [isProcessing, setIsProcessing] = useState(false);
   
@@ -65,7 +65,6 @@ const Checkout = () => {
   const deliveryCharge = 0;
   
   let extraDiscount = 0;
-  // Extra discount is shown but not calculated as per user request
 
   const totalAmount = currentPrice + deliveryCharge;
   const finalPayable = totalAmount - extraDiscount;
@@ -130,8 +129,7 @@ const Checkout = () => {
   
   const handlePayNow = () => {
     if (selectedPayment === 'qr') {
-      setIsProcessing(true);
-      // Wait indefinitely, no simulation
+      setShowQRPage(true);
     } else if (selectedPayment === 'phonepe') {
       setIsProcessing(true);
       window.location.href = `phonepe://pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`;
@@ -152,6 +150,61 @@ const Checkout = () => {
     return 'Payments';
   };
 
+  if (showQRPage) {
+    return (
+      <div className="min-h-screen bg-white flex flex-col font-sans">
+        <div className="bg-[#2874f0] text-white px-4 py-3 flex items-center gap-3">
+          <ArrowLeft className="h-6 w-6 cursor-pointer" onClick={() => setShowQRPage(false)} />
+          <h1 className="text-[18px] font-medium">Scan to Pay</h1>
+        </div>
+        <div className="flex-1 overflow-y-auto px-6 py-6 flex flex-col items-center">
+          <h2 className="text-2xl font-bold mb-6 text-black">Scan QR Code to Pay</h2>
+          <div className="mb-8 p-1">
+            <QRCodeSVG value={`upi://pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`} size={220} />
+          </div>
+          <div className="text-xl font-bold text-black mb-6">
+            Order Amount ₹{finalPayable}
+          </div>
+          <h3 className="text-xl font-bold text-black mb-3">
+            Enter UTR Number
+          </h3>
+          <input 
+            type="text" 
+            placeholder="Enter Your UTR No." 
+            className="w-full border border-gray-300 rounded-sm px-3 py-2.5 mb-5 focus:outline-none focus:border-gray-400 text-gray-700 placeholder-gray-400"
+          />
+          <button 
+            onClick={handleVerify}
+            className="bg-[#f25c27] hover:bg-[#d85020] text-white px-8 py-2.5 rounded-sm font-medium mb-8"
+          >
+            Submit UTR
+          </button>
+          <h3 className="text-[19px] font-bold text-black mb-3 w-full text-center">
+            Instructions for Payment
+          </h3>
+          <div className="w-full border border-gray-300">
+            <div className="flex border-b border-gray-300">
+              <div className="w-16 p-2.5 border-r border-gray-300 text-sm text-gray-800">Step 1:</div>
+              <div className="flex-1 p-2.5 text-sm text-gray-800">Scan the QR code using your mobile banking app.</div>
+            </div>
+            <div className="flex border-b border-gray-300">
+              <div className="w-16 p-2.5 border-r border-gray-300 text-sm text-gray-800">Step 2:</div>
+              <div className="flex-1 p-2.5 text-sm text-gray-800">Enter the payment amount shown above.</div>
+            </div>
+            <div className="flex border-b border-gray-300">
+              <div className="w-16 p-2.5 border-r border-gray-300 text-sm text-gray-800">Step 3:</div>
+              <div className="flex-1 p-2.5 text-sm text-gray-800">Complete the payment and note your UTR number.</div>
+            </div>
+            <div className="flex">
+              <div className="w-16 p-2.5 border-r border-gray-300 text-sm text-gray-800">Step 4:</div>
+              <div className="flex-1 p-2.5 text-sm text-gray-800">Enter your UTR number above and click Submit.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-[#483635] min-h-screen md:flex md:justify-center">
       {isProcessing && (
@@ -165,13 +218,11 @@ const Checkout = () => {
       )}
       <div className="bg-white w-full max-w-md min-h-screen shadow-lg relative flex flex-col pb-36">
         
-        {/* Header */}
         <div className="flex items-center gap-4 p-4 pt-5 pb-2">
           <ArrowLeft className="h-6 w-6 cursor-pointer text-[#212121]" onClick={() => { if(step > 1) setStep(step - 1); else navigate(-1); }} />
           <h1 className="text-[18px] text-[#212121]">{getStepTitle()}</h1>
         </div>
 
-        {/* Stepper */}
         <div className="px-8 py-5 border-b border-gray-100 bg-white flex justify-between items-center relative overflow-hidden">
           <div className="absolute top-1/2 left-12 right-12 h-[1px] bg-gray-200 -z-0 -translate-y-2.5" />
           {[1, 2, 3].map((s, i) => (
@@ -186,10 +237,8 @@ const Checkout = () => {
           ))}
         </div>
 
-        {/* Content area */}
         <div className="flex-1 overflow-y-auto">
           
-          {/* STEP 1: Address */}
           {step === 1 && (
             <div className="p-4 pt-6">
               <form id="address-form" onSubmit={handleSubmit(onSubmitAddress)} className="space-y-4">
@@ -254,7 +303,6 @@ const Checkout = () => {
             </div>
           )}
 
-          {/* STEP 2: Order Summary */}
           {step === 2 && (
             <div className="bg-gray-100">
               <div className="bg-white p-4 mb-2">
@@ -324,7 +372,6 @@ const Checkout = () => {
             </div>
           )}
 
-          {/* STEP 3: Payments */}
           {step === 3 && (
             <div className="bg-gray-100">
               <div className="bg-white p-4 mb-2 flex justify-center">
@@ -335,7 +382,6 @@ const Checkout = () => {
 
               <div className="bg-white p-4 mb-2 space-y-3">
                 
-                {/* PhonePe */}
                 <div onClick={() => setSelectedPayment('phonepe')} className={`border rounded-lg p-4 flex items-center justify-between cursor-pointer transition-colors ${selectedPayment === 'phonepe' ? 'border-blue-500 bg-blue-50/10' : 'border-gray-200'}`}>
                   <div className="flex items-center gap-3">
                     <img src="/payment/phonepe.svg" alt="PhonePe" className="h-9 w-9 object-contain" />
@@ -344,7 +390,6 @@ const Checkout = () => {
                   <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
                 </div>
 
-                {/* Google Pay */}
                 <div onClick={() => setSelectedPayment('gpay')} className={`border rounded-lg p-4 flex items-center justify-between cursor-pointer transition-colors ${selectedPayment === 'gpay' ? 'border-blue-500 bg-blue-50/10' : 'border-gray-200'}`}>
                   <div className="flex items-center gap-3">
                     <img src="/payment/gpay.svg" alt="Google Pay" className="h-9 w-9 object-contain" />
@@ -353,7 +398,6 @@ const Checkout = () => {
                   <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
                 </div>
 
-                {/* Paytm */}
                 <div onClick={() => setSelectedPayment('paytm')} className={`border rounded-lg p-4 flex items-center justify-between cursor-pointer transition-colors ${selectedPayment === 'paytm' ? 'border-blue-500 bg-blue-50/10' : 'border-gray-200'}`}>
                   <div className="flex items-center gap-3">
                     <img src="/payment/paytm.svg" alt="Paytm" className="h-9 w-12 object-contain" />
@@ -362,7 +406,6 @@ const Checkout = () => {
                   <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
                 </div>
 
-                {/* Scan to Pay */}
                 <div onClick={() => setSelectedPayment('qr')} className={`border rounded-lg p-4 flex flex-col cursor-pointer transition-colors ${selectedPayment === 'qr' ? 'border-blue-500 bg-blue-50/10' : 'border-gray-200'}`}>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
@@ -371,17 +414,8 @@ const Checkout = () => {
                     </div>
                     <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
                   </div>
-                  
-                  {selectedPayment === 'qr' && (
-                    <div className="mt-4 border-t border-gray-200 pt-6 flex flex-col items-center">
-                      <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm mb-4">
-                        <QRCodeSVG value={`upi://pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`} size={200} />
-                      </div>
-                    </div>
-                  )}
                 </div>
 
-                {/* COD */}
                 <div className="border rounded-lg p-4 flex items-center justify-between border-gray-200 opacity-50 bg-gray-50">
                   <div className="flex items-center gap-3">
                     <Truck className="h-9 w-9 text-gray-500" strokeWidth={1.5} />
@@ -483,7 +517,7 @@ const Checkout = () => {
                   </div>
                 </div>
                 <button onClick={handlePayNow} className="w-1/2 bg-[#ffc200] text-black font-bold text-lg flex items-center justify-center hover:bg-[#f3b800] transition-colors">
-                  Pay Now
+                  {selectedPayment === 'qr' ? 'Continue' : 'Pay Now'}
                 </button>
               </div>
               <div className="flex items-center justify-center gap-8 py-3 text-[11px] font-medium text-gray-600 bg-gray-50 border-t border-gray-200">
