@@ -41,7 +41,7 @@ const Checkout = () => {
   const [showQRPage, setShowQRPage] = useState(false);
   const [utr, setUtr] = useState('');
   
-  const [selectedPayment, setSelectedPayment] = useState(''); 
+  const [selectedPayment, setSelectedPayment] = useState('phonepe'); 
   const [timeLeft, setTimeLeft] = useState(6 * 60 + 20);
   const [isProcessing, setIsProcessing] = useState(false);
   
