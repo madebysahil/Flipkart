@@ -13,7 +13,7 @@ const Cart = () => {
   const discount = cartItems.reduce((acc, item) => {
     return acc + ((item.product.oldPrice || item.product.price) - item.product.price) * item.quantity;
   }, 0);
-  const deliveryCharge = itemsPrice > 500 ? 0 : 40;
+  const deliveryCharge = 0;
   const totalAmount = itemsPrice + deliveryCharge;
   const totalQuantity = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 

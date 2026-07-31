@@ -62,7 +62,7 @@ const Checkout = () => {
   const itemsPrice = cartItems.reduce((acc, item) => acc + ((item.product.oldPrice || item.product.price) * item.quantity), 0);
   const currentPrice = cartItems.reduce((acc, item) => acc + (item.product.price * item.quantity), 0);
   const discount = itemsPrice - currentPrice;
-  const deliveryCharge = currentPrice > 500 ? 0 : 40;
+  const deliveryCharge = 0;
   
   let extraDiscount = 0;
   if (selectedPayment === 'phonepe') extraDiscount = Math.floor(currentPrice * 0.10);
