@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import { useCart } from '../context/CartContext';
-import { ShoppingCart, Zap, Star, ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
+import { ShoppingCart, Zap, Star, ThumbsUp, ThumbsDown, CheckCircle, Heart } from 'lucide-react';
 
 const dummyReviews = [
   { rating: 5, title: "Terrific purchase", comment: "Awesome phone, camera quality is superb. Battery backup is also very good. Delivery was on time.", author: "Ramesh Kumar", location: "New Delhi", date: "1 month ago", likes: 234, dislikes: 12 },
@@ -17,6 +17,7 @@ const Product = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [activeImage, setActiveImage] = useState(0);
+  const [isWishlisted, setIsWishlisted] = useState(false);
   const scrollRef = useRef(null);
 
   const handleThumbnailClick = (idx) => {
@@ -36,6 +37,11 @@ const Product = () => {
   };
 
   useEffect(() => {
+    if (id) {
+      const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+      setIsWishlisted(wishlist.includes(id));
+    }
+
     const fetchProduct = async () => {
       try {
         const { data } = await api.get(`/products/${id}`);
@@ -62,12 +68,63 @@ const Product = () => {
     navigate('/checkout'); // Direct to checkout/address page
   };
 
+  const handleWishlistToggle = () => {
+    const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+    if (isWishlisted) {
+      const newWishlist = wishlist.filter(itemId => itemId !== id);
+      localStorage.setItem('wishlist', JSON.stringify(newWishlist));
+      setIsWishlisted(false);
+    } else {
+      wishlist.push(id);
+      localStorage.setItem('wishlist', JSON.stringify(wishlist));
+      setIsWishlisted(true);
+    }
+  };
+
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: product.title,
+          text: `Check out ${product.title} on Flipkart!`,
+          url: window.location.href,
+        });
+      } else {
+        // Fallback for browsers that don't support Web Share API
+        navigator.clipboard.writeText(window.location.href);
+        alert('Link copied to clipboard!');
+      }
+    } catch (error) {
+      console.log('Error sharing:', error);
+    }
+  };
+
   return (
     <div className="bg-background min-h-screen pt-4 pb-24 sm:pb-8">
       <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 sm:flex gap-4">
         
         {/* Left Side - Image Gallery */}
-        <div className="sm:w-2/5 p-4 sm:p-8 flex flex-col items-center bg-white border-b sm:border-b-0 sm:border-r border-gray-200 sm:sticky sm:top-20 sm:h-[calc(100vh-80px)] overflow-y-auto">
+        <div className="sm:w-2/5 p-4 sm:p-8 flex flex-col items-center bg-white border-b sm:border-b-0 sm:border-r border-gray-200 sm:sticky sm:top-20 sm:h-[calc(100vh-80px)] overflow-y-auto relative">
+          
+          {/* Wishlist and Share Floating Buttons */}
+          <div className="absolute top-4 right-4 flex flex-col gap-3 z-10">
+            <button 
+              onClick={handleWishlistToggle}
+              className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.16)] border border-[#f0f0f0] hover:bg-gray-50 transition-colors"
+            >
+              <Heart className={`w-5 h-5 ${isWishlisted ? 'fill-[#ff4343] text-[#ff4343]' : 'text-[#c2c2c2] fill-[#c2c2c2]'}`} />
+            </button>
+            <button 
+              onClick={handleShare}
+              className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.16)] border border-[#f0f0f0] hover:bg-gray-50 transition-colors"
+            >
+              {/* Custom curved right arrow SVG matching screenshot */}
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.5 18.5C8.5 18.5 10.5 13.5 18 13.5V17.5L23.5 10.5L18 3.5V7.5C9 7.5 4 12.5 5 19.5L8.5 18.5Z" fill="#c2c2c2"/>
+              </svg>
+            </button>
+          </div>
+
           <div 
             ref={scrollRef}
             onScroll={handleScroll}
