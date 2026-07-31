@@ -35,6 +35,7 @@ const Product = () => {
     }
   };
 
+  useEffect(() => {
     const fetchProduct = async () => {
       try {
         const { data } = await api.get(`/products/${id}`);
