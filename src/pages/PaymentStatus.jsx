@@ -1,21 +1,16 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams, Link, useNavigate } from 'react-router-dom';
 import api from '../services/api';
-import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
-import { useAuth } from '../context/AuthContext';
 
 const PaymentStatus = () => {
   const [searchParams] = useSearchParams();
   const orderId = searchParams.get('order_id');
   const isSuccess = searchParams.get('success');
-  const amountStr = searchParams.get('amount');
-  const amount = amountStr ? parseFloat(amountStr) : 490;
   const utr = searchParams.get('utr');
   
   const [status, setStatus] = useState(isSuccess === 'true' ? 'success' : 'loading');
   const navigate = useNavigate();
-  const { user } = useAuth();
 
   useEffect(() => {
     if (orderId && !isSuccess) {
@@ -43,7 +38,6 @@ const PaymentStatus = () => {
     return <div className="min-h-screen flex items-center justify-center bg-[#f1f3f6]">Verifying your payment...</div>;
   }
 
-  const superCoins = Math.floor(amount / 100 * 4); // Fake Flipkart logic for SuperCoins
 
   if (utr) {
     return (
@@ -79,60 +73,63 @@ const PaymentStatus = () => {
   }
 
   return (
-    <div className="bg-[#f1f3f6] min-h-screen font-sans">
-      {/* Blue Header */}
-      <div className="bg-[#2874f0] text-white px-4 py-3 flex items-center gap-3 shadow-sm sticky top-0 z-50">
-        <ArrowLeft className="h-6 w-6 cursor-pointer" onClick={() => navigate('/')} />
-        <h1 className="text-[18px] font-medium">Order Details</h1>
-      </div>
-
-      <div className="max-w-md mx-auto mt-2">
+    <div className="bg-[#f1f3f6] min-h-screen font-sans pb-20">
+      {status !== 'success' && (
+        <div className="bg-[#2874f0] text-white px-4 py-3 flex items-center gap-3 shadow-sm sticky top-0 z-50">
+          <ArrowLeft className="h-6 w-6 cursor-pointer" onClick={() => navigate('/')} />
+          <h1 className="text-[18px] font-medium">Order Details</h1>
+        </div>
+      )}
+      <div className="max-w-md mx-auto">
         {status === 'success' ? (
           <>
-            {/* Success Card */}
-            <div className="bg-white p-6 flex flex-col items-center justify-center border-b border-gray-200">
-              <motion.div 
-                initial={{ scale: 0 }} 
-                animate={{ scale: 1 }} 
-                transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                className="w-16 h-16 rounded-full bg-[#26a541] flex items-center justify-center mb-4 shadow-md"
-              >
-                <motion.svg 
-                  initial={{ pathLength: 0 }} 
-                  animate={{ pathLength: 1 }} 
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="w-8 h-8 text-white" 
-                  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}
-                >
-                  <motion.path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </motion.svg>
-              </motion.div>
-
-              <h2 className="text-xl font-medium text-gray-900 mb-1">Order placed for ₹{amount}</h2>
-              <p className="text-sm text-gray-500">Your order has been placed successfully.</p>
-            </div>
-
-            {/* SuperCoin Card */}
-            <div className="bg-white mt-2 p-4 flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#fffcf5] flex items-center justify-center shadow-[0_0_8px_rgba(255,200,0,0.3)]">
-                <img src="https://rukminim1.flixcart.com/lockin/32/32/images/super_coin_icon_22x22.png" alt="SuperCoin" className="w-6 h-6 object-contain" />
+            {/* Panel 1 */}
+            <div className="bg-white px-5 pt-8 pb-5 mb-2">
+              <div className="w-[72px] h-[72px] rounded-full bg-[#1dbf73] flex items-center justify-center mb-4">
+                <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
               </div>
-              <div className="flex-1">
-                <p className="font-medium text-gray-900 text-sm">You earned {superCoins} SuperCoins!</p>
-                <p className="text-[11px] text-gray-500 mt-0.5">Will be credited after the return period is over</p>
+              <h2 className="text-[22px] font-bold text-black mb-1">Thanks for shopping with us!</h2>
+              <p className="text-[15px] text-[#666666] mb-3">Delivery by Sun, Aug 02, 2026</p>
+              <div className="flex items-center text-[#1dbf73] text-[15px] font-bold">
+                <span className="mr-1.5 text-lg">⚡</span> 99 SuperCoins on the way
               </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="mt-4 px-4 space-y-3">
-              {user ? (
-                <Link to="/profile" className="block w-full text-center bg-[#2874f0] text-white py-3 rounded-sm font-medium shadow-sm hover:bg-[#1a5fcd] transition-colors">
-                  View Order Details
-                </Link>
-              ) : null}
-              <Link to="/" className="block w-full text-center bg-white text-[#2874f0] border border-[#2874f0] py-3 rounded-sm font-medium shadow-sm hover:bg-gray-50 transition-colors">
-                Continue Shopping
-              </Link>
+            {/* Panel 2 */}
+            <div className="bg-white px-5 py-4 mb-2">
+              <h3 className="text-[16px] font-bold text-black">Delivery by Sun, Aug 02, 2026</h3>
+            </div>
+
+            {/* Panel 3 */}
+            <div className="bg-white px-5 py-4 mb-2">
+              <h3 className="text-[16px] font-bold text-black mb-2">Delivered to:</h3>
+              <p className="text-[15px] text-black">, , , </p>
+            </div>
+
+            {/* Panel 4 */}
+            <div className="bg-white px-5 py-5 pb-8 mb-4">
+              <div className="bg-[#f9f9f9] rounded-lg p-4">
+                <div className="flex items-center mb-3 text-[14px] font-bold text-[#424242]">
+                  <span className="mr-2 text-lg">📦</span> Delivery requires an OTP
+                </div>
+                <p className="text-[13.5px] text-[#424242] leading-relaxed mb-4">
+                  We will open the package at your doorstep to check for damages or wrong product delivery. An OTP will be shared when the order is out for delivery.
+                </p>
+                <p className="text-[13.5px] text-[#424242] leading-relaxed">
+                  Share the OTP with the agent to confirm open box delivery.
+                </p>
+              </div>
+            </div>
+
+            {/* Floating button */}
+            <div className="fixed bottom-0 left-0 right-0 bg-white p-3 flex justify-center">
+              <div className="max-w-md w-full px-2">
+                 <Link to="/" className="block w-full text-center bg-[#2874f0] text-white py-3.5 rounded-lg font-bold text-[16px]">
+                    Continue Shopping
+                 </Link>
+              </div>
             </div>
           </>
         ) : (
