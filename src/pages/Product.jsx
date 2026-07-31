@@ -124,10 +124,43 @@ const Product = () => {
             <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="f-assured" className="h-5 ml-2" />
           </div>
 
-          <div className="mt-4 flex items-end gap-3">
+          <div className="mt-4 flex items-end gap-3 mb-4">
             <span className="text-[28px] font-medium text-[#212121]">₹{product.price.toLocaleString()}</span>
             {product.oldPrice && <span className="text-[#878787] line-through mb-1.5 text-sm">₹{product.oldPrice.toLocaleString()}</span>}
             {product.discount && <span className="text-[#388e3c] font-bold mb-1.5 text-sm">{product.discount}% off</span>}
+          </div>
+
+          {/* Trust Badges */}
+          <div className="flex justify-between items-start py-4 my-2 border-y border-gray-200">
+            <div className="flex flex-col items-center flex-1">
+              <div className="w-10 h-10 rounded-full border-[1.5px] border-[#fb641b] text-[#fb641b] flex items-center justify-center mb-1 bg-white">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+              </div>
+              <span className="text-[12px] text-center text-[#212121]">7 days Replacement</span>
+            </div>
+            
+            <div className="flex flex-col items-center flex-1 px-1">
+              <div className="w-10 h-10 rounded-sm flex items-center justify-center mb-1 text-[#878787] relative">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M5 4h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v12h14V6H5zm3 3h8v2H8V9zm0 4h5v2H8v-2z" />
+                </svg>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-[28px] h-[2px] bg-white absolute rotate-45 z-10"></div>
+                  <div className="w-[28px] h-[2px] bg-[#878787] absolute rotate-45 mt-[2px] ml-[2px]"></div>
+                  <div className="w-[28px] h-[2px] bg-[#878787] absolute rotate-45"></div>
+                </div>
+              </div>
+              <span className="text-[12px] text-center text-[#212121]">No Cash On Delivery</span>
+            </div>
+            
+            <div className="flex flex-col items-center flex-1">
+              <div className="h-10 flex items-center justify-center mb-1">
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" className="h-[22px] object-contain" alt="Plus F-Assured" />
+              </div>
+              <span className="text-[12px] text-center text-[#212121]">Plus (F-Assured)</span>
+            </div>
           </div>
 
           {/* Highlights */}
