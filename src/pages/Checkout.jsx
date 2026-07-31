@@ -429,7 +429,7 @@ const Checkout = () => {
         </div>
 
         {/* Sticky Footer */}
-        <div className="absolute bottom-0 left-0 w-full bg-white shadow-[0_-10px_20px_rgba(0,0,0,0.05)] z-50">
+        <div className="sticky mt-auto bottom-0 left-0 w-full bg-white shadow-[0_-4px_10px_rgba(0,0,0,0.05)] z-50">
           
           {step === 1 && (
             <div className="p-4 bg-white shadow-[0_-4px_10px_rgba(0,0,0,0.05)] border-t border-gray-100">
