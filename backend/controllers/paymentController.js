@@ -1,23 +1,22 @@
 const { Cashfree, CFEnvironment } = require('cashfree-pg');
-const Order = require('../models/Order');
-const Cart = require('../models/Cart');
+
 
 Cashfree.XClientId = process.env.CASHFREE_APP_ID;
 Cashfree.XClientSecret = process.env.CASHFREE_SECRET_KEY;
 Cashfree.XEnvironment = process.env.CASHFREE_ENVIRONMENT === 'PRODUCTION' ? CFEnvironment.PRODUCTION : CFEnvironment.SANDBOX;
 
 const createPaymentOrder = async (req, res) => {
-  const { addressId, guestAddress, guestCartItems, guestEmail } = req.body;
+  const { addressId: _addressId, guestAddress, guestCartItems, guestEmail } = req.body;
   try {
     let finalCartItems = [];
-    let userAddress = guestAddress || {};
-    let customerEmail = guestEmail || 'guest@example.com';
+    let _userAddress = guestAddress || {};
+    let _customerEmail = guestEmail || 'guest@example.com';
 
     if (req.user) {
       // Note: We bypass Cart.findOne since there's no DB
       // The frontend provides guestCartItems even if logged in now? No, but we can fallback
       finalCartItems = guestCartItems || [];
-      userAddress = guestAddress || { fullName: 'User', mobile: '9999999999' };
+      _userAddress = guestAddress || { fullName: 'User', mobile: '9999999999' };
     } else {
       if (!guestCartItems || guestCartItems.length === 0) {
         return res.status(400).json({ message: 'Guest cart is empty' });
