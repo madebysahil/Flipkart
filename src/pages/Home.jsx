@@ -73,11 +73,11 @@ const Home = () => {
         <div className="max-w-[1600px] mx-auto px-2 sm:px-4">
           {/* Desktop Banner */}
           <div className="hidden md:block w-full h-[280px] bg-gray-200 rounded-sm overflow-hidden relative group cursor-pointer shadow-sm">
-            <img src="/images/freedom-desktop.jpg" alt="Freedom Sale" className="w-full h-full object-cover" />
+            <img src="/images/banners/banner1.jpg" alt="Freedom Sale" className="w-full h-full object-cover" />
           </div>
           {/* Mobile Banner */}
           <div className="md:hidden w-full h-[180px] bg-gray-200 rounded-sm overflow-hidden relative cursor-pointer shadow-sm">
-            <img src="/images/freedom-mobile.jpg" alt="Freedom Sale Mobile" className="w-full h-full object-cover" />
+            <img src="/images/banners/banner1.jpg" alt="Freedom Sale Mobile" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
