@@ -31,7 +31,7 @@ const HeaderActions = () => (
 
 const CategoryCircles = () => {
   const cats = [
-    { name: 'For You', icon: 'https://rukminim1.flixcart.com/fk-p-flap/128/128/image/f0b3f58d99cb98fc.png?q=100', active: true },
+    { name: 'For You', icon: 'https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100', active: true },
     { name: 'Fashion', icon: 'https://rukminim1.flixcart.com/fk-p-flap/128/128/image/0d75b34f7d8fbcb3.png?q=100' },
     { name: 'Mobiles', icon: 'https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100' },
     { name: 'Beauty', icon: 'https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100' },
