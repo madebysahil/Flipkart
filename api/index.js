@@ -3,14 +3,14 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
-const connectDB = require('./config/db');
+const connectDB = require('../backend/config/db');
 
 // Route imports
-const authRoutes = require('./routes/authRoutes');
-const productRoutes = require('./routes/productRoutes');
-const cartRoutes = require('./routes/cartRoutes');
-const userRoutes = require('./routes/userRoutes');
-const paymentRoutes = require('./routes/paymentRoutes');
+const authRoutes = require('../backend/routes/authRoutes');
+const productRoutes = require('../backend/routes/productRoutes');
+const cartRoutes = require('../backend/routes/cartRoutes');
+const userRoutes = require('../backend/routes/userRoutes');
+const paymentRoutes = require('../backend/routes/paymentRoutes');
 
 // Initialize App
 const app = express();
@@ -18,11 +18,11 @@ const app = express();
 // Connect DB
 connectDB().then(() => {
   // If no products exist, seed them automatically
-  const Product = require('./models/Product');
+  const Product = require('../backend/models/Product');
   Product.countDocuments().then(async count => {
     if (count === 0) {
       console.log('No products found, seeding from extra/products.js...');
-      const seedProducts = require('./seed');
+      const seedProducts = require('../backend/seed');
       await seedProducts();
     }
   });
