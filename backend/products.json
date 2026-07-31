@@ -1,5 +1,53 @@
 [
   {
+    "_id": "morphy-richards-kettle-01",
+    "title": "Morphy Richards Windsor Series 1.7 Litre Digital Electric Kettle Electric Kettle",
+    "description": "Buy Morphy Richards Windsor Series 1.7 Litre Digital Electric Kettle Electric Kettle for Rs.5995.0 Online. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 30,
+    "oldPrice": 5995,
+    "discount": 99,
+    "images": [
+      "https://rukmini1.flixcart.com/image/1500/1500/xif0q/electric-kettle/l/j/v/590029-windsor-series-1-7-litre-digital-electric-kettle-morphy-original-imah5h75tghaumyp.jpeg?q=70",
+      "https://rukmini1.flixcart.com/image/1500/1500/xif0q/electric-kettle/x/0/4/590029-windsor-series-1-7-litre-digital-electric-kettle-morphy-original-imah5h75s6jwm2z5.jpeg?q=70",
+      "https://rukmini1.flixcart.com/image/1500/1500/xif0q/electric-kettle/n/n/6/590029-windsor-series-1-7-litre-digital-electric-kettle-morphy-original-imah5h75wp8gxknk.jpeg?q=70",
+      "https://rukmini1.flixcart.com/image/1500/1500/xif0q/electric-kettle/9/z/v/590029-windsor-series-1-7-litre-digital-electric-kettle-morphy-original-imah5h75yghqyp3s.jpeg?q=70"
+    ],
+    "category": "Home Appliances",
+    "brand": "Morphy Richards",
+    "countInStock": 100,
+    "rating": 4.4,
+    "numReviews": 14,
+    "highlights": [
+      "Capacity: 1.7 Litre",
+      "Digital Temperature Control",
+      "Color: Black",
+      "Material: Stainless Steel"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Morphy Richards"
+          },
+          {
+            "name": "Model",
+            "value": "Windsor Series 1.7 Litre Digital"
+          },
+          {
+            "name": "Type",
+            "value": "Electric Kettle"
+          },
+          {
+            "name": "Color",
+            "value": "Black"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "_id": "6a6c8e8f8d1771a25c8a9500",
     "title": "vivo V50 5G",
     "description": "12 GB RAM\n256 GB Storage\n6.77-inch AMOLED Display\n6000 mAh Battery\n50MP + 50MP Dual Rear Camera\n50MP Front Camera\nSnapdragon 7 Gen 3 Processor\n5G Connectivity",
