@@ -13,7 +13,7 @@ const InputField = ({ name, label, type="text", required = true, pattern, maxLen
       type={type}
       id={name}
       placeholder=" "
-      className={`peer w-full border ${errors[name] ? 'border-red-500' : 'border-gray-300'} px-3 pt-5 pb-2 rounded focus:outline-none focus:border-blue-500`}
+      className={`peer w-full border ${errors[name] ? 'border-red-500' : 'border-[#e0e0e0]'} px-3 py-3 rounded-sm text-[14px] focus:outline-none focus:border-[#2874f0] bg-transparent`}
       {...register(name, { 
         required: required ? `${label} is required` : false,
         ...(pattern && { pattern }),
@@ -23,11 +23,11 @@ const InputField = ({ name, label, type="text", required = true, pattern, maxLen
     />
     <label 
       htmlFor={name}
-      className={`absolute left-3 top-4 text-gray-500 text-sm transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-blue-500 ${!errors[name] && 'peer-valid:top-1 peer-valid:text-xs'}`}
+      className={`absolute left-3 top-3 text-[#878787] text-[14px] transition-all duration-200 bg-white px-1 peer-placeholder-shown:top-3 peer-placeholder-shown:text-[14px] peer-focus:-top-2 peer-focus:text-[12px] peer-focus:text-[#2874f0] ${!errors[name] && 'peer-valid:-top-2 peer-valid:text-[12px]'}`}
     >
       {label}
     </label>
-    {errors[name] && <p className="text-red-500 text-xs mt-1">{errors[name].message}</p>}
+    {errors[name] && <p className="text-red-500 text-[11px] mt-1">{errors[name].message}</p>}
   </div>
 );
 
@@ -148,7 +148,7 @@ const Checkout = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen md:flex md:justify-center">
+    <div className="bg-[#483635] min-h-screen md:flex md:justify-center">
       {isProcessing && (
         <div className="fixed inset-0 bg-black/75 z-[99999] flex flex-col items-center justify-center text-white p-4">
           <Loader2 className="h-12 w-12 animate-spin mb-4 text-[#ffc200]" />
@@ -161,20 +161,20 @@ const Checkout = () => {
       <div className="bg-white w-full max-w-md min-h-screen shadow-lg relative flex flex-col pb-36">
         
         {/* Header */}
-        <div className="flex items-center gap-4 p-4 border-b">
-          <ArrowLeft className="h-6 w-6 cursor-pointer text-gray-700" onClick={() => { if(step > 1) setStep(step - 1); else navigate(-1); }} />
-          <h1 className="text-xl font-medium text-gray-900">{getStepTitle()}</h1>
+        <div className="flex items-center gap-4 p-4 pt-5 pb-2">
+          <ArrowLeft className="h-6 w-6 cursor-pointer text-[#212121]" onClick={() => { if(step > 1) setStep(step - 1); else navigate(-1); }} />
+          <h1 className="text-[18px] text-[#212121]">{getStepTitle()}</h1>
         </div>
 
         {/* Stepper */}
-        <div className="px-8 py-4 border-b border-gray-200 bg-white flex justify-between items-center relative overflow-hidden">
-          <div className="absolute top-1/2 left-10 right-10 h-[1.5px] bg-gray-300 -z-0 -translate-y-[6px]" />
+        <div className="px-8 py-5 border-b border-gray-100 bg-white flex justify-between items-center relative overflow-hidden">
+          <div className="absolute top-1/2 left-12 right-12 h-[1px] bg-gray-200 -z-0 -translate-y-2.5" />
           {[1, 2, 3].map((s, i) => (
              <div key={i} className="flex flex-col items-center z-10 bg-white px-2">
-               <div className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-bold border-2 ${step >= s ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-blue-400 text-blue-400'}`}>
-                 {step > s ? '✓' : s}
+               <div className={`h-7 w-7 rounded-full flex items-center justify-center text-[13px] font-bold border-[1.5px] ${step >= s ? 'bg-[#2874f0] border-[#2874f0] text-white' : 'bg-white border-[#2874f0] text-[#2874f0]'}`}>
+                 {s}
                </div>
-               <span className={`text-[11px] mt-1.5 ${step >= s ? 'text-gray-800' : 'text-gray-400'}`}>
+               <span className={`text-[11px] mt-1.5 ${step === s ? 'text-black font-bold' : 'text-gray-400'}`}>
                  {s === 1 ? 'Address' : s === 2 ? 'Order Summary' : 'Payment'}
                </span>
              </div>
@@ -186,12 +186,7 @@ const Checkout = () => {
           
           {/* STEP 1: Address */}
           {step === 1 && (
-            <div className="p-4">
-              <div className="bg-[#fffcf3] border border-[#f5ebcd] rounded p-3 flex gap-2 items-start mb-6 text-sm text-[#8c6720]">
-                <Info className="h-5 w-5 shrink-0 mt-0.5 opacity-70" />
-                <p>Ensure your address details are accurate for a smooth delivery experience</p>
-              </div>
-
+            <div className="p-4 pt-6">
               <form id="address-form" onSubmit={handleSubmit(onSubmitAddress)} className="space-y-4">
                 <InputField name="fullName" label="Full Name" register={register} errors={errors} clearErrors={clearErrors} />
                 <InputField name="mobile" label="Mobile number" type="tel" pattern={{value: /^[0-9]{10}$/, message: "Invalid mobile"}} maxLength={10} register={register} errors={errors} clearErrors={clearErrors} />
@@ -201,10 +196,9 @@ const Checkout = () => {
                   <InputField name="city" label="City" className="flex-1" register={register} errors={errors} clearErrors={clearErrors} />
                   <div className="relative flex-1">
                     <select
-                      className="w-full border border-gray-300 px-3 pt-5 pb-2 rounded focus:outline-none focus:border-blue-500 appearance-none bg-transparent"
+                      className="peer w-full border border-[#2874f0] px-3 py-3 rounded-sm text-[14px] focus:outline-none focus:border-[#2874f0] appearance-none bg-transparent"
                       {...register("state", { required: true })}
                     >
-                      <option value="">Select State</option>
                       <option value="Andhra Pradesh">Andhra Pradesh</option>
                       <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                       <option value="Assam">Assam</option>
@@ -242,7 +236,10 @@ const Checkout = () => {
                       <option value="Lakshadweep">Lakshadweep</option>
                       <option value="Puducherry">Puducherry</option>
                     </select>
-                    <label className="absolute left-3 top-1 text-xs text-gray-500">State</label>
+                    <label className="absolute left-3 -top-2 text-[12px] text-gray-500 bg-white px-1">State</label>
+                    <div className="absolute right-3 top-4 pointer-events-none">
+                      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="#212121" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </div>
                   </div>
                 </div>
 
@@ -435,14 +432,10 @@ const Checkout = () => {
         <div className="absolute bottom-0 left-0 w-full bg-white shadow-[0_-10px_20px_rgba(0,0,0,0.05)] z-50">
           
           {step === 1 && (
-            <div className="flex flex-col">
-              <button form="address-form" type="submit" className="w-full bg-[#ffc200] text-black font-bold text-lg py-4 flex items-center justify-center hover:bg-[#f3b800] transition-colors">
-                Proceed <span className="ml-1 -mt-0.5 text-2xl font-light">›</span>
+            <div className="p-4 bg-white shadow-[0_-4px_10px_rgba(0,0,0,0.05)] border-t border-gray-100">
+              <button form="address-form" type="submit" className="w-full bg-[#ff6116] text-white font-medium text-[16px] py-3.5 rounded-sm flex items-center justify-center">
+                Proceed
               </button>
-              <div className="flex items-center justify-center gap-8 py-3 text-[11px] font-medium text-gray-600 bg-gray-50 border-t border-gray-200">
-                <span className="flex items-center gap-1.5"><Lock className="h-3.5 w-3.5 text-gray-500" /> Secure Checkout</span>
-                <span className="flex items-center gap-1.5"><Truck className="h-3.5 w-3.5 text-gray-500" /> Fast Delivery</span>
-              </div>
             </div>
           )}
 
