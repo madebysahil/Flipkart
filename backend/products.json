@@ -45,6 +45,43 @@
           }
         ]
       }
+    ],
+    "reviews": [
+      {
+        "rating": 5,
+        "title": "Great product",
+        "comment": "Looking so beautiful good. Water boils very quickly and the digital temperature control is super accurate! Worth the money.",
+        "author": "Pragyan Ranjani Sethy",
+        "location": "New Delhi",
+        "date": "18 Mar 2024",
+        "likes": 45,
+        "dislikes": 2,
+        "images": [
+          "https://rukmini1.flixcart.com/image/1500/1500/xif0q/electric-kettle/l/j/v/590029-windsor-series-1-7-litre-digital-electric-kettle-morphy-original-imah5h75tghaumyp.jpeg?q=70"
+        ]
+      },
+      {
+        "rating": 5,
+        "title": "Excellent",
+        "comment": "Beautiful product .Worth every penny.Temperature control works seamlessly. The built quality is also top notch.",
+        "author": "Rupak Kumar Dandpat",
+        "location": "Mumbai",
+        "date": "27 Jan 2024",
+        "likes": 34,
+        "dislikes": 0,
+        "images": []
+      },
+      {
+        "rating": 5,
+        "title": "Highly recommended",
+        "comment": "Very sophisticated tech 👍. The black finish looks very premium in my kitchen.",
+        "author": "Naresh Karela",
+        "location": "Bengaluru",
+        "date": "21 Jan 2024",
+        "likes": 12,
+        "dislikes": 1,
+        "images": []
+      }
     ]
   },
   {
@@ -187,6 +224,21 @@
             "name": "USB",
             "value": "USB Type-C"
           }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "rating": 5,
+        "title": "Terrific purchase",
+        "comment": "Awesome phone, camera quality is superb. Battery backup is also very good. Delivery was on time.",
+        "author": "Ramesh Kumar",
+        "location": "New Delhi",
+        "date": "1 month ago",
+        "likes": 234,
+        "dislikes": 12,
+        "images": [
+          "https://rukmini1.flixcart.com/image/300/300/xif0q/mobile/h/i/x/-original-imah4ssphzgcw2hz.jpeg"
         ]
       }
     ]

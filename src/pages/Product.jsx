@@ -272,7 +272,7 @@ const Product = () => {
             </div>
             
             <div className="flex flex-col">
-              {dummyReviews.map((review, idx) => (
+              {(product.reviews && product.reviews.length > 0 ? product.reviews : dummyReviews).map((review, idx) => (
                 <div key={idx} className="p-4 sm:p-6 border-b border-gray-100 last:border-b-0">
                   <div className="flex items-center gap-3 mb-3">
                     <div className={`${review.rating >= 4 ? 'bg-[#388e3c]' : 'bg-[#ff9f00]'} text-white text-xs font-bold px-1.5 py-0.5 rounded-sm flex items-center gap-1`}>
@@ -281,6 +281,16 @@ const Product = () => {
                     <span className="font-medium text-[#212121]">{review.title}</span>
                   </div>
                   <p className="text-[#212121] text-[14px] mb-4">{review.comment}</p>
+                  
+                  {review.images && review.images.length > 0 && (
+                    <div className="flex gap-2 mb-4">
+                      {review.images.map((img, i) => (
+                        <div key={i} className="w-16 h-16 border border-gray-200 rounded-sm overflow-hidden flex-shrink-0 cursor-pointer">
+                           <img src={img} alt="Review" className="w-full h-full object-cover" />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   
                   <div className="flex items-center justify-between mt-4">
                     <div className="flex items-center gap-2 text-[12px] text-[#878787]">
