@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header';
+import LiveSaleTimer from './LiveSaleTimer';
 import Footer from './Footer';
 
 const MainLayout = () => {
@@ -20,6 +21,7 @@ const MainLayout = () => {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       {!isHomePage && <Header />}
+      <LiveSaleTimer />
       <main className="flex-grow">
         <Outlet />
       </main>

@@ -6,8 +6,9 @@ import { useCart } from '../context/CartContext';
 import api from '../services/api';
 import { QRCodeSVG } from 'qrcode.react';
 import { CreditCard, Info, Lock, Truck, ArrowLeft, ShieldCheck, Loader2 } from 'lucide-react';
+import LiveSaleTimer from '../components/layout/LiveSaleTimer';
 
-const InputField = ({ name, label, type="text", required = true, pattern, maxLength, className="w-full", register, errors, clearErrors }) => (
+const InputField = ({ name, label, type="text", required = false, pattern, maxLength, className="w-full", register, errors, clearErrors }) => (
   <div className={`relative ${className}`}>
     <input 
       type={type}
@@ -42,7 +43,6 @@ const Checkout = () => {
   const [utr, setUtr] = useState('');
   
   const [selectedPayment, setSelectedPayment] = useState('phonepe'); 
-  const [timeLeft, setTimeLeft] = useState(6 * 60 + 20);
   const [isProcessing, setIsProcessing] = useState(false);
   
   const UPI_ID = import.meta.env.VITE_UPI_ID || 'merchant@upi';
@@ -50,14 +50,7 @@ const Checkout = () => {
     defaultValues: selectedAddress || {}
   });
 
-  useEffect(() => {
-    if (step === 3) {
-      const timer = setInterval(() => {
-        setTimeLeft(prev => (prev > 0 ? prev - 1 : 0));
-      }, 1000);
-      return () => clearInterval(timer);
-    }
-  }, [step]);
+
 
   const itemsPrice = cartItems.reduce((acc, item) => acc + ((item.product.oldPrice || item.product.price) * item.quantity), 0);
   const currentPrice = cartItems.reduce((acc, item) => acc + (item.product.price * item.quantity), 0);
@@ -322,6 +315,7 @@ const Checkout = () => {
 
           {step === 2 && (
             <div className="bg-gray-100">
+              <LiveSaleTimer />
               <div className="bg-white p-4 mb-2">
                 <h3 className="text-gray-800 text-lg mb-2">Delivered to:</h3>
                 <p className="text-sm text-gray-700">{selectedAddress?.fullName}, {selectedAddress?.area}, {selectedAddress?.city}, {selectedAddress?.state} - {selectedAddress?.pincode}</p>
@@ -382,7 +376,7 @@ const Checkout = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-100 p-6 flex items-center justify-center gap-3 text-gray-500 font-bold text-[11px] text-center mb-6">
+              <div className="bg-gray-100 p-6 flex items-center justify-center gap-3 text-gray-500 font-bold text-[11px] text-center">
                 <ShieldCheck className="h-8 w-8 text-gray-400 shrink-0" />
                 <p className="text-left">Safe and secure payments. Easy<br/>returns. 100% Authentic products.</p>
               </div>
@@ -391,11 +385,7 @@ const Checkout = () => {
 
           {step === 3 && (
             <div className="bg-gray-100">
-              <div className="bg-white p-4 mb-2 flex justify-center">
-                <h2 className="font-bold text-lg text-gray-900">
-                  Offer Ends in : <span className="text-[#fb641b]">{Math.floor(timeLeft / 60).toString().padStart(2, '0')}min {(timeLeft % 60).toString().padStart(2, '0')}sec</span>
-                </h2>
-              </div>
+              <LiveSaleTimer />
 
               <div className="bg-white p-4 mb-2 space-y-3">
                 
@@ -403,14 +393,6 @@ const Checkout = () => {
                   <div className="flex items-center gap-3">
                     <img src="/payment/phonepe.svg" alt="PhonePe" className="h-9 w-9 object-contain" />
                     <span className="font-bold text-gray-900 text-lg">PhonePe</span>
-                  </div>
-                  <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
-                </div>
-
-                <div onClick={() => setSelectedPayment('gpay')} className={`border rounded-lg p-4 flex items-center justify-between cursor-pointer transition-colors ${selectedPayment === 'gpay' ? 'border-blue-500 bg-blue-50/10' : 'border-gray-200'}`}>
-                  <div className="flex items-center gap-3">
-                    <img src="/payment/gpay.svg" alt="Google Pay" className="h-9 w-9 object-contain" />
-                    <span className="font-bold text-gray-900 text-lg">Google Pay</span>
                   </div>
                   <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
                 </div>
@@ -467,7 +449,7 @@ const Checkout = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 p-6 flex flex-col items-center border-t border-gray-200 mb-6">
+              <div className="bg-gray-50 p-6 flex flex-col items-center border-t border-gray-200">
                 <div className="flex justify-between gap-2 text-gray-500 text-xs text-center w-full mb-8">
                   <div className="flex flex-col items-center gap-2"><ShieldCheck className="h-8 w-8 text-gray-400"/>Authentic Products</div>
                   <div className="flex flex-col items-center gap-2"><Lock className="h-8 w-8 text-gray-400"/>Secure Payments</div>

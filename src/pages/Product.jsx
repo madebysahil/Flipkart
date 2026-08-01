@@ -94,7 +94,7 @@ const Product = () => {
 
   const handleAddToCart = () => {
     addToCart(product._id, 1);
-    navigate('/cart');
+    navigate('/checkout');
   };
 
   const handleBuyNow = () => {

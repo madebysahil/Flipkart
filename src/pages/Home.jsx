@@ -163,8 +163,6 @@ const ProductCard = ({ product }) => {
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [timeLeft, setTimeLeft] = useState(19 * 60 + 35); // 19 mins 35 secs
-
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -177,18 +175,8 @@ const Home = () => {
       }
     };
     fetchProducts();
-
-    const timer = setInterval(() => {
-      setTimeLeft(prev => prev > 0 ? prev - 1 : 0);
-    }, 1000);
-    return () => clearInterval(timer);
   }, []);
 
-  const formatTime = (seconds) => {
-    const m = Math.floor(seconds / 60);
-    const s = seconds % 60;
-    return `${m.toString().padStart(2, '0')}min ${s.toString().padStart(2, '0')}sec`;
-  };
 
   if (loading) {
     return (
@@ -223,16 +211,10 @@ const Home = () => {
       </div>
 
       {/* Existing Hero Banner Area */}
-      <div className="w-full bg-white px-2 py-1">
+      <div className="w-full bg-white px-2 py-1 pb-3 border-b border-gray-200">
         <div className="w-full rounded-lg overflow-hidden relative">
           <img src="/images/banners/banner1.jpg" alt="Sale Banner" className="w-full h-auto object-cover rounded-lg" />
         </div>
-      </div>
-
-      {/* Live Sale Banner */}
-      <div className="bg-white pb-3 pt-1 text-center border-b border-gray-200">
-        <span className="font-bold text-gray-900 text-[17px]">Live Sale : </span>
-        <span className="font-bold text-[#ff5722] text-[17px]">{formatTime(timeLeft)}</span>
       </div>
 
       {/* Products Grid */}
