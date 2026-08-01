@@ -333,5 +333,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_mivi_soundbar_1785609833491",
+    "title": "Mivi Fort H350 Soundbar, 350 Watts, 5.1 Channel, Multi-Input and EQ Modes",
+    "description": "Buy Mivi Fort H350 Soundbar online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 489,
+    "oldPrice": 4890,
+    "discount": 90,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/speaker/t/0/n/-original-imah4bzezrvt7bzp.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/speaker/k/z/e/-original-imahkckkpze5byyx.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/speaker/t/0/n/-original-imah4bzezrvt7bzp.jpeg?q=80"
+    ],
+    "category": "Electronics",
+    "brand": "Mivi",
+    "countInStock": 120,
+    "rating": 4.3,
+    "numReviews": 5612,
+    "highlights": [
+      "Power Output (RMS): 350 W",
+      "Power Source: AC Adapter",
+      "Bluetooth Version: 5.1",
+      "Wireless range: 10 m",
+      "5.1 Channel Surround Sound"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Mivi"
+          },
+          {
+            "name": "Model",
+            "value": "Fort H350"
+          },
+          {
+            "name": "Type",
+            "value": "Soundbar"
+          },
+          {
+            "name": "Color",
+            "value": "Black"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Ankit Gupta",
+        "title": "Bass is thumping!",
+        "rating": 5,
+        "comment": "Mind-blowing sound quality for the price. The 350W output is massive and the bass really hits hard. Worth every penny.",
+        "date": "3 days ago",
+        "location": "Chennai",
+        "likes": 115,
+        "dislikes": 5,
+        "images": []
+      },
+      {
+        "author": "Neha Sharma",
+        "title": "Good surround sound",
+        "rating": 4,
+        "comment": "The 5.1 channel surround gives a theatre-like experience at home. Bluetooth connectivity is solid with no drops.",
+        "date": "20 days ago",
+        "location": "Kolkata",
+        "likes": 89,
+        "dislikes": 2,
+        "images": []
+      },
+      {
+        "author": "Rajeev Kumar",
+        "title": "Value for money",
+        "rating": 4,
+        "comment": "Good soundbar for living room setup. Dialogue is clear, and the remote works seamlessly. Great budget friendly option.",
+        "date": "1 month ago",
+        "location": "Noida",
+        "likes": 42,
+        "dislikes": 1,
+        "images": []
+      }
+    ]
   }
 ]
