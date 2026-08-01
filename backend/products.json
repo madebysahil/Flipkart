@@ -1244,5 +1244,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_prestige_cooker_1785611061511",
+    "title": "Prestige Svachh Duo 5 L Inner Lid Induction Bottom Pressure Cooker",
+    "description": "Buy Prestige Svachh Duo 5 L Pressure Cooker online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 299,
+    "oldPrice": 2990,
+    "discount": 90,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/pressure-cooker/8/v/0/yes-1-20264-prestige-original-imahgwghkg3kcgzb.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/pressure-cooker/q/8/z/-original-imahp6ys23my8nkz.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/pressure-cooker/8/v/0/yes-1-20264-prestige-original-imahgwghkg3kcgzb.jpeg?q=80"
+    ],
+    "category": "Home & Kitchen",
+    "brand": "Prestige",
+    "countInStock": 120,
+    "rating": 4.6,
+    "numReviews": 5122,
+    "highlights": [
+      "Capacity: 5 Litres",
+      "Inner Lid for extra safety",
+      "Induction Bottom compatible",
+      "Svachh deep lid design prevents messy spills",
+      "Made of Hard Anodized Aluminum"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Prestige"
+          },
+          {
+            "name": "Model",
+            "value": "Svachh Duo"
+          },
+          {
+            "name": "Capacity",
+            "value": "5 L"
+          },
+          {
+            "name": "Material",
+            "value": "Hard Anodized Aluminum"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Priya S",
+        "title": "No messy spills",
+        "rating": 5,
+        "comment": "The Svachh lid design actually works! There are no messy dal spills on the stove anymore. Very easy to clean.",
+        "date": "10 days ago",
+        "location": "Chennai",
+        "likes": 215,
+        "dislikes": 12,
+        "images": []
+      },
+      {
+        "author": "Anil Verma",
+        "title": "Good quality but heavy",
+        "rating": 4,
+        "comment": "The hard anodized body is very sturdy but makes the cooker slightly heavy. Works perfectly on my induction cooktop.",
+        "date": "1 month ago",
+        "location": "Kanpur",
+        "likes": 120,
+        "dislikes": 6,
+        "images": []
+      },
+      {
+        "author": "Kavita Rao",
+        "title": "Must have for 4-5 people",
+        "rating": 5,
+        "comment": "5 litres is the perfect size for cooking rice or dal for our family of 5. Prestige quality is reliable as always.",
+        "date": "2 months ago",
+        "location": "Hyderabad",
+        "likes": 98,
+        "dislikes": 3,
+        "images": []
+      }
+    ]
   }
 ]
