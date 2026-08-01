@@ -995,5 +995,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_samsung_fridge_1785610738634",
+    "title": "Samsung 189 L Direct Cool Single Door 4 Star Refrigerator",
+    "description": "Buy Samsung 189 L Direct Cool Single Door 4 Star Refrigerator online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 599,
+    "oldPrice": 11980,
+    "discount": 95,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/refrigerator-new/c/8/q/-original-imahhjf9qfqdgfuk.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/refrigerator-new/c/8/q/-original-imahhjf9qfqdgfuk.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/refrigerator-new/c/8/q/-original-imahhjf9qfqdgfuk.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Samsung",
+    "countInStock": 35,
+    "rating": 4.5,
+    "numReviews": 3481,
+    "highlights": [
+      "189 L Capacity",
+      "4 Star Energy Rating",
+      "Direct Cool technology",
+      "Digital Inverter Compressor",
+      "Base Stand with Drawer"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Samsung"
+          },
+          {
+            "name": "Capacity",
+            "value": "189 L"
+          },
+          {
+            "name": "Defrosting Type",
+            "value": "Direct Cool"
+          },
+          {
+            "name": "Type",
+            "value": "Single Door"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Anand R",
+        "title": "Perfect for small family",
+        "rating": 5,
+        "comment": "The base drawer is very convenient for storing onions and potatoes. Cooling is very efficient and fast. Noise is almost zero.",
+        "date": "12 days ago",
+        "location": "Bengaluru",
+        "likes": 284,
+        "dislikes": 11,
+        "images": []
+      },
+      {
+        "author": "Meera Patel",
+        "title": "Good energy efficiency",
+        "rating": 5,
+        "comment": "The 4-star rating is definitely helping with electricity bills. Samsung quality is reliable as always.",
+        "date": "1 month ago",
+        "location": "Ahmedabad",
+        "likes": 156,
+        "dislikes": 5,
+        "images": []
+      },
+      {
+        "author": "Varun S",
+        "title": "Decent fridge",
+        "rating": 4,
+        "comment": "The floral design looks good in the kitchen. Storage space inside is well optimized. Just wish it had a bigger freezer.",
+        "date": "20 days ago",
+        "location": "Delhi",
+        "likes": 88,
+        "dislikes": 4,
+        "images": []
+      }
+    ]
   }
 ]
