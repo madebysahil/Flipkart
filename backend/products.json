@@ -115,10 +115,22 @@
       {
         "category": "General",
         "items": [
-          { "name": "Brand", "value": "Atomberg" },
-          { "name": "Model", "value": "Renesa Prime" },
-          { "name": "Type", "value": "Ceiling Fan" },
-          { "name": "Motor Type", "value": "BLDC" }
+          {
+            "name": "Brand",
+            "value": "Atomberg"
+          },
+          {
+            "name": "Model",
+            "value": "Renesa Prime"
+          },
+          {
+            "name": "Type",
+            "value": "Ceiling Fan"
+          },
+          {
+            "name": "Motor Type",
+            "value": "BLDC"
+          }
         ]
       }
     ],
@@ -154,6 +166,88 @@
         "location": "Ahmedabad",
         "likes": 156,
         "dislikes": 3,
+        "images": []
+      }
+    ]
+  },
+  {
+    "_id": "product_iphone_17_pro_1785609343467",
+    "title": "Apple iPhone 17 Pro (Cosmic Orange, 512 GB)",
+    "description": "Buy Apple iPhone 17 Pro online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 599,
+    "oldPrice": 59900,
+    "discount": 99,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/q/l/l/-original-imahft5nzymbfwfh.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+    ],
+    "category": "Mobiles",
+    "brand": "Apple",
+    "countInStock": 150,
+    "rating": 4.8,
+    "numReviews": 23412,
+    "highlights": [
+      "512 GB ROM",
+      "15.49 cm (6.1 inch) Super Retina XDR Display",
+      "48MP + 12MP + 12MP | 12MP Front Camera",
+      "A17 Pro Chip, 6 Core Processor"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Apple"
+          },
+          {
+            "name": "Model",
+            "value": "iPhone 17 Pro"
+          },
+          {
+            "name": "Color",
+            "value": "Cosmic Orange"
+          },
+          {
+            "name": "Storage",
+            "value": "512 GB"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Arjun Reddy",
+        "title": "Mind-blowing performance",
+        "rating": 5,
+        "comment": "The A17 Pro chip is insanely fast. Gaming and multitasking are a breeze. The Cosmic Orange color looks stunning in person.",
+        "date": "10 days ago",
+        "location": "Bengaluru",
+        "likes": 845,
+        "dislikes": 23,
+        "images": []
+      },
+      {
+        "author": "Simran Kaur",
+        "title": "Incredible Camera",
+        "rating": 5,
+        "comment": "Upgraded from iPhone 13 Pro. The camera improvements are massive, especially in low light. Battery life easily lasts a full day.",
+        "date": "1 month ago",
+        "location": "New Delhi",
+        "likes": 612,
+        "dislikes": 15,
+        "images": []
+      },
+      {
+        "author": "Nikhil Agarwal",
+        "title": "Best premium smartphone",
+        "rating": 4,
+        "comment": "Very premium feel with the titanium body. It's noticeably lighter. Only deducting one star because the charging speeds could be better.",
+        "date": "15 days ago",
+        "location": "Mumbai",
+        "likes": 420,
+        "dislikes": 18,
         "images": []
       }
     ]
