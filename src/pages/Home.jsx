@@ -195,8 +195,25 @@ const Home = () => {
       <HeaderActions />
       <CategoryCircles />
 
-      {/* Hero Banner Area */}
-      <div className="w-full bg-white px-2 py-2">
+      {/* Freedom Sale Banner */}
+      <div className="w-full bg-white px-2 pt-2 pb-1">
+        <div className="w-full rounded-lg overflow-hidden relative bg-gradient-to-r from-[#ff9933] via-white to-[#138808] p-[2px] shadow-sm">
+          <div className="bg-white rounded-md w-full h-full flex flex-col items-center justify-center py-3 relative overflow-hidden">
+            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-orange-400 via-transparent to-green-500 pointer-events-none"></div>
+            <h2 className="text-[22px] font-black italic text-transparent bg-clip-text bg-gradient-to-r from-[#ff6100] via-[#212121] to-[#0a6600] uppercase tracking-wide leading-tight mb-1 relative z-10 drop-shadow-sm">
+              The Freedom Sale
+            </h2>
+            <div className="flex items-center gap-2 relative z-10">
+              <span className="bg-[#fb641b] text-white text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase tracking-wider animate-pulse">Live Now</span>
+              <span className="text-[#212121] text-[13px] font-bold">Up to 80% Off</span>
+            </div>
+            <p className="text-[10px] text-gray-500 mt-1 font-medium relative z-10">On Electronics, Fashion & more</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Existing Hero Banner Area */}
+      <div className="w-full bg-white px-2 py-1">
         <div className="w-full rounded-lg overflow-hidden relative">
           <img src="/images/banners/banner1.jpg" alt="Sale Banner" className="w-full h-auto object-cover rounded-lg" />
         </div>
