@@ -1737,5 +1737,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_samsung_microwave_1785611707593",
+    "title": "Samsung 23 L Ceramic Cavity Keep Warm Grill Microwave Oven",
+    "description": "Buy Samsung 23 L Ceramic Cavity Keep Warm Grill Microwave Oven online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 1799,
+    "oldPrice": 6919,
+    "discount": 74,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/microwave-new/m/c/w/-original-imaheyuszwf79q54.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/microwave-new/m/c/w/-original-imaheyuszwf79q54.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/microwave-new/m/c/w/-original-imaheyuszwf79q54.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Samsung",
+    "countInStock": 30,
+    "rating": 4.5,
+    "numReviews": 4210,
+    "highlights": [
+      "Capacity: 23 L",
+      "Ceramic Enamel Cavity",
+      "Grill & Keep Warm features",
+      "Eco Mode for energy saving",
+      "Color: Black"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Samsung"
+          },
+          {
+            "name": "Capacity",
+            "value": "23 L"
+          },
+          {
+            "name": "Type",
+            "value": "Grill"
+          },
+          {
+            "name": "Cavity Material",
+            "value": "Ceramic Enamel"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Anjali K",
+        "title": "Excellent build quality",
+        "rating": 5,
+        "comment": "The ceramic cavity is so easy to clean. Much better than standard stainless steel interiors. Highly recommend.",
+        "date": "10 days ago",
+        "location": "Mumbai",
+        "likes": 234,
+        "dislikes": 12,
+        "images": []
+      },
+      {
+        "author": "Rahul M",
+        "title": "Good for reheating and grilling",
+        "rating": 4,
+        "comment": "Works great for daily reheating and the grill function is decent for making paneer tikka. Display is a bit dim.",
+        "date": "1 month ago",
+        "location": "Delhi",
+        "likes": 145,
+        "dislikes": 5,
+        "images": []
+      },
+      {
+        "author": "Sneha",
+        "title": "Keep warm feature is useful",
+        "rating": 5,
+        "comment": "I use the keep warm feature a lot when dinner is delayed. Samsung quality is reliable as always.",
+        "date": "2 months ago",
+        "location": "Pune",
+        "likes": 88,
+        "dislikes": 3,
+        "images": []
+      }
+    ]
   }
 ]
