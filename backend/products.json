@@ -1327,5 +1327,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_crompton_mixer_1785611191885",
+    "title": "Crompton DS 500 W Mixer Grinder (3 Jars)",
+    "description": "Buy Crompton DS 500 W Mixer Grinder online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 399,
+    "oldPrice": 1735,
+    "discount": 77,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/mixer-grinder-juicer/o/s/a/acgm-ds500w3j-blk-crompton-original-imags4egyhcdmkjw.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/mixer-grinder-juicer/o/s/a/acgm-ds500w3j-blk-crompton-original-imags4egyhcdmkjw.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/mixer-grinder-juicer/o/s/a/acgm-ds500w3j-blk-crompton-original-imags4egyhcdmkjw.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Crompton",
+    "countInStock": 45,
+    "rating": 4.4,
+    "numReviews": 3280,
+    "highlights": [
+      "Power: 500 W",
+      "3 Stainless Steel Jars",
+      "Motor Overload Protection",
+      "Ergonomic handle design",
+      "Color: Black"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Crompton"
+          },
+          {
+            "name": "Model",
+            "value": "DS 500"
+          },
+          {
+            "name": "Type",
+            "value": "Mixer Grinder"
+          },
+          {
+            "name": "Number of Jars",
+            "value": "3"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Ankit R",
+        "title": "Good for daily use",
+        "rating": 5,
+        "comment": "The 500W motor is quite powerful for making daily chutneys and grinding spices. The jars are of good quality stainless steel.",
+        "date": "10 days ago",
+        "location": "Pune",
+        "likes": 115,
+        "dislikes": 12,
+        "images": []
+      },
+      {
+        "author": "Sunita Devi",
+        "title": "Very noisy",
+        "rating": 3,
+        "comment": "It works well but the noise level is very high compared to my previous mixer. Otherwise good value for money.",
+        "date": "1 month ago",
+        "location": "Lucknow",
+        "likes": 98,
+        "dislikes": 6,
+        "images": []
+      },
+      {
+        "author": "Vijay T",
+        "title": "Sleek design",
+        "rating": 4,
+        "comment": "The black finish looks very elegant in my kitchen. The overload protector is a very useful safety feature.",
+        "date": "2 months ago",
+        "location": "Chennai",
+        "likes": 84,
+        "dislikes": 3,
+        "images": []
+      }
+    ]
   }
 ]
