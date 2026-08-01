@@ -581,5 +581,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_lg_ac_1785610181632",
+    "title": "LG 2025 Model 1.5 Ton 3 Star Split Inverter AC",
+    "description": "Buy LG 2025 Model 1.5 Ton 3 Star Split Inverter AC online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 699,
+    "oldPrice": 34950,
+    "discount": 98,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-conditioner-new/m/z/e/-original-imahmgq7b3vhzuwm.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-conditioner-new/m/b/k/-original-imahmgpmhga3eb54.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-conditioner-new/m/z/e/-original-imahmgq7b3vhzuwm.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "LG",
+    "countInStock": 45,
+    "rating": 4.5,
+    "numReviews": 4512,
+    "highlights": [
+      "1.5 Ton Capacity",
+      "3 Star Energy Rating",
+      "Dual Inverter Compressor",
+      "AI Convertible 6-in-1 Cooling",
+      "Copper Condenser"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "LG"
+          },
+          {
+            "name": "Model",
+            "value": "2025 Model"
+          },
+          {
+            "name": "Type",
+            "value": "Split Inverter AC"
+          },
+          {
+            "name": "Capacity",
+            "value": "1.5 Ton"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Vikas Singh",
+        "title": "Super cooling and silent",
+        "rating": 5,
+        "comment": "The AI convertible mode is fantastic. It cools the room very fast and the outdoor unit makes almost zero noise. Highly recommended.",
+        "date": "2 months ago",
+        "location": "Noida",
+        "likes": 210,
+        "dislikes": 12,
+        "images": []
+      },
+      {
+        "author": "Anjali Patel",
+        "title": "Good AC but installation took time",
+        "rating": 4,
+        "comment": "AC performance is great. The energy efficiency is good for regular use. Installation took 2 days which was a bit slow.",
+        "date": "15 days ago",
+        "location": "Ahmedabad",
+        "likes": 145,
+        "dislikes": 9,
+        "images": []
+      },
+      {
+        "author": "Rohit Verma",
+        "title": "LG reliability",
+        "rating": 5,
+        "comment": "Upgraded from a non-inverter AC and the electricity bill difference is huge. The 6-in-1 cooling feature is very useful during monsoon.",
+        "date": "1 month ago",
+        "location": "Lucknow",
+        "likes": 88,
+        "dislikes": 4,
+        "images": []
+      }
+    ]
   }
 ]
