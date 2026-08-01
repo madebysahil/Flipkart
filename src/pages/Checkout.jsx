@@ -502,7 +502,7 @@ const Checkout = () => {
                     You Save ₹{totalSavings}
                   </div>
                 </div>
-                <button onClick={handleCreateOrder} className="w-1/2 bg-[#ffc200] text-black font-bold text-lg flex items-center justify-center hover:bg-[#f3b800] transition-colors">
+                <button onClick={handleCreateOrder} className="w-1/2 bg-[#ffc200] text-black font-medium text-[16px] flex items-center justify-center hover:bg-[#f3b800] transition-colors">
                   Place Order <span className="ml-1 -mt-0.5 text-2xl font-light">›</span>
                 </button>
               </div>
@@ -528,7 +528,7 @@ const Checkout = () => {
                     You Save ₹{totalSavings}
                   </div>
                 </div>
-                <button onClick={handlePayNow} className="w-1/2 bg-[#ffc200] text-black font-bold text-lg flex items-center justify-center hover:bg-[#f3b800] transition-colors">
+                <button onClick={handlePayNow} className="w-1/2 bg-[#ffc200] text-black font-medium text-[16px] flex items-center justify-center hover:bg-[#f3b800] transition-colors">
                   {selectedPayment === 'qr' ? 'Continue' : 'Pay Now'}
                 </button>
               </div>
