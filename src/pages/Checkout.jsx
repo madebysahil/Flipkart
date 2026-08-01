@@ -466,10 +466,10 @@ const Checkout = () => {
                     <span>Easy Returns</span>
                   </div>
                 </div>
-                <div className="flex gap-5 items-center justify-center text-[#878787] opacity-80">
-                   <span className="font-black italic text-[22px] tracking-tighter">VISA</span>
-                   <span className="font-bold text-[19px] tracking-tight">mastercard</span>
-                   <span className="font-black italic text-[20px] tracking-tighter">RuPay</span>
+                <div className="flex gap-4 items-center justify-center mt-2">
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="VISA" className="h-4 object-contain" />
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-6 object-contain" />
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/RuPay.svg" alt="RuPay" className="h-5 object-contain" />
                 </div>
               </div>
 
