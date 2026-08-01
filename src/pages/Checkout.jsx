@@ -226,7 +226,7 @@ const Checkout = () => {
           </p>
         </div>
       )}
-      <div className="bg-white w-full max-w-md min-h-screen shadow-lg relative flex flex-col pb-36">
+      <div className="bg-white w-full max-w-md min-h-screen shadow-lg relative flex flex-col pb-0">
         
         <div className="flex items-center gap-4 p-4 pt-5 pb-2">
           <ArrowLeft className="h-6 w-6 cursor-pointer text-[#212121]" onClick={() => { if(step > 1) setStep(step - 1); else navigate(-1); }} />
@@ -449,16 +449,16 @@ const Checkout = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 p-6 flex flex-col items-center border-t border-gray-200">
-                <div className="flex justify-between gap-2 text-gray-500 text-xs text-center w-full mb-8">
-                  <div className="flex flex-col items-center gap-2"><ShieldCheck className="h-8 w-8 text-gray-400"/>Authentic Products</div>
-                  <div className="flex flex-col items-center gap-2"><Lock className="h-8 w-8 text-gray-400"/>Secure Payments</div>
-                  <div className="flex flex-col items-center gap-2"><Truck className="h-8 w-8 text-gray-400"/>Easy Returns</div>
+              <div className="bg-white px-4 py-6 flex flex-col items-center">
+                <div className="flex justify-between gap-2 text-gray-500 text-[11px] text-center w-full mb-6 px-4">
+                  <div className="flex flex-col items-center gap-1.5"><ShieldCheck className="h-8 w-8 text-gray-400" strokeWidth={1}/>Authentic Products</div>
+                  <div className="flex flex-col items-center gap-1.5"><Lock className="h-8 w-8 text-gray-400" strokeWidth={1}/>Secure Payments</div>
+                  <div className="flex flex-col items-center gap-1.5"><Truck className="h-8 w-8 text-gray-400" strokeWidth={1}/>Easy Returns</div>
                 </div>
-                <div className="flex gap-6 items-center justify-center grayscale opacity-80 mix-blend-multiply">
-                   <span className="font-black italic text-blue-900 text-2xl tracking-tighter">VISA</span>
-                   <span className="font-bold text-red-500 text-xl tracking-tight">mastercard</span>
-                   <span className="font-black italic text-blue-700 text-xl tracking-tighter">RuPay</span>
+                <div className="flex gap-4 items-center justify-center grayscale opacity-70 mix-blend-multiply">
+                   <span className="font-black italic text-gray-600 text-2xl tracking-tighter">VISA</span>
+                   <span className="font-bold text-gray-500 text-xl tracking-tight">mastercard</span>
+                   <span className="font-black italic text-gray-500 text-2xl tracking-tighter">RuPay</span>
                 </div>
               </div>
 
