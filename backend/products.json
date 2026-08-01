@@ -1575,5 +1575,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_prestige_combo_cooker_1785611491183",
+    "title": "Prestige Popular 2 L, 3 L, 5 L Outer Lid Pressure Cooker Combo",
+    "description": "Buy Prestige Popular Pressure Cooker Combo online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 599,
+    "oldPrice": 1815,
+    "discount": 67,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/pressure-cooker/5/9/i/no-3-10039-prestige-original-imahgkj9ca8mgyhu.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/pressure-cooker/5/9/i/no-3-10039-prestige-original-imahgkj9ca8mgyhu.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/pressure-cooker/5/9/i/no-3-10039-prestige-original-imahgkj9ca8mgyhu.jpeg?q=80"
+    ],
+    "category": "Home & Kitchen",
+    "brand": "Prestige",
+    "countInStock": 80,
+    "rating": 4.2,
+    "numReviews": 7561,
+    "highlights": [
+      "Combo of 3 Cookers: 2L, 3L, and 5L",
+      "Outer Lid Design",
+      "Material: Virgin Aluminum",
+      "Gas Stovetop Compatible",
+      "Metallic Safety Plug"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Prestige"
+          },
+          {
+            "name": "Model",
+            "value": "Popular Combo"
+          },
+          {
+            "name": "Capacity",
+            "value": "2 L, 3 L, 5 L"
+          },
+          {
+            "name": "Lid Type",
+            "value": "Outer Lid"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Ramesh Kumar",
+        "title": "Best combo offer",
+        "rating": 5,
+        "comment": "Getting 3 cookers of different sizes at this price is a steal. Quality is good as expected from Prestige.",
+        "date": "10 days ago",
+        "location": "Jaipur",
+        "likes": 280,
+        "dislikes": 12,
+        "images": []
+      },
+      {
+        "author": "Anita Desai",
+        "title": "Good for gas stove",
+        "rating": 4,
+        "comment": "These are not induction friendly which is a bummer, but they work perfectly on a normal gas stove.",
+        "date": "1 month ago",
+        "location": "Surat",
+        "likes": 145,
+        "dislikes": 8,
+        "images": []
+      },
+      {
+        "author": "Vikram S",
+        "title": "Handles are a bit loose",
+        "rating": 3,
+        "comment": "The cookers are fine but the handle on the 2L one became loose after a few weeks of use. Had to tighten it with a screwdriver.",
+        "date": "2 months ago",
+        "location": "Ahmedabad",
+        "likes": 85,
+        "dislikes": 15,
+        "images": []
+      }
+    ]
   }
 ]
