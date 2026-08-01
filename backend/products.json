@@ -747,5 +747,87 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_kettle_1785610417931",
+    "title": "Morphy Richards Windsor Series 1.7 Litre Digital Electric Kettle",
+    "description": "Buy Morphy Richards Windsor Series 1.7 Litre Digital Electric Kettle online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 455,
+    "oldPrice": 15167,
+    "discount": 97,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/electric-kettle/l/j/v/590029-windsor-series-1-7-litre-digital-electric-kettle-morphy-original-imah5h75tghaumyp.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/electric-kettle/x/0/4/590029-windsor-series-1-7-litre-digital-electric-kettle-morphy-original-imah5h75s6jwm2z5.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/electric-kettle/l/j/v/590029-windsor-series-1-7-litre-digital-electric-kettle-morphy-original-imah5h75tghaumyp.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Morphy Richards",
+    "countInStock": 150,
+    "rating": 4.8,
+    "numReviews": 3521,
+    "highlights": [
+      "Capacity: 1.7 L",
+      "Digital Temperature Control",
+      "Material: Stainless Steel",
+      "Auto Shut-off"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Morphy Richards"
+          },
+          {
+            "name": "Model",
+            "value": "Windsor Series"
+          },
+          {
+            "name": "Type",
+            "value": "Electric Kettle"
+          },
+          {
+            "name": "Color",
+            "value": "Steel"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Nitin R",
+        "title": "Very useful digital kettle",
+        "rating": 5,
+        "comment": "The digital temperature display is a game changer. I can heat water exactly to the temperature I want for my green tea.",
+        "date": "3 weeks ago",
+        "location": "Gurgaon",
+        "likes": 340,
+        "dislikes": 22,
+        "images": []
+      },
+      {
+        "author": "Pooja Desai",
+        "title": "Excellent build quality",
+        "rating": 5,
+        "comment": "Stainless steel body looks premium. It boils water very quickly. The auto shut-off works perfectly.",
+        "date": "1 month ago",
+        "location": "Ahmedabad",
+        "likes": 211,
+        "dislikes": 10,
+        "images": []
+      },
+      {
+        "author": "Vikram Singh",
+        "title": "A bit expensive but worth it",
+        "rating": 4,
+        "comment": "It's slightly heavier than plastic kettles but the quality is unmatched. The keep-warm function is very helpful in winters.",
+        "date": "2 months ago",
+        "location": "Shimla",
+        "likes": 95,
+        "dislikes": 5,
+        "images": []
+      }
+    ]
   }
 ]
