@@ -1410,5 +1410,83 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_pigeon_induction_1785611296057",
+    "title": "Pigeon 2100 W Induction Cooktop Push Button",
+    "description": "Buy Pigeon 2100 W Induction Cooktop online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 449,
+    "oldPrice": 2138,
+    "discount": 79,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/induction-cook-top/r/0/m/-original-imahf77vrzjhj3gk.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/induction-cook-top/r/0/m/-original-imahf77vrzjhj3gk.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/induction-cook-top/r/0/m/-original-imahf77vrzjhj3gk.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Pigeon",
+    "countInStock": 100,
+    "rating": 4.1,
+    "numReviews": 354,
+    "highlights": [
+      "Power: 2100 W",
+      "Push Button Controls",
+      "Pre-set Cooking Menus",
+      "Auto Shut-off feature"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Pigeon"
+          },
+          {
+            "name": "Power",
+            "value": "2100 W"
+          },
+          {
+            "name": "Control",
+            "value": "Push Button"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Naveen",
+        "title": "Good for the price",
+        "rating": 4,
+        "comment": "Heats up quickly. The push buttons are a bit hard to press but they work fine. Good for hostellers.",
+        "date": "1 month ago",
+        "location": "Bengaluru",
+        "likes": 56,
+        "dislikes": 2,
+        "images": []
+      },
+      {
+        "author": "Sushma",
+        "title": "Value for money",
+        "rating": 5,
+        "comment": "Nice induction cooktop. Working well so far. The pre set menus are helpful.",
+        "date": "2 months ago",
+        "location": "Delhi",
+        "likes": 34,
+        "dislikes": 1,
+        "images": []
+      },
+      {
+        "author": "Karthik",
+        "title": "A bit noisy",
+        "rating": 3,
+        "comment": "The fan makes some noise while cooking but the heating is fast. Average product.",
+        "date": "15 days ago",
+        "location": "Chennai",
+        "likes": 12,
+        "dislikes": 4,
+        "images": []
+      }
+    ]
   }
 ]
