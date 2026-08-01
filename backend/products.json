@@ -912,5 +912,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_sony_tv_1785610630941",
+    "title": "SONY Bravia 2 108 cm (43 inch) Ultra HD (4K) LED Smart Google TV",
+    "description": "Buy SONY Bravia 2 108 cm (43 inch) Ultra HD (4K) LED Smart Google TV online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 599,
+    "oldPrice": 29950,
+    "discount": 98,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/television/i/8/0/-original-imah2dzwa44rbqds.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/television/i/8/0/-original-imah2dzwa44rbqds.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/television/i/8/0/-original-imah2dzwa44rbqds.jpeg?q=80"
+    ],
+    "category": "Televisions",
+    "brand": "Sony",
+    "countInStock": 40,
+    "rating": 4.7,
+    "numReviews": 2185,
+    "highlights": [
+      "Resolution: Ultra HD (4K) 3840 x 2160 Pixels",
+      "Sound Output: 20 W",
+      "Refresh Rate: 60 Hz",
+      "Supported Apps: Netflix|Prime Video|Disney+Hotstar|Youtube",
+      "Operating System: Google TV"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Sony"
+          },
+          {
+            "name": "Model",
+            "value": "Bravia 2"
+          },
+          {
+            "name": "Screen Size",
+            "value": "43 inch"
+          },
+          {
+            "name": "Smart Tv",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Arvind Kumar",
+        "title": "Unmatched picture quality",
+        "rating": 5,
+        "comment": "Sony Bravia never disappoints. The 4K clarity is stunning and the colors look very natural. X1 processor makes a huge difference.",
+        "date": "2 weeks ago",
+        "location": "Mumbai",
+        "likes": 420,
+        "dislikes": 8,
+        "images": []
+      },
+      {
+        "author": "Divya S",
+        "title": "Smooth Google TV interface",
+        "rating": 5,
+        "comment": "The interface is very snappy. Voice search works perfectly. Sound quality is decent for a medium sized room.",
+        "date": "1 month ago",
+        "location": "Chennai",
+        "likes": 215,
+        "dislikes": 3,
+        "images": []
+      },
+      {
+        "author": "Manoj T",
+        "title": "Good TV but pricey",
+        "rating": 4,
+        "comment": "Picture is great but the bezel could have been slightly thinner. Overall a very premium experience.",
+        "date": "5 days ago",
+        "location": "Kochi",
+        "likes": 92,
+        "dislikes": 4,
+        "images": []
+      }
+    ]
   }
 ]
