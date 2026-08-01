@@ -499,5 +499,87 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_bajaj_cooler_1785610067237",
+    "title": "BAJAJ 36 L Room/Personal Air Cooler",
+    "description": "Buy Bajaj 36 L Room/Personal Air Cooler online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 465,
+    "oldPrice": 5167,
+    "discount": 91,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-cooler/e/9/7/100-0-px97-torque-new-36-bajaj-original-imahadwkshkkvgec.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-cooler/e/9/7/100-0-px97-torque-new-36-bajaj-original-imahadwkshkkvgec.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-cooler/e/9/7/100-0-px97-torque-new-36-bajaj-original-imahadwkshkkvgec.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Bajaj",
+    "countInStock": 100,
+    "rating": 4.2,
+    "numReviews": 7583,
+    "highlights": [
+      "Tank Capacity: 36 L",
+      "Cooling Area: 150 sq ft",
+      "Air Throw: 30 ft",
+      "Hexacool Technology"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Bajaj"
+          },
+          {
+            "name": "Model",
+            "value": "PX 97 Torque"
+          },
+          {
+            "name": "Type",
+            "value": "Room/Personal Air Cooler"
+          },
+          {
+            "name": "Color",
+            "value": "White"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Ashish M",
+        "title": "Very powerful cooling",
+        "rating": 5,
+        "comment": "Inverter friendly and very good air throw. It cools down the room within 15 minutes. Best cooler in this range.",
+        "date": "1 month ago",
+        "location": "Bhopal",
+        "likes": 560,
+        "dislikes": 12,
+        "images": []
+      },
+      {
+        "author": "Kiran S",
+        "title": "Good for small rooms",
+        "rating": 4,
+        "comment": "Water capacity is good enough for 8-10 hours. Cooling is excellent. A bit noisy on high speed but manageable.",
+        "date": "2 weeks ago",
+        "location": "Indore",
+        "likes": 341,
+        "dislikes": 9,
+        "images": []
+      },
+      {
+        "author": "Sunil Varma",
+        "title": "Decent purchase",
+        "rating": 4,
+        "comment": "Plastic body is strong. Honeycomb pads are doing a good job. Satisfied with the purchase so far.",
+        "date": "10 days ago",
+        "location": "Pune",
+        "likes": 120,
+        "dislikes": 3,
+        "images": []
+      }
+    ]
   }
 ]
