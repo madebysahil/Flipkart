@@ -467,11 +467,11 @@ const Checkout = () => {
                   </div>
                 </div>
                 
-                <div className="flex gap-4 items-center justify-center mt-2 w-full">
-                   <img src="/payment/visa-logo.png" alt="VISA" className="h-8 object-contain" />
-                   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-7 object-contain" />
-                   <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/RuPay.svg" alt="RuPay" className="h-7 object-contain" />
-                   <img src="/payment/razorpay-logo.png" alt="Razorpay" className="h-6 object-contain" />
+                <div className="flex gap-4 items-center justify-center mt-2 w-full px-4">
+                   <img src="/payment/visa-logo.png" alt="VISA" className="h-6 object-contain" />
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-[18px] object-contain" />
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/RuPay.svg" alt="RuPay" className="h-[18px] object-contain" />
+                   <img src="/payment/razorpay-logo.png" alt="Razorpay" className="h-[14px] object-contain" />
                 </div>
               </div>
 
