@@ -416,5 +416,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_safari_luggage_1785609944110",
+    "title": "Safari Keplar 3P Set 4W Cabin & Check-in Set 8 Wheels - 30 inch (Pearl Blue)",
+    "description": "Buy Safari Keplar 3P Luggage Set online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 499,
+    "oldPrice": 4990,
+    "discount": 90,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/h/3/a/-watermarked-original-imahm5cth567zkc6.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/y/c/t/-original-imahm5ctucspvg79.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/h/3/a/-watermarked-original-imahm5cth567zkc6.jpeg?q=80"
+    ],
+    "category": "Travel",
+    "brand": "Safari",
+    "countInStock": 60,
+    "rating": 4.6,
+    "numReviews": 1284,
+    "highlights": [
+      "Outer Material: Polycarbonate",
+      "Water Resistant",
+      "Capacity: 116 L",
+      "Color: Pearl Blue",
+      "Number of Wheels: 8"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Safari"
+          },
+          {
+            "name": "Model",
+            "value": "Keplar 3P"
+          },
+          {
+            "name": "Type",
+            "value": "Cabin & Check-in Set"
+          },
+          {
+            "name": "Color",
+            "value": "Pearl Blue"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Priya Kapoor",
+        "title": "Sturdy and stylish",
+        "rating": 5,
+        "comment": "The Pearl Blue color is gorgeous. Used it on a recent international trip and it survived all the baggage handling without a scratch.",
+        "date": "12 days ago",
+        "location": "Delhi",
+        "likes": 234,
+        "dislikes": 5,
+        "images": []
+      },
+      {
+        "author": "Mohit Sharma",
+        "title": "Smooth wheels",
+        "rating": 5,
+        "comment": "The 8-wheel design makes navigating through airports so easy. The material is very tough polycarbonate.",
+        "date": "2 months ago",
+        "location": "Mumbai",
+        "likes": 156,
+        "dislikes": 2,
+        "images": []
+      },
+      {
+        "author": "Anjali V",
+        "title": "Great value for money",
+        "rating": 4,
+        "comment": "Getting 3 pieces of luggage at this price is a steal! The zippers are smooth and the lock is secure.",
+        "date": "15 days ago",
+        "location": "Bengaluru",
+        "likes": 98,
+        "dislikes": 1,
+        "images": []
+      }
+    ]
   }
 ]
