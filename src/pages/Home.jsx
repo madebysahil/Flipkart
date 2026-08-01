@@ -194,8 +194,7 @@ const Home = () => {
     return (
       <div className="bg-[#f1f3f6] min-h-screen max-w-md mx-auto flex items-center justify-center shadow-sm">
         <div className="flex flex-col items-center">
-          <div className="w-10 h-10 border-4 border-[#2874f0] border-t-transparent rounded-full animate-spin mb-4"></div>
-          <span className="text-gray-500 font-medium text-sm">Loading amazing products...</span>
+          <div className="w-10 h-10 border-4 border-[#2874f0] border-t-transparent rounded-full animate-spin"></div>
         </div>
       </div>
     );
