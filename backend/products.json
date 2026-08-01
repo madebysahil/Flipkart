@@ -664,5 +664,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_leader_cycle_1785610290685",
+    "title": "Leader Gladiator 21 Speed Hybrid Cycle with Front Suspension & Disc Brake 26T",
+    "description": "Buy Leader Gladiator Multi Speed 21 Speed Cycle online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 499,
+    "oldPrice": 9980,
+    "discount": 95,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/cycle/j/l/2/gladiator-multi-speed-21-speed-cycle-with-front-suspension-and-original-imahgersuhhhfgjf.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/cycle/j/l/2/gladiator-multi-speed-21-speed-cycle-with-front-suspension-and-original-imahgersuhhhfgjf.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/cycle/j/l/2/gladiator-multi-speed-21-speed-cycle-with-front-suspension-and-original-imahgersuhhhfgjf.jpeg?q=80"
+    ],
+    "category": "Sports",
+    "brand": "Leader",
+    "countInStock": 20,
+    "rating": 4,
+    "numReviews": 2184,
+    "highlights": [
+      "Age Group: 15+ Years",
+      "Ideal For: Men & Women",
+      "Gear: 21 Gear",
+      "Front Brake: Disc | Rear Brake: Disc",
+      "Frame Material: Steel Cycle/Mild steel Cycle"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Leader"
+          },
+          {
+            "name": "Model Number",
+            "value": "Gladiator"
+          },
+          {
+            "name": "Bicycle Size",
+            "value": "26 inch"
+          },
+          {
+            "name": "Color",
+            "value": "Black, Blue"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Sanjay D",
+        "title": "Great entry level geared cycle",
+        "rating": 5,
+        "comment": "The gear shifting is very smooth after some initial tuning. Brakes are very responsive. Good for daily commute.",
+        "date": "5 days ago",
+        "location": "Hyderabad",
+        "likes": 210,
+        "dislikes": 12,
+        "images": []
+      },
+      {
+        "author": "Amit Singh",
+        "title": "Value for money",
+        "rating": 4,
+        "comment": "Riding experience is good. The suspension handles small potholes well. The seat is a bit hard but you can change it.",
+        "date": "1 month ago",
+        "location": "Pune",
+        "likes": 145,
+        "dislikes": 9,
+        "images": []
+      },
+      {
+        "author": "Karan M",
+        "title": "Looks very sporty",
+        "rating": 4,
+        "comment": "Matt black finish looks very premium. Assembly took some time but the manual was helpful.",
+        "date": "20 days ago",
+        "location": "Delhi",
+        "likes": 88,
+        "dislikes": 4,
+        "images": []
+      }
+    ]
   }
 ]
