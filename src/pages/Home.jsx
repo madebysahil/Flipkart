@@ -190,8 +190,19 @@ const Home = () => {
     return `${m.toString().padStart(2, '0')}min ${s.toString().padStart(2, '0')}sec`;
   };
 
+  if (loading) {
+    return (
+      <div className="bg-[#f1f3f6] min-h-screen max-w-md mx-auto flex items-center justify-center shadow-sm">
+        <div className="flex flex-col items-center">
+          <div className="w-10 h-10 border-4 border-[#2874f0] border-t-transparent rounded-full animate-spin mb-4"></div>
+          <span className="text-gray-500 font-medium text-sm">Loading amazing products...</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="bg-[#f1f3f6] min-h-screen pb-8 max-w-md mx-auto shadow-sm">
+    <div className="bg-[#f1f3f6] min-h-screen pb-8 max-w-md mx-auto shadow-sm animate-fade-in">
       <HeaderActions />
       <CategoryCircles />
 
@@ -227,15 +238,11 @@ const Home = () => {
 
       {/* Products Grid */}
       <div className="bg-gray-200">
-        {loading ? (
-          <div className="flex justify-center p-8 bg-white">Loading products...</div>
-        ) : (
-          <div className="grid grid-cols-2 gap-[1px]">
-            {products.map((product) => (
-              <ProductCard key={product._id} product={product} />
-            ))}
-          </div>
-        )}
+        <div className="grid grid-cols-2 gap-[1px]">
+          {products.map((product) => (
+            <ProductCard key={product._id} product={product} />
+          ))}
+        </div>
       </div>
       
     </div>
