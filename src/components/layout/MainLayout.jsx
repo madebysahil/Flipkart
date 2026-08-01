@@ -7,6 +7,7 @@ const MainLayout = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const isCheckoutPage = location.pathname.startsWith('/checkout');
+  const isSuccessPage = location.pathname.startsWith('/payment/status');
 
   if (isCheckoutPage) {
     return (
@@ -21,7 +22,7 @@ const MainLayout = () => {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       {!isHomePage && <Header />}
-      {!isHomePage && <LiveSaleTimer />}
+      {!isHomePage && !isSuccessPage && <LiveSaleTimer />}
       <main className="flex-grow">
         <Outlet />
       </main>
