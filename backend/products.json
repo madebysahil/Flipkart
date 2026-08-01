@@ -251,5 +251,87 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_orient_cooler_1785609660632",
+    "title": "Orient Electric Durachill 40 L Room/Personal Air Cooler",
+    "description": "Buy Orient Electric 40 L Room/Personal Air Cooler online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 565,
+    "oldPrice": 6278,
+    "discount": 91,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-cooler/e/u/e/150-150-durachill-40l-pack-of-1-40-orient-electric-original-imah2fc6w4jevv8b.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-cooler/g/j/l/150-150-durachill-40l-pack-of-1-40-orient-electric-original-imah2fc66zxgpkaz.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-cooler/e/u/e/150-150-durachill-40l-pack-of-1-40-orient-electric-original-imah2fc6w4jevv8b.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Orient",
+    "countInStock": 80,
+    "rating": 4.1,
+    "numReviews": 3524,
+    "highlights": [
+      "Tank Capacity: 40 L",
+      "Power Consumption - 150 W",
+      "Cooling Area: 150 sq ft",
+      "3 Speed Settings"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Orient Electric"
+          },
+          {
+            "name": "Model",
+            "value": "Durachill 40L"
+          },
+          {
+            "name": "Color",
+            "value": "White, Grey"
+          },
+          {
+            "name": "Type",
+            "value": "Room/Personal Air Cooler"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Ravi Kumar",
+        "title": "Very cooling and effective",
+        "rating": 5,
+        "comment": "The airflow is amazing for a medium-sized room. The 40L tank lasts easily throughout the night without needing a refill.",
+        "date": "5 days ago",
+        "location": "Lucknow",
+        "likes": 210,
+        "dislikes": 12,
+        "images": []
+      },
+      {
+        "author": "Preeti Sharma",
+        "title": "Good for the price",
+        "rating": 4,
+        "comment": "Nice product by Orient. Cooling is good but makes a little bit of noise on the highest speed setting. Overall satisfied.",
+        "date": "1 month ago",
+        "location": "Jaipur",
+        "likes": 145,
+        "dislikes": 9,
+        "images": []
+      },
+      {
+        "author": "Sumit Desai",
+        "title": "Excellent build quality",
+        "rating": 4,
+        "comment": "Plastic quality is top notch and wheels make it very easy to move around. Works perfectly in dry summer heat.",
+        "date": "20 days ago",
+        "location": "Nagpur",
+        "likes": 88,
+        "dislikes": 4,
+        "images": []
+      }
+    ]
   }
 ]
