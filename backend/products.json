@@ -1658,5 +1658,84 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_prestige_cookware_1785611599208",
+    "title": "Prestige Festival Pack - Build Your Kitchen Non-Stick Cookware Set",
+    "description": "Buy Prestige Festival Pack Cookware Set online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 398,
+    "oldPrice": 1658,
+    "discount": 76,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/cookware-set/1/k/5/3-30841-prestige-original-imahhspxghgcgpmr.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/cookware-set/1/k/5/3-30841-prestige-original-imahhspxghgcgpmr.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/cookware-set/1/k/5/3-30841-prestige-original-imahhspxghgcgpmr.jpeg?q=80"
+    ],
+    "category": "Home & Kitchen",
+    "brand": "Prestige",
+    "countInStock": 75,
+    "rating": 4.1,
+    "numReviews": 1493,
+    "highlights": [
+      "3 Piece Cookware Set",
+      "Non-Stick Coating",
+      "Induction Bottom",
+      "Dishwasher Safe",
+      "Color: Red/Black"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Prestige"
+          },
+          {
+            "name": "Material",
+            "value": "Aluminum with Non-Stick Coating"
+          },
+          {
+            "name": "Induction Base",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Vikas Patel",
+        "title": "Good for beginners",
+        "rating": 4,
+        "comment": "Perfect starter pack for bachelors or newly weds. The non-stick coating is decent and works well on induction.",
+        "date": "10 days ago",
+        "location": "Ahmedabad",
+        "likes": 134,
+        "dislikes": 5,
+        "images": []
+      },
+      {
+        "author": "Pooja Sharma",
+        "title": "Coating peels off",
+        "rating": 2,
+        "comment": "The non stick coating on the tawa started peeling after 2 months of use. Use only wooden spatulas.",
+        "date": "2 months ago",
+        "location": "Delhi",
+        "likes": 89,
+        "dislikes": 12,
+        "images": []
+      },
+      {
+        "author": "Karthik R",
+        "title": "Worth the price",
+        "rating": 5,
+        "comment": "Getting 3 items from Prestige at this price is excellent. The kadhai is very useful for daily cooking.",
+        "date": "15 days ago",
+        "location": "Chennai",
+        "likes": 45,
+        "dislikes": 2,
+        "images": []
+      }
+    ]
   }
 ]
