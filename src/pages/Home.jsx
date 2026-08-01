@@ -211,12 +211,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Existing Hero Banner Area */}
-      <div className="w-full bg-white px-2 py-1 pb-1">
-        <div className="w-full rounded-lg overflow-hidden relative">
-          <img src="/images/banners/banner1.jpg" alt="Sale Banner" className="w-full h-auto object-cover rounded-lg" />
-        </div>
-      </div>
+
       
       <LiveSaleTimer />
 
