@@ -449,16 +449,27 @@ const Checkout = () => {
                 </div>
               </div>
 
+              <div className="bg-[#f1f3f6] h-3 w-full"></div>
+              
               <div className="bg-white px-4 py-6 flex flex-col items-center">
-                <div className="flex justify-between gap-2 text-gray-500 text-[11px] text-center w-full mb-6 px-4">
-                  <div className="flex flex-col items-center gap-1.5"><ShieldCheck className="h-8 w-8 text-gray-400" strokeWidth={1}/>Authentic Products</div>
-                  <div className="flex flex-col items-center gap-1.5"><Lock className="h-8 w-8 text-gray-400" strokeWidth={1}/>Secure Payments</div>
-                  <div className="flex flex-col items-center gap-1.5"><Truck className="h-8 w-8 text-gray-400" strokeWidth={1}/>Easy Returns</div>
+                <div className="flex justify-between text-[#878787] text-[10px] text-center w-full mb-6 px-1 font-medium">
+                  <div className="flex flex-col items-center gap-2">
+                    <ShieldCheck className="h-[30px] w-[30px]" strokeWidth={1.2}/>
+                    <span>Authentic Products</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <Lock className="h-[30px] w-[30px]" strokeWidth={1.2}/>
+                    <span>Secure Payments</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <Truck className="h-[30px] w-[30px]" strokeWidth={1.2}/>
+                    <span>Easy Returns</span>
+                  </div>
                 </div>
-                <div className="flex gap-4 items-center justify-center grayscale opacity-70 mix-blend-multiply">
-                   <span className="font-black italic text-gray-600 text-2xl tracking-tighter">VISA</span>
-                   <span className="font-bold text-gray-500 text-xl tracking-tight">mastercard</span>
-                   <span className="font-black italic text-gray-500 text-2xl tracking-tighter">RuPay</span>
+                <div className="flex gap-5 items-center justify-center text-[#878787] opacity-80">
+                   <span className="font-black italic text-[22px] tracking-tighter">VISA</span>
+                   <span className="font-bold text-[19px] tracking-tight">mastercard</span>
+                   <span className="font-black italic text-[20px] tracking-tighter">RuPay</span>
                 </div>
               </div>
 
