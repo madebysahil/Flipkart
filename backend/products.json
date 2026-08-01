@@ -1820,5 +1820,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_milton_kettle_combo_1785611935183",
+    "title": "MILTON GO ELE KETTLE 1500 + FLIP LID 350 Beverage Maker",
+    "description": "Buy MILTON GO ELE KETTLE combo online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 397,
+    "oldPrice": 1654,
+    "discount": 76,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/electric-kettle/q/o/d/go-electro-stainless-steel-electric-kettle-1500-flip-lid-350-original-imahg6asgdfzk4fm.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/electric-kettle/q/o/d/go-electro-stainless-steel-electric-kettle-1500-flip-lid-350-original-imahg6asgdfzk4fm.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/electric-kettle/q/o/d/go-electro-stainless-steel-electric-kettle-1500-flip-lid-350-original-imahg6asgdfzk4fm.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Milton",
+    "countInStock": 40,
+    "rating": 4.2,
+    "numReviews": 2180,
+    "highlights": [
+      "Combo: 1.5L Kettle + 350ml Flask",
+      "Material: Stainless Steel",
+      "Auto Shut-off feature",
+      "Flip Lid Flask",
+      "Power: 1500 W (Kettle)"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Milton"
+          },
+          {
+            "name": "Model",
+            "value": "GO ELE KETTLE 1500 + FLIP LID 350"
+          },
+          {
+            "name": "Type",
+            "value": "Beverage Maker Combo"
+          },
+          {
+            "name": "Material",
+            "value": "Stainless Steel"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Arjun",
+        "title": "Great value combo",
+        "rating": 5,
+        "comment": "The kettle boils water very fast and the free flask is of very good quality. Great for winter mornings.",
+        "date": "10 days ago",
+        "location": "Shimla",
+        "likes": 150,
+        "dislikes": 5,
+        "images": []
+      },
+      {
+        "author": "Nandini R",
+        "title": "Cable is short",
+        "rating": 4,
+        "comment": "Good product but the power cable of the kettle is too short. Have to keep it very close to the plug point.",
+        "date": "1 month ago",
+        "location": "Bengaluru",
+        "likes": 88,
+        "dislikes": 12,
+        "images": []
+      },
+      {
+        "author": "Karan M",
+        "title": "Flask doesn't keep hot for long",
+        "rating": 3,
+        "comment": "The kettle is excellent but the flask only keeps tea hot for about 3-4 hours, not longer.",
+        "date": "15 days ago",
+        "location": "Delhi",
+        "likes": 42,
+        "dislikes": 8,
+        "images": []
+      }
+    ]
   }
 ]
