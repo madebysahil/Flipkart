@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const LiveSaleTimer = () => {
   const [timeLeft, setTimeLeft] = useState(12 * 60); // Default 12 mins
   const [viewers, setViewers] = useState(12312);
   const [isLoaded, setIsLoaded] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     // Check if end time is already in session storage
@@ -62,11 +64,12 @@ const LiveSaleTimer = () => {
           <span className="font-bold text-gray-900 text-[17px]">Live Sale : </span>
           <span className="font-bold text-[#ff5722] text-[17px]">{formatTime(timeLeft)}</span>
         </div>
-        <div className="flex items-center gap-1.5 bg-red-50 text-red-700 px-3 py-1 rounded-full text-xs font-semibold border border-red-100 shadow-sm">
-          <span className="animate-pulse">🚨</span>
-          <span>Hurry! {viewers.toLocaleString()} people are watching</span>
-          <span className="inline-block animate-[blink_2s_infinite]">👁️</span>
-        </div>
+        {location.pathname === '/' && (
+          <div className="flex items-center gap-1.5 bg-red-50 text-red-700 px-3 py-1 rounded-full text-xs font-semibold border border-red-100 shadow-sm">
+            <span>{viewers.toLocaleString()} people are watching</span>
+            <span className="inline-block animate-[blink_2s_infinite]">👁️</span>
+          </div>
+        )}
       </div>
       <style>{`
         @keyframes blink {
