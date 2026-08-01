@@ -451,25 +451,12 @@ const Checkout = () => {
 
               <div className="bg-[#f1f3f6] h-3 w-full"></div>
               
-              <div className="bg-white px-4 py-6 flex flex-col items-center">
-                <div className="flex justify-between text-[#878787] text-[10px] text-center w-full mb-6 px-1 font-medium">
-                  <div className="flex flex-col items-center gap-2">
-                    <ShieldCheck className="h-[30px] w-[30px]" strokeWidth={1.2}/>
-                    <span>Authentic Products</span>
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
-                    <Lock className="h-[30px] w-[30px]" strokeWidth={1.2}/>
-                    <span>Secure Payments</span>
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
-                    <Truck className="h-[30px] w-[30px]" strokeWidth={1.2}/>
-                    <span>Easy Returns</span>
-                  </div>
-                </div>
-                <div className="flex gap-4 items-center justify-center mt-2">
-                   <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="VISA" className="h-4 object-contain" />
-                   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-6 object-contain" />
-                   <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/RuPay.svg" alt="RuPay" className="h-5 object-contain" />
+              <div className="bg-white px-4 py-8 flex flex-col items-center border-t border-gray-100">
+                <img src="/payment/original-badge.jpg" alt="100% Original Guaranteed" className="h-[90px] object-contain mix-blend-multiply mb-6" />
+                
+                <div className="flex gap-8 items-center justify-center w-full">
+                   <img src="/payment/visa-logo.png" alt="VISA" className="h-[26px] object-contain" />
+                   <img src="/payment/razorpay-logo.png" alt="Razorpay" className="h-[28px] object-contain" />
                 </div>
               </div>
 
