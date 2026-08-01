@@ -21,7 +21,7 @@ const MainLayout = () => {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       {!isHomePage && <Header />}
-      <LiveSaleTimer />
+      {!isHomePage && <LiveSaleTimer />}
       <main className="flex-grow">
         <Outlet />
       </main>

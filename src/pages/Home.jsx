@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../services/api';
 import { Search, Star } from 'lucide-react';
+import LiveSaleTimer from '../components/layout/LiveSaleTimer';
 
 const HeaderActions = () => (
   <div className="bg-gradient-to-b from-[#2874f0] to-[#8db8f9] px-3 py-3">
@@ -211,11 +212,13 @@ const Home = () => {
       </div>
 
       {/* Existing Hero Banner Area */}
-      <div className="w-full bg-white px-2 py-1 pb-3 border-b border-gray-200">
+      <div className="w-full bg-white px-2 py-1 pb-1">
         <div className="w-full rounded-lg overflow-hidden relative">
           <img src="/images/banners/banner1.jpg" alt="Sale Banner" className="w-full h-auto object-cover rounded-lg" />
         </div>
       </div>
+      
+      <LiveSaleTimer />
 
       {/* Products Grid */}
       <div className="bg-gray-200">
