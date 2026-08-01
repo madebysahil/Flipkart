@@ -502,9 +502,11 @@ const Checkout = () => {
                     You Save ₹{totalSavings}
                   </div>
                 </div>
-                <button onClick={handleCreateOrder} className="w-1/2 bg-[#ff6116] text-white font-medium text-[16px] flex items-center justify-center hover:bg-[#e05312] transition-colors">
-                  Place Order <span className="ml-1 -mt-0.5 text-2xl font-light">›</span>
-                </button>
+                <div className="w-1/2 p-3 bg-white border-t border-gray-200 flex items-center justify-center">
+                  <button onClick={handleCreateOrder} className="w-full h-full bg-[#ff6116] text-white font-medium text-[16px] rounded-sm flex items-center justify-center hover:bg-[#e05312] transition-colors py-3">
+                    Place Order <span className="ml-1 -mt-0.5 text-2xl font-light">›</span>
+                  </button>
+                </div>
               </div>
               <div className="flex items-center justify-center gap-8 py-3 text-[11px] font-medium text-gray-600 bg-gray-50 border-t border-gray-200">
                 <span className="flex items-center gap-1.5"><Lock className="h-3.5 w-3.5 text-gray-500" /> Secure Checkout</span>
@@ -528,9 +530,11 @@ const Checkout = () => {
                     You Save ₹{totalSavings}
                   </div>
                 </div>
-                <button onClick={handlePayNow} className="w-1/2 bg-[#ff6116] text-white font-medium text-[16px] flex items-center justify-center hover:bg-[#e05312] transition-colors">
-                  {selectedPayment === 'qr' ? 'Continue' : 'Pay Now'}
-                </button>
+                <div className="w-1/2 p-3 bg-white border-t border-gray-200 flex items-center justify-center">
+                  <button onClick={handlePayNow} className="w-full h-full bg-[#ff6116] text-white font-medium text-[16px] rounded-sm flex items-center justify-center hover:bg-[#e05312] transition-colors py-3">
+                    {selectedPayment === 'qr' ? 'Continue' : 'Pay Now'}
+                  </button>
+                </div>
               </div>
               <div className="flex items-center justify-center gap-8 py-3 text-[11px] font-medium text-gray-600 bg-gray-50 border-t border-gray-200">
                 <span className="flex items-center gap-1.5"><Lock className="h-3.5 w-3.5 text-gray-500" /> Secure Checkout</span>
