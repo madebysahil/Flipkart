@@ -829,5 +829,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_vivo_phone_1785610523062",
+    "title": "vivo v50 5G (Grey, 256 GB Storage, 8 GB RAM)",
+    "description": "Buy vivo v50 5G online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 499,
+    "oldPrice": 16633,
+    "discount": 97,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/d/g/d/v50-5g-v2427-vivo-original-imahc6d8jyfyha9m.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/g/p/6/v50-5g-v2427-vivo-original-imahc6d8g9kbm3fw.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/d/g/d/v50-5g-v2427-vivo-original-imahc6d8jyfyha9m.jpeg?q=80"
+    ],
+    "category": "Mobiles",
+    "brand": "Vivo",
+    "countInStock": 200,
+    "rating": 4.5,
+    "numReviews": 8512,
+    "highlights": [
+      "8 GB RAM | 256 GB ROM",
+      "16.94 cm (6.67 inch) Full HD+ Display",
+      "50MP + 8MP | 32MP Front Camera",
+      "5000 mAh Battery",
+      "Snapdragon 6 Gen 1 Processor"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Vivo"
+          },
+          {
+            "name": "Model",
+            "value": "v50 5G"
+          },
+          {
+            "name": "Color",
+            "value": "Grey"
+          },
+          {
+            "name": "Storage",
+            "value": "256 GB"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Mahesh Kumar",
+        "title": "Great camera phone",
+        "rating": 5,
+        "comment": "The camera quality is excellent in daylight and good in low light. The battery backup easily lasts 1.5 days with normal usage.",
+        "date": "10 days ago",
+        "location": "Lucknow",
+        "likes": 510,
+        "dislikes": 22,
+        "images": []
+      },
+      {
+        "author": "Neha Singh",
+        "title": "Smooth display",
+        "rating": 4,
+        "comment": "The 120Hz display is very fluid. Charging is fast but UI has some bloatware. Overall a solid mid-range 5G phone.",
+        "date": "1 month ago",
+        "location": "Kanpur",
+        "likes": 341,
+        "dislikes": 15,
+        "images": []
+      },
+      {
+        "author": "Rahul Sharma",
+        "title": "Stylish design",
+        "rating": 5,
+        "comment": "Phone looks very premium. It is lightweight and easy to hold. Performance is decent for daily tasks.",
+        "date": "2 months ago",
+        "location": "Jaipur",
+        "likes": 125,
+        "dislikes": 8,
+        "images": []
+      }
+    ]
   }
 ]
