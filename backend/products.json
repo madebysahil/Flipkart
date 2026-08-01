@@ -1078,5 +1078,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_hrx_luggage_1785610850383",
+    "title": "HRX Kyoto Cabin & Check-in Set 8 Wheels - 30 inch White",
+    "description": "Buy HRX Kyoto Cabin & Check-in Set 8 Wheels online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 498,
+    "oldPrice": 3831,
+    "discount": 87,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/l/q/f/20-kyoto-3-hr3p026s252301-cabin-check-in-set-hrx-119-30-original-imahneyfhmfjhkyp.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/v/s/n/20-kyoto-1-hrla026s252301-check-in-suitcase-hrx-119-30-original-imahneyf3fknvdks.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/l/q/f/20-kyoto-3-hr3p026s252301-cabin-check-in-set-hrx-119-30-original-imahneyfhmfjhkyp.jpeg?q=80"
+    ],
+    "category": "Travel",
+    "brand": "HRX",
+    "countInStock": 40,
+    "rating": 4.5,
+    "numReviews": 1824,
+    "highlights": [
+      "Type: Cabin & Check-in Set",
+      "Material: Polycarbonate",
+      "8 Wheels",
+      "TSA Lock included",
+      "Color: White"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "HRX"
+          },
+          {
+            "name": "Model",
+            "value": "Kyoto"
+          },
+          {
+            "name": "Color",
+            "value": "White"
+          },
+          {
+            "name": "Wheels",
+            "value": "8"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Karan Gupta",
+        "title": "Stylish and strong",
+        "rating": 5,
+        "comment": "The white color looks very premium and aesthetic. The wheels are extremely smooth and the polycarbonate shell feels quite durable.",
+        "date": "10 days ago",
+        "location": "Mumbai",
+        "likes": 125,
+        "dislikes": 6,
+        "images": []
+      },
+      {
+        "author": "Anjali S",
+        "title": "Good for international travel",
+        "rating": 5,
+        "comment": "The TSA lock is a huge plus. The 30 inch size fits a lot of clothes. Very happy with the HRX quality.",
+        "date": "1 month ago",
+        "location": "Delhi",
+        "likes": 98,
+        "dislikes": 3,
+        "images": []
+      },
+      {
+        "author": "Rohit Verma",
+        "title": "Scratches easily",
+        "rating": 3,
+        "comment": "The bag is good but because it's white it gets dirty and scratched very easily at the airport.",
+        "date": "15 days ago",
+        "location": "Pune",
+        "likes": 42,
+        "dislikes": 8,
+        "images": []
+      }
+    ]
   }
 ]
