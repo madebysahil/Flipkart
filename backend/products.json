@@ -87,5 +87,75 @@
         ]
       }
     ]
+  },
+  {
+    "_id": "product_atomberg_fan",
+    "title": "Atomberg Renesa Prime Remote|High Air Delivery|LED Speed Indicator|Low Noise|Sleek Design with 3 Year Warranty BLDC Motor with Remote 1200 mm Ceiling Fan",
+    "description": "Buy Atomberg Renesa Prime Ceiling Fan online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 419,
+    "oldPrice": 3492,
+    "discount": 88,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/fan/r/c/5/-original-imahp6d6kgqpceaj.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/fan/n/k/p/renesa-prime-remote-high-air-delivery-led-speed-indicator-low-original-imahnjbgyfqha6s3.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/fan/r/c/5/-original-imahp6d6kgqpceaj.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Atomberg",
+    "countInStock": 150,
+    "rating": 4.5,
+    "numReviews": 8452,
+    "highlights": [
+      "BLDC Motor: Energy Efficient Technology",
+      "Remote Control for Speed & Timer",
+      "Sleek and Modern Design",
+      "3 Years Warranty"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          { "name": "Brand", "value": "Atomberg" },
+          { "name": "Model", "value": "Renesa Prime" },
+          { "name": "Type", "value": "Ceiling Fan" },
+          { "name": "Motor Type", "value": "BLDC" }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Sanjay Verma",
+        "title": "Excellent product",
+        "rating": 5,
+        "comment": "Very good fan. Air delivery is top notch and it consumes very less electricity. The remote control feature is very handy.",
+        "date": "1 month ago",
+        "location": "Pune",
+        "likes": 421,
+        "dislikes": 14,
+        "images": []
+      },
+      {
+        "author": "Kavita Rao",
+        "title": "Silent and powerful",
+        "rating": 4,
+        "comment": "The fan is completely silent at lower speeds. At full speed, there is only wind noise. Sleek design looks great in the living room.",
+        "date": "2 months ago",
+        "location": "Hyderabad",
+        "likes": 285,
+        "dislikes": 8,
+        "images": []
+      },
+      {
+        "author": "Amit Patel",
+        "title": "Worth every penny",
+        "rating": 5,
+        "comment": "Saved a lot on electricity bills since I installed this. Easy to install and the LED speed indicator is a nice touch.",
+        "date": "15 days ago",
+        "location": "Ahmedabad",
+        "likes": 156,
+        "dislikes": 3,
+        "images": []
+      }
+    ]
   }
 ]

@@ -317,17 +317,17 @@ const Product = () => {
               {/* Photo grid */}
               <div className="flex gap-2 mt-4 h-[200px]">
                  <div className="w-1/2 h-full rounded-lg overflow-hidden">
-                    <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/television/e/g/d/-original-imahz2d9hrtywscm.jpeg?q=70" className="w-full h-full object-cover" alt="Review 1" />
+                    <img src={product.images?.[0] || "https://placehold.co/400"} className="w-full h-full object-cover" alt="Review 1" />
                  </div>
                  <div className="w-1/2 h-full flex flex-col gap-2">
                     <div className="flex gap-2 h-[calc(50%-4px)]">
-                       <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/television/4/m/u/-original-imahnewnqjqmvcgn.jpeg?q=70" className="w-1/2 h-full object-cover rounded-lg" alt="Review 2" />
-                       <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/television/5/u/z/-original-imahdwgupnhwsasg.jpeg?q=70" className="w-1/2 h-full object-cover rounded-lg" alt="Review 3" />
+                       <img src={product.images?.[1] || product.images?.[0] || "https://placehold.co/200"} className="w-1/2 h-full object-cover rounded-lg" alt="Review 2" />
+                       <img src={product.images?.[2] || product.images?.[0] || "https://placehold.co/200"} className="w-1/2 h-full object-cover rounded-lg" alt="Review 3" />
                     </div>
                     <div className="flex gap-2 h-[calc(50%-4px)]">
-                       <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/television/t/p/u/-original-imahdwgugpsgnryh.jpeg?q=70" className="w-1/2 h-full object-cover rounded-lg" alt="Review 4" />
+                       <img src={product.images?.[3] || product.images?.[1] || "https://placehold.co/200"} className="w-1/2 h-full object-cover rounded-lg" alt="Review 4" />
                        <div className="w-1/2 h-full relative rounded-lg overflow-hidden cursor-pointer">
-                          <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/television/e/g/d/-original-imahz2d9hrtywscm.jpeg?q=70" className="w-full h-full object-cover brightness-50" alt="Review 5" />
+                          <img src={product.images?.[4] || product.images?.[0] || "https://placehold.co/200"} className="w-full h-full object-cover brightness-50" alt="Review 5" />
                           <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">+86</div>
                        </div>
                     </div>
