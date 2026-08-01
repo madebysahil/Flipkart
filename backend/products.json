@@ -1161,5 +1161,88 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_prestige_airfryer_1785610954687",
+    "title": "Prestige Nutrifry Digital Air Fryer",
+    "description": "Buy Prestige Nutrifry Digital Air Fryer online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 489,
+    "oldPrice": 3493,
+    "discount": 86,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-fryer/8/p/a/black-4-5-1200-nutrifry-digital-prestige-original-imahfbgh98ygshny.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-fryer/a/c/v/black-4-5-1200-nutrifry-digital-prestige-original-imahfbghbxfjfxcs.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-fryer/8/p/a/black-4-5-1200-nutrifry-digital-prestige-original-imahfbgh98ygshny.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Prestige",
+    "countInStock": 60,
+    "rating": 4.6,
+    "numReviews": 2198,
+    "highlights": [
+      "Digital display and control",
+      "Power: 1200 W",
+      "Capacity: 4.5 Litres",
+      "Color: Black",
+      "Fry, Bake, Grill, and Roast"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Prestige"
+          },
+          {
+            "name": "Model",
+            "value": "Nutrifry Digital"
+          },
+          {
+            "name": "Capacity",
+            "value": "4.5 Litres"
+          },
+          {
+            "name": "Color",
+            "value": "Black"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Sunil Sharma",
+        "title": "Healthy cooking made easy",
+        "rating": 5,
+        "comment": "The digital interface is very intuitive. I've made french fries and chicken wings with zero oil and they turned out super crispy.",
+        "date": "1 week ago",
+        "location": "Noida",
+        "likes": 184,
+        "dislikes": 5,
+        "images": []
+      },
+      {
+        "author": "Kavita Rao",
+        "title": "Good capacity",
+        "rating": 5,
+        "comment": "4.5 Litres is perfect for a family of four. It's easy to clean because of the non-stick basket. Highly recommend this over deep frying.",
+        "date": "3 weeks ago",
+        "location": "Bengaluru",
+        "likes": 142,
+        "dislikes": 8,
+        "images": []
+      },
+      {
+        "author": "Gaurav Singh",
+        "title": "Takes a bit of space",
+        "rating": 4,
+        "comment": "Performance is top notch but the unit itself is quite bulky and takes up significant counter space. Keep that in mind.",
+        "date": "1 month ago",
+        "location": "Chandigarh",
+        "likes": 65,
+        "dislikes": 2,
+        "images": []
+      }
+    ]
   }
 ]
