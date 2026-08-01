@@ -1488,5 +1488,92 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "product_realme_washingmachine_1785611386718",
+    "title": "realme TechLife 7 kg 5 Star rating Semi Automatic Top Load Washing Machine",
+    "description": "Buy realme TechLife 7 kg Semi Automatic Washing Machine online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 2449,
+    "oldPrice": 7653,
+    "discount": 68,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/washing-machine-new/h/d/2/-original-imahg4zyxyfkqs9k.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/washing-machine-new/h/d/2/-original-imahg4zyxyfkqs9k.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/washing-machine-new/h/d/2/-original-imahg4zyxyfkqs9k.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "realme",
+    "countInStock": 25,
+    "rating": 4.3,
+    "numReviews": 8942,
+    "highlights": [
+      "Capacity: 7 kg",
+      "5 Star Energy Rating",
+      "Semi Automatic Top Load",
+      "Color: White, Black",
+      "Powerful Pulsator for better cleaning"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "realme"
+          },
+          {
+            "name": "Model",
+            "value": "TechLife"
+          },
+          {
+            "name": "Capacity",
+            "value": "7 kg"
+          },
+          {
+            "name": "Type",
+            "value": "Semi Automatic"
+          },
+          {
+            "name": "Load Type",
+            "value": "Top Load"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Amit Kumar",
+        "title": "Great value for money",
+        "rating": 5,
+        "comment": "The wash quality is surprisingly good for a semi-automatic machine. 7kg capacity is perfect for our family of four.",
+        "date": "10 days ago",
+        "location": "Lucknow",
+        "likes": 421,
+        "dislikes": 18,
+        "images": []
+      },
+      {
+        "author": "Priyanka S",
+        "title": "Saves electricity",
+        "rating": 5,
+        "comment": "The 5-star rating is true. I've noticed a drop in my electricity bill. Very easy to operate and move around.",
+        "date": "1 month ago",
+        "location": "Delhi",
+        "likes": 312,
+        "dislikes": 14,
+        "images": []
+      },
+      {
+        "author": "Suresh T",
+        "title": "Dryer is a bit slow",
+        "rating": 3,
+        "comment": "Washing is fine but the spin dryer takes a longer time to dry clothes completely compared to my old LG machine.",
+        "date": "2 months ago",
+        "location": "Mumbai",
+        "likes": 156,
+        "dislikes": 22,
+        "images": []
+      }
+    ]
   }
 ]
