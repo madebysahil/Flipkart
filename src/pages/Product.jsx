@@ -317,17 +317,17 @@ const Product = () => {
               {/* Photo grid */}
               <div className="flex gap-2 mt-4 h-[200px]">
                  <div className="w-1/2 h-full rounded-lg overflow-hidden">
-                    <img src="https://rukminim2.flixcart.com/blobio/124/124/imr/blobio-imr_e65dc0832a764d8a87b3a98ea88915e8.jpg?q=90" className="w-full h-full object-cover" alt="Review 1" />
+                    <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/television/e/g/d/-original-imahz2d9hrtywscm.jpeg?q=70" className="w-full h-full object-cover" alt="Review 1" />
                  </div>
                  <div className="w-1/2 h-full flex flex-col gap-2">
                     <div className="flex gap-2 h-[calc(50%-4px)]">
-                       <img src="https://rukminim2.flixcart.com/blobio/124/124/imr/blobio-imr_2dd09d945a0b4104af7f28ed5edae821.jpg?q=90" className="w-1/2 h-full object-cover rounded-lg" alt="Review 2" />
-                       <img src="https://rukminim2.flixcart.com/blobio/124/124/imr/blobio-imr_1a7ebc4c81d044fdbb14ab44558eecf9.jpeg?q=90" className="w-1/2 h-full object-cover rounded-lg" alt="Review 3" />
+                       <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/television/4/m/u/-original-imahnewnqjqmvcgn.jpeg?q=70" className="w-1/2 h-full object-cover rounded-lg" alt="Review 2" />
+                       <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/television/5/u/z/-original-imahdwgupnhwsasg.jpeg?q=70" className="w-1/2 h-full object-cover rounded-lg" alt="Review 3" />
                     </div>
                     <div className="flex gap-2 h-[calc(50%-4px)]">
-                       <img src="https://rukminim2.flixcart.com/blobio/124/124/imr/blobio-imr_32a1eb4b8f584f2b96b40348cc818a77.jpeg?q=90" className="w-1/2 h-full object-cover rounded-lg" alt="Review 4" />
+                       <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/television/t/p/u/-original-imahdwgugpsgnryh.jpeg?q=70" className="w-1/2 h-full object-cover rounded-lg" alt="Review 4" />
                        <div className="w-1/2 h-full relative rounded-lg overflow-hidden cursor-pointer">
-                          <img src="https://rukminim2.flixcart.com/blobio/124/124/imr/blobio-imr_9c719e731b814a608e925ccfa3b6c4e0.jpeg?q=90" className="w-full h-full object-cover brightness-50" alt="Review 5" />
+                          <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/television/e/g/d/-original-imahz2d9hrtywscm.jpeg?q=70" className="w-full h-full object-cover brightness-50" alt="Review 5" />
                           <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">+86</div>
                        </div>
                     </div>
