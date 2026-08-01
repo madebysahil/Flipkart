@@ -1,7 +1,10 @@
-const products = require('../products.json');
+const fs = require('fs');
+const path = require('path');
 
 const getProducts = async (req, res) => {
   try {
+    const productsPath = path.join(__dirname, '../products.json');
+    const products = JSON.parse(fs.readFileSync(productsPath, 'utf8'));
     let filteredProducts = products;
     if (req.query.keyword) {
       filteredProducts = filteredProducts.filter(p => p.title.toLowerCase().includes(req.query.keyword.toLowerCase()));
@@ -14,6 +17,8 @@ const getProducts = async (req, res) => {
 
 const getProductById = async (req, res) => {
   try {
+    const productsPath = path.join(__dirname, '../products.json');
+    const products = JSON.parse(fs.readFileSync(productsPath, 'utf8'));
     const product = products.find(p => p._id === req.params.id);
     if (product) {
       res.json(product);
