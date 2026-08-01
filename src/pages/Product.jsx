@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import { useCart } from '../context/CartContext';
-import { ShoppingCart, Zap, Star, ThumbsUp, ThumbsDown, CheckCircle, Heart } from 'lucide-react';
+import { ShoppingCart, Zap, Star, ThumbsUp, ThumbsDown, CheckCircle, Heart, ChevronUp, ChevronRight } from 'lucide-react';
 
 const getCategoryReviews = (product) => {
   if (product?.reviews && product.reviews.length > 0) return product.reviews;
@@ -299,53 +299,94 @@ const Product = () => {
           )}
 
           {/* Ratings & Reviews */}
-          <div className="mt-6 border border-gray-200 rounded-sm mb-4">
-            <div className="p-4 sm:p-6 border-b border-gray-200 flex justify-between items-center">
-              <h3 className="text-[20px] font-medium text-[#212121]">Ratings & Reviews</h3>
-              <button className="bg-white text-[#2874f0] text-[14px] font-medium px-4 py-2 rounded-sm shadow-[0_1px_2px_0_rgba(0,0,0,0.2)]">Rate Product</button>
-            </div>
-            
-            <div className="flex flex-col">
-              {getCategoryReviews(product).map((review, idx) => (
-                <div key={idx} className="p-4 sm:p-6 border-b border-gray-100 last:border-b-0">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className={`${review.rating >= 4 ? 'bg-[#388e3c]' : 'bg-[#ff9f00]'} text-white text-xs font-bold px-1.5 py-0.5 rounded-sm flex items-center gap-1`}>
-                      {review.rating} <Star className="h-3 w-3 fill-current" />
+          <div className="mt-6 border border-gray-200 rounded-sm mb-4 bg-white">
+            <div className="p-4 sm:p-6">
+              <div className="flex justify-between items-center mb-2">
+                 <h3 className="text-[20px] font-medium text-[#212121]">Ratings and reviews</h3>
+                 <div className="bg-gray-100 p-1.5 rounded-full"><ChevronUp className="w-5 h-5 text-gray-500" /></div>
+              </div>
+              <div className="flex items-center gap-2 mb-1">
+                 <span className="text-[24px] font-bold text-[#212121]">{product.rating}</span>
+                 <Star className="w-5 h-5 fill-[#388e3c] text-[#388e3c]" />
+                 <span className="bg-[#e7fbf0] text-[#388e3c] text-[11px] px-2 py-0.5 rounded-sm font-medium">Very Good</span>
+              </div>
+              <div className="text-[12px] text-[#878787] flex items-center gap-1 mt-1">
+                 based on {product.numReviews?.toLocaleString() || '6,511'} ratings by <CheckCircle className="w-3.5 h-3.5" /> Verified Buyers
+              </div>
+              
+              {/* Photo grid */}
+              <div className="flex gap-2 mt-4 h-[200px]">
+                 <div className="w-1/2 h-full rounded-lg overflow-hidden">
+                    <img src="https://rukminim2.flixcart.com/blobio/124/124/imr/blobio-imr_e65dc0832a764d8a87b3a98ea88915e8.jpg?q=90" className="w-full h-full object-cover" alt="Review 1" />
+                 </div>
+                 <div className="w-1/2 h-full flex flex-col gap-2">
+                    <div className="flex gap-2 h-[calc(50%-4px)]">
+                       <img src="https://rukminim2.flixcart.com/blobio/124/124/imr/blobio-imr_2dd09d945a0b4104af7f28ed5edae821.jpg?q=90" className="w-1/2 h-full object-cover rounded-lg" alt="Review 2" />
+                       <img src="https://rukminim2.flixcart.com/blobio/124/124/imr/blobio-imr_1a7ebc4c81d044fdbb14ab44558eecf9.jpeg?q=90" className="w-1/2 h-full object-cover rounded-lg" alt="Review 3" />
                     </div>
-                    <span className="font-medium text-[#212121]">{review.title}</span>
-                  </div>
-                  <p className="text-[#212121] text-[14px] mb-4">{review.comment}</p>
-                  
-                  {review.images && review.images.length > 0 && (
-                    <div className="flex gap-2 mb-4">
-                      {review.images.map((img, i) => (
-                        <div key={i} className="w-16 h-16 border border-gray-200 rounded-sm overflow-hidden flex-shrink-0 cursor-pointer">
-                           <img src={img} alt="Review" className="w-full h-full object-cover" />
-                        </div>
-                      ))}
+                    <div className="flex gap-2 h-[calc(50%-4px)]">
+                       <img src="https://rukminim2.flixcart.com/blobio/124/124/imr/blobio-imr_32a1eb4b8f584f2b96b40348cc818a77.jpeg?q=90" className="w-1/2 h-full object-cover rounded-lg" alt="Review 4" />
+                       <div className="w-1/2 h-full relative rounded-lg overflow-hidden cursor-pointer">
+                          <img src="https://rukminim2.flixcart.com/blobio/124/124/imr/blobio-imr_9c719e731b814a608e925ccfa3b6c4e0.jpeg?q=90" className="w-full h-full object-cover brightness-50" alt="Review 5" />
+                          <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">+86</div>
+                       </div>
                     </div>
-                  )}
-                  
-                  <div className="flex items-center justify-between mt-4">
-                    <div className="flex items-center gap-2 text-[12px] text-[#878787]">
-                      <span>{review.author}</span>
-                      <CheckCircle className="h-3 w-3 text-[#878787] ml-1 hidden sm:block" />
-                      <span className="hidden sm:inline">Certified Buyer, {review.location}</span>
-                      <span className="mx-1 hidden sm:inline">•</span>
-                      <span>{review.date}</span>
-                    </div>
-                    
-                    <div className="flex items-center gap-4 text-[#878787] text-[12px]">
-                      <div className="flex items-center gap-1 cursor-pointer hover:text-[#212121]">
-                        <ThumbsUp className="h-4 w-4" /> {review.likes}
+                 </div>
+              </div>
+
+              {/* Feature Ratings */}
+              <div className="flex flex-wrap gap-2 mt-5">
+                 {['Picture 4.3', 'Sound 4.2', 'Connectivity 4.2', 'Delivery & Installation 4.2', 'Value for Money 4.2', 'Software 4.1', 'App Support 4.1'].map(feat => {
+                    const parts = feat.split(' ');
+                    const rating = parts.pop();
+                    const name = parts.join(' ');
+                    return (
+                      <div key={feat} className="flex items-center gap-1 bg-[#f0f5ff] px-2.5 py-1 rounded-md text-[13px] text-[#212121]">
+                         {name} <span className="font-bold flex items-center ml-1">{rating} <Star className="w-3.5 h-3.5 fill-[#388e3c] text-[#388e3c] ml-0.5" /></span>
                       </div>
-                      <div className="flex items-center gap-1 cursor-pointer hover:text-[#212121]">
-                        <ThumbsDown className="h-4 w-4" /> {review.dislikes}
+                    )
+                 })}
+              </div>
+              
+              {/* Horizontal Reviews */}
+              <div className="flex overflow-x-auto gap-4 mt-6 pb-2 snap-x scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                {getCategoryReviews(product).map((review, idx) => (
+                  <div key={idx} className="min-w-[280px] w-[280px] bg-[#f5f7fa] p-4 rounded-xl snap-start border border-gray-100 flex flex-col justify-between">
+                    <div>
+                      <div className="flex justify-between items-start mb-2">
+                         <div className="flex items-center gap-2">
+                           <div className="flex items-center gap-1 bg-white border border-gray-200 px-1.5 py-0.5 rounded-md text-[11px] font-bold text-[#212121]">
+                             {review.rating} <Star className="w-3 h-3 fill-[#388e3c] text-[#388e3c]" />
+                           </div>
+                           <span className="font-bold text-[14px] text-[#212121]">{review.title}</span>
+                         </div>
+                         <span className="text-[11px] text-[#878787]">{review.date}</span>
                       </div>
+                      <p className="text-[13px] text-[#4a4a4a] mb-4 line-clamp-2">
+                        {review.comment}
+                        <span className="text-[#2874f0] font-medium ml-1 cursor-pointer">...more</span>
+                      </p>
+                    </div>
+                    <div className="flex justify-between items-end">
+                       <div className="flex flex-col">
+                         <span className="text-[12px] text-[#212121]">{review.author}</span>
+                         <div className="flex items-center text-[10px] text-[#878787] mt-0.5">
+                           <CheckCircle className="w-3 h-3 mr-1" /> Verified Buyer
+                         </div>
+                       </div>
+                       <div className="flex gap-3 text-[#878787] text-xs">
+                          <div className="flex items-center gap-1 cursor-pointer hover:text-[#212121]"><ThumbsUp className="w-3.5 h-3.5" /> {review.likes}</div>
+                          <div className="flex items-center gap-1 cursor-pointer hover:text-[#212121]"><ThumbsDown className="w-3.5 h-3.5" /> {review.dislikes}</div>
+                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+
+              {/* Show all reviews button */}
+              <button className="w-full mt-5 py-2.5 border border-gray-300 rounded-lg text-[#212121] font-bold text-[14px] flex items-center justify-center hover:bg-gray-50 transition-colors">
+                 Show all reviews <ChevronRight className="w-4 h-4 ml-1 text-gray-500" />
+              </button>
             </div>
           </div>
         </div>
