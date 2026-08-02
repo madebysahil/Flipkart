@@ -2290,5 +2290,80 @@
         ]
       }
     ]
+  },
+  {
+    "_id": "1785655624140",
+    "title": "Snapple TAG Stainless Steel Water Bottle Single Wall ISI Certified 1000 ml Steel Bottle",
+    "price": 649,
+    "oldPrice": 1599,
+    "discount": 45,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/bottle/r/r/5/1000-messi-stainless-steel-1l-water-bottle-combo-for-fridge-original-imahpgkgrz9q8qkk.jpeg?q=20",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/bottle/t/9/r/1000-tag-stainless-steel-water-bottle-single-wall-isi-certified-original-imahnfzxrzahc8jf.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/bottle/t/9/r/1000-tag-stainless-steel-water-bottle-single-wall-isi-certified-enriched-0-original-imahnfzxrzahc8jf.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/bottle/t/9/r/1000-tag-stainless-steel-water-bottle-single-wall-isi-certified-enriched-2-original-imahnfzxrzahc8jf.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/bottle/t/9/r/1000-tag-stainless-steel-water-bottle-single-wall-isi-certified-enriched-3-original-imahnfzxrzahc8jf.jpeg?q=80"
+    ],
+    "category": "Sports & Fitness",
+    "brand": "Snapple",
+    "rating": 4.1,
+    "numReviews": 245,
+    "highlights": [
+      "Capacity: 1000 ml",
+      "Stainless Steel Body",
+      "Single Wall, ISI Certified",
+      "Leak Proof Design"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Snapple"
+          },
+          {
+            "name": "Type",
+            "value": "Water Bottle"
+          },
+          {
+            "name": "Material",
+            "value": "Stainless Steel"
+          },
+          {
+            "name": "Capacity",
+            "value": "1000 ml"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Very sturdy and good quality steel bottle. Does not leak.",
+        "author": "Rakesh J",
+        "title": "Excellent quality",
+        "date": "4 days ago",
+        "location": "Hyderabad",
+        "likes": 12,
+        "dislikes": 1,
+        "images": [
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+        ]
+      },
+      {
+        "rating": 4,
+        "comment": "Good bottle for gym. The cap is tight.",
+        "author": "Aman T",
+        "title": "Good for gym",
+        "date": "1 week ago",
+        "location": "Delhi",
+        "likes": 5,
+        "dislikes": 0,
+        "images": [
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+        ]
+      }
+    ]
   }
 ]
