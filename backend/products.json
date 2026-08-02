@@ -2365,5 +2365,76 @@
         ]
       }
     ]
+  },
+  {
+    "_id": "1785655733199",
+    "title": "Longway Multipurpose Portable Digital Kitchen Weighing Scale",
+    "price": 149,
+    "oldPrice": 999,
+    "discount": 62,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/weighing-scale/t/a/s/electronic-digital-1gram-10-kg-weight-scale-kitchen-weight-scale-original-imahh3q3zhq3qsxr.jpeg?q=20",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/weighing-scale/i/z/f/multipurpose-portable-digital-kitchen-weighing-scale-lwkws01-original-imahyd3gay5hfhf6.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/weighing-scale/i/z/f/multipurpose-portable-digital-kitchen-weighing-scale-lwkws01-original-imahyd3gay5hfhf6.jpeg?q=90",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/weighing-scale/q/b/1/-original-imahyh8tqfzb5tbz.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/weighing-scale/q/b/1/-original-imahyh8tqfzb5tbz.jpeg?q=90"
+    ],
+    "category": "Home & Kitchen",
+    "brand": "Longway",
+    "rating": 4,
+    "numReviews": 12504,
+    "highlights": [
+      "Multipurpose Portable Scale",
+      "Digital Display",
+      "Max capacity: 10 kg",
+      "Tare function included"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Longway"
+          },
+          {
+            "name": "Type",
+            "value": "Kitchen Weighing Scale"
+          },
+          {
+            "name": "Display",
+            "value": "Digital"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Very accurate and easy to use. Good for baking.",
+        "author": "Priti K",
+        "title": "Accurate scale",
+        "date": "1 week ago",
+        "location": "Kolkata",
+        "likes": 134,
+        "dislikes": 5,
+        "images": [
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+        ]
+      },
+      {
+        "rating": 4,
+        "comment": "Value for money. Runs on AA batteries.",
+        "author": "Mohit S",
+        "title": "Value for money",
+        "date": "3 weeks ago",
+        "location": "Noida",
+        "likes": 42,
+        "dislikes": 1,
+        "images": [
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+        ]
+      }
+    ]
   }
 ]
