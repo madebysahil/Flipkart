@@ -1941,5 +1941,46 @@
         "comment": "Good quality, worth the price."
       }
     ]
+  },
+  {
+    "_id": "1785654374509",
+    "title": "Kanishka Smk Pk2 (23) | Energy Saving | Anti Dust with 2 Year Warranty Energy Saving, Anti Dust, Anti Rust, High Air Delivery, Ultra High Speed 1200 mm Ceiling Fan",
+    "price": 649,
+    "oldPrice": 6599,
+    "discount": 74,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/fan/x/z/w/smk-pk2-23-energy-saving-anti-dust-2-year-warranty-saving-dust-original-imagr7jz8hzbz7z8.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Kanishka",
+    "rating": 4,
+    "numReviews": 845,
+    "highlights": [],
+    "specifications": [
+      {
+        "name": "Type",
+        "value": "Ceiling Fan"
+      },
+      {
+        "name": "Motor Speed",
+        "value": "400 RPM"
+      },
+      {
+        "name": "Power Consumption",
+        "value": "50 W"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "Sunil",
+        "rating": 4,
+        "comment": "Good airflow, silent operation."
+      },
+      {
+        "user": "Raj",
+        "rating": 5,
+        "comment": "Value for money, works perfectly."
+      }
+    ]
   }
 ]
