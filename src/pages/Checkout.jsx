@@ -137,42 +137,8 @@ const Checkout = () => {
   };
   
   const handlePayNow = () => {
-    if (selectedPayment === 'qr') {
+    if (selectedPayment === 'qr' || ['phonepe', 'gpay', 'paytm'].includes(selectedPayment)) {
       setShowQRPage(true);
-    } else if (['phonepe', 'gpay', 'paytm'].includes(selectedPayment)) {
-      setIsProcessing(true);
-      
-      // Use Android intent:// URIs - opens specific app but routes through standard upi:// protocol
-      // This bypasses the stricter security of app-specific deep links (phonepe://, paytmmp://)
-      setTimeout(() => {
-        const am = Number(finalPayable).toFixed(2);
-        const payParams = `pay?pa=${UPI_ID}&pn=${PAYEE_NAME}&tr=${transactionId}&tn=Payment&am=${am}&cu=INR`;
-        
-        const packages = {
-          phonepe: 'com.phonepe.app',
-          gpay: 'com.google.android.apps.nbu.paisa.user',
-          paytm: 'net.one97.paytm'
-        };
-        
-        const pkg = packages[selectedPayment];
-        window.location.href = `intent://${payParams}#Intent;scheme=upi;package=${pkg};end`;
-      }, 500);
-
-      // Wait 2 minutes in background, then redirect to real looking success page
-      setTimeout(() => {
-        if (!user) {
-          localStorage.removeItem('cartItems');
-          window.dispatchEvent(new Event('storage'));
-        }
-        setIsProcessing(false);
-        const orderData = {
-          address: selectedAddress ? `${selectedAddress.fullName}, ${selectedAddress.city}, ${selectedAddress.state} - ${selectedAddress.pincode}` : ', , , ',
-          deliveryDate: getDeliveryDate()
-        };
-        sessionStorage.setItem('lastOrderData', JSON.stringify(orderData));
-        navigate(`/payment/status?success=true`);
-      }, 120000);
-      
     } else {
       alert('Please select a payment method');
     }
