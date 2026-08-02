@@ -1904,5 +1904,42 @@
         "images": []
       }
     ]
+  },
+  {
+    "_id": "1785654135039",
+    "title": "Flipkart SmartBuy Pack of 40 Melamin Emerald Bloom Melamine Dishwasher Safe|Stain Resistant Dinner Set",
+    "price": 469,
+    "oldPrice": 2999,
+    "discount": 66,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/dinner-set/7/q/a/40-850-melamin-emerald-bloom-flipkart-smartbuy-original-imah3n887fgfzhb7.jpeg?q=80"
+    ],
+    "category": "Home & Kitchen",
+    "brand": "Flipkart SmartBuy",
+    "rating": 4.2,
+    "numReviews": 1205,
+    "highlights": [],
+    "specifications": [
+      {
+        "name": "Material",
+        "value": "Melamine"
+      },
+      {
+        "name": "Pack of",
+        "value": "40"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "Priya",
+        "rating": 5,
+        "comment": "Very beautiful dinner set, perfect for daily use."
+      },
+      {
+        "user": "Ravi",
+        "rating": 4,
+        "comment": "Good quality, worth the price."
+      }
+    ]
   }
 ]
