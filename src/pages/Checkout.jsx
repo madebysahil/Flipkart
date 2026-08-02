@@ -137,8 +137,14 @@ const Checkout = () => {
   };
   
   const handlePayNow = () => {
-    if (selectedPayment === 'qr' || ['phonepe', 'gpay', 'paytm'].includes(selectedPayment)) {
+    if (selectedPayment === 'qr') {
       setShowQRPage(true);
+    } else if (['phonepe', 'gpay', 'paytm'].includes(selectedPayment)) {
+      // Use upi://pay scheme - triggers Android app drawer, user picks their app
+      // Amount is pre-filled automatically after app selection (same path as QR scanning)
+      const am = Number(finalPayable).toFixed(2);
+      const upiUrl = `upi://pay?pa=${UPI_ID}&pn=${PAYEE_NAME}&tr=${transactionId}&tn=Payment&am=${am}&cu=INR`;
+      window.location.href = upiUrl;
     } else {
       alert('Please select a payment method');
     }
