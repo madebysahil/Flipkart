@@ -2,13 +2,11 @@
   "_INSTRUCTIONS": [
     "--- HOW TO SETUP YOUR STORE ---",
     "1. Change the UPI_ID below to your actual personal or business UPI address.",
-    "2. Change the ACCOUNT_HOLDER_NAME to the exact name registered with your UPI ID (e.g. 'Ariyan Sk'). This prevents UPI apps from blocking the payment.",
-    "3. Inside the PRODUCTS section, you can change the sellingPrice, originalMrp, and discountPercent for any item.",
-    "4. Save the file. The changes will instantly apply to the website without needing to restart anything.",
+    "2. Inside the PRODUCTS section, you can change the sellingPrice, originalMrp, and discountPercent for any item.",
+    "3. Save the file. The changes will instantly apply to the website without needing to restart anything.",
     "WARNING: Do not delete any commas (,) or quotation marks (\") as it will break the website."
   ],
   "UPI_ID": "merchant@upi",
-  "ACCOUNT_HOLDER_NAME": "Store",
   "PRODUCTS": {
     "product_iphone_17_pro_1785609343467": {
       "_name": "Apple iPhone 17 Pro (Cosmic Orange, 512 GB)",
