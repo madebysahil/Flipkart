@@ -174,14 +174,19 @@ const Checkout = () => {
     } else if (['phonepe', 'paytm'].includes(selectedPayment)) {
       const params = `pa=${UPI_ID}&pn=${PAYEE_NAME}&cu=INR`;
       
+      setIsProcessing(true);
+      
       // Redirect to app
       setTimeout(() => {
         if (selectedPayment === 'phonepe') window.location.href = `phonepe://pay?${params}`;
         if (selectedPayment === 'paytm') window.location.href = `paytmmp://pay?${params}`;
       }, 300);
 
-      // Show UTR input page immediately
-      setShowAppUtrPage(true);
+      // Wait 2 minutes, then show UTR input page
+      setTimeout(() => {
+        setIsProcessing(false);
+        setShowAppUtrPage(true);
+      }, 120000);
       
     } else {
       alert('Please select a payment method');
@@ -193,6 +198,34 @@ const Checkout = () => {
     if (step === 2) return 'Order Summary';
     return 'Payments';
   };
+
+  if (isProcessing) {
+    return (
+      <div className="min-h-screen bg-white flex flex-col items-center justify-center font-sans px-6 text-center">
+        <Loader2 className="h-12 w-12 text-[#2874f0] animate-spin mb-6" />
+        <h2 className="text-xl font-bold text-gray-900 mb-4">
+          Redirecting to {selectedPayment === 'phonepe' ? 'PhonePe' : 'Paytm'}...
+        </h2>
+        <p className="text-gray-600 text-sm mb-2">Please complete the payment in your app.</p>
+        <p className="text-[#ff3f6c] font-medium text-sm animate-pulse mb-10">Do not press back or close this page.</p>
+        
+        <div className="bg-blue-50 border border-blue-100 rounded-lg p-4 w-full max-w-sm mb-6">
+          <p className="text-xs text-blue-800 mb-3 text-left">
+            We are waiting 2 minutes for the app. If you have already completed the payment, you can verify it now.
+          </p>
+          <button 
+            onClick={() => {
+              setIsProcessing(false);
+              setShowAppUtrPage(true);
+            }}
+            className="w-full py-2.5 bg-white border border-[#2874f0] text-[#2874f0] text-sm font-medium rounded-md hover:bg-blue-50 transition-colors"
+          >
+            I have completed the payment
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (isVerifyingPayment) {
     return (
