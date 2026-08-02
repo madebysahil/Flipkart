@@ -61,8 +61,16 @@ const Checkout = () => {
 
 
 
-  const itemsPrice = cartItems.reduce((acc, item) => acc + ((item.product.oldPrice || item.product.price) * item.quantity), 0);
-  const currentPrice = cartItems.reduce((acc, item) => acc + (item.product.price * item.quantity), 0);
+  const getProductPrice = (productId, defaultPrice) => {
+    return config.PRODUCTS?.[productId]?.sellingPrice || defaultPrice;
+  };
+
+  const getProductOldPrice = (productId, defaultOldPrice) => {
+    return config.PRODUCTS?.[productId]?.originalMrp || defaultOldPrice;
+  };
+
+  const itemsPrice = cartItems.reduce((acc, item) => acc + (getProductOldPrice(item.product._id, item.product.oldPrice || item.product.price) * item.quantity), 0);
+  const currentPrice = cartItems.reduce((acc, item) => acc + (getProductPrice(item.product._id, item.product.price) * item.quantity), 0);
   const discount = itemsPrice - currentPrice;
   const deliveryCharge = 0;
   
@@ -339,7 +347,10 @@ const Checkout = () => {
               </div>
 
               <div className="bg-white mb-2">
-                {cartItems.map((item) => (
+                {cartItems.map((item) => {
+                  const livePrice = getProductPrice(item.product._id, item.product.price);
+                  const liveOldPrice = getProductOldPrice(item.product._id, item.product.oldPrice || item.product.price);
+                  return (
                   <div key={item.product._id} className="p-4 flex gap-4 border-b border-gray-100 relative">
                     <div className="w-24 h-24 shrink-0 flex items-center justify-center">
                       <img src={item.product.images?.[0]} alt="" className="max-h-full object-contain" />
@@ -349,9 +360,9 @@ const Checkout = () => {
                       <p className="text-gray-600 text-sm line-clamp-1">{item.product.title}</p>
                       <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="assured" className="h-4 my-1.5" />
                                            <div className="flex items-center gap-2 mt-1 mb-3">
-                        <span className="text-xl font-bold">₹{item.product.price}</span>
-                        <span className="text-gray-400 line-through text-sm">₹{item.product.oldPrice}</span>
-                        <span className="text-green-600 font-bold text-sm">{Math.round((item.product.oldPrice - item.product.price)/item.product.oldPrice * 100)}% off</span>
+                        <span className="text-xl font-bold">₹{livePrice}</span>
+                        <span className="text-gray-400 line-through text-sm">₹{liveOldPrice}</span>
+                        <span className="text-green-600 font-bold text-sm">{Math.round((liveOldPrice - livePrice)/liveOldPrice * 100)}% off</span>
                       </div>
 
                       <div className="mt-1 flex items-center gap-6">
@@ -365,7 +376,8 @@ const Checkout = () => {
                       </div>
                     </div>
                   </div>
-                ))}
+                  );
+                })}
               </div>
 
               <div className="bg-white p-4 mb-2">
