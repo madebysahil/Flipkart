@@ -2436,5 +2436,76 @@
         ]
       }
     ]
+  },
+  {
+    "_id": "1785655836330",
+    "title": "NYTK RETAIL 2025 Foldable Barbeque With - 2 Spatula,1 Bbq, 10 Stick &amp; 1 Air Blower Charcoal Grill",
+    "price": 489,
+    "oldPrice": 1999,
+    "discount": 51,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/barbecue-grill/u/r/x/no-bbq-barbeque-stick-pack-of-12-gas-dealguru-original-imah6szhqtypg8c9.jpeg?q=20",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/barbecue-grill/e/p/i/yes-foldable-barbeque-with-2-spatula-1-bbq-12-stick-1-air-blower-original-imahjm24mzcgp3qz.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/barbecue-grill/e/p/i/yes-foldable-barbeque-with-2-spatula-1-bbq-12-stick-1-air-blower-original-imahjm24mzcgp3qz.jpeg?q=90",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/barbecue-grill/j/d/e/yes-2025-foldable-barbeque-with-2-spatula-1-bbq-10-stick-1-air-original-imahjm268jan8hvg.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/barbecue-grill/j/d/e/yes-2025-foldable-barbeque-with-2-spatula-1-bbq-10-stick-1-air-original-imahjm268jan8hvg.jpeg?q=90"
+    ],
+    "category": "Home Appliances",
+    "brand": "NYTK Retail",
+    "rating": 4.3,
+    "numReviews": 890,
+    "highlights": [
+      "Foldable Barbeque Charcoal Grill",
+      "Includes 2 Spatula & 10 BBQ Sticks",
+      "Air Blower included",
+      "Portable & Lightweight"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "NYTK Retail"
+          },
+          {
+            "name": "Type",
+            "value": "Charcoal Grill"
+          },
+          {
+            "name": "Design",
+            "value": "Foldable"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Awesome BBQ set. Best for picnics.",
+        "author": "Rohan J",
+        "title": "Awesome product",
+        "date": "4 days ago",
+        "location": "Pune",
+        "likes": 120,
+        "dislikes": 3,
+        "images": [
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+        ]
+      },
+      {
+        "rating": 4,
+        "comment": "Grill quality is good but sticks could be better.",
+        "author": "Mayank K",
+        "title": "Good buy",
+        "date": "1 week ago",
+        "location": "Indore",
+        "likes": 34,
+        "dislikes": 1,
+        "images": [
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+        ]
+      }
+    ]
   }
 ]
