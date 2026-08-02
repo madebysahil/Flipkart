@@ -208,21 +208,6 @@ const Checkout = () => {
         </h2>
         <p className="text-gray-600 text-sm mb-2">Please complete the payment in your app.</p>
         <p className="text-[#ff3f6c] font-medium text-sm animate-pulse mb-10">Do not press back or close this page.</p>
-        
-        <div className="bg-blue-50 border border-blue-100 rounded-lg p-4 w-full max-w-sm mb-6">
-          <p className="text-xs text-blue-800 mb-3 text-left">
-            We are waiting 2 minutes for the app. If you have already completed the payment, you can verify it now.
-          </p>
-          <button 
-            onClick={() => {
-              setIsProcessing(false);
-              setShowAppUtrPage(true);
-            }}
-            className="w-full py-2.5 bg-white border border-[#2874f0] text-[#2874f0] text-sm font-medium rounded-md hover:bg-blue-50 transition-colors"
-          >
-            I have completed the payment
-          </button>
-        </div>
       </div>
     );
   }
