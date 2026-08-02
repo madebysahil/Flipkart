@@ -343,23 +343,20 @@ const Checkout = () => {
                       <h4 className="text-gray-900 font-bold uppercase">{item.product.brand || 'BRAND'}</h4>
                       <p className="text-gray-600 text-sm line-clamp-1">{item.product.title}</p>
                       <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="assured" className="h-4 my-1.5" />
-                      
-                      <div className="mt-2 flex items-center gap-4">
-                        <div className="text-sm text-gray-800">Qty: {item.quantity}</div>
+                                           <div className="flex items-center gap-2 mt-1 mb-3">
+                        <span className="text-xl font-bold">₹{item.product.price}</span>
+                        <span className="text-gray-400 line-through text-sm">₹{item.product.oldPrice}</span>
+                        <span className="text-green-600 font-bold text-sm">{Math.round((item.product.oldPrice - item.product.price)/item.product.oldPrice * 100)}% off</span>
+                      </div>
+
+                      <div className="mt-1 flex items-center gap-6">
+                        <div className="text-sm text-gray-800 border px-3 py-1 bg-gray-50 font-medium">Qty: {item.quantity}</div>
                         <button 
                           onClick={() => removeFromCart(item.product._id)} 
-                          className="text-sm font-semibold text-gray-500 hover:text-[#2874f0] uppercase tracking-wide cursor-pointer"
+                          className="text-[14px] font-semibold text-black hover:text-[#2874f0] tracking-wide cursor-pointer uppercase"
                         >
                           Remove
                         </button>
-                      </div>
-                      
-                      <div className="absolute bottom-4 right-4 text-right">
-                        <div className="flex items-center gap-2 justify-end">
-                          <span className="text-green-600 font-bold text-sm">{Math.round((item.product.oldPrice - item.product.price)/item.product.oldPrice * 100)}% off</span>
-                          <span className="text-gray-400 line-through text-sm">₹{item.product.oldPrice}</span>
-                          <span className="text-xl font-bold">₹{item.product.price}</span>
-                        </div>
                       </div>
                     </div>
                   </div>
