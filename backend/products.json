@@ -2023,5 +2023,42 @@
         "comment": "Good service and easy installation."
       }
     ]
+  },
+  {
+    "_id": "1785654641314",
+    "title": "V-Guard VRC 1.8C with 2 Pots Electric Rice Cooker",
+    "price": 498,
+    "oldPrice": 4235,
+    "discount": 80,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/electric-cooker/q/c/h/-original-imagxhzgx22aawhg.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "V-Guard",
+    "rating": 4.1,
+    "numReviews": 1042,
+    "highlights": [],
+    "specifications": [
+      {
+        "name": "Capacity",
+        "value": "1.8 L"
+      },
+      {
+        "name": "Power",
+        "value": "500 W"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "Rohan",
+        "rating": 4,
+        "comment": "Nice rice cooker, easy to use."
+      },
+      {
+        "user": "Pooja",
+        "rating": 5,
+        "comment": "Cooks rice perfectly every time."
+      }
+    ]
   }
 ]
