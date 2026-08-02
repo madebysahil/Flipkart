@@ -395,15 +395,15 @@ const Checkout = () => {
               <div className="bg-white p-4 mb-2 space-y-3">
                 
                 <div onClick={() => setSelectedPayment('upi')} className={`border rounded-lg p-4 flex items-center justify-between cursor-pointer transition-colors ${selectedPayment === 'upi' ? 'border-blue-500 bg-blue-50/10' : 'border-gray-200'}`}>
-                  <div className="flex items-center gap-3">
-                    <div className="flex items-center -space-x-1">
-                      <img src="/payment/phonepe.svg" alt="PhonePe" className="h-7 w-7 object-contain" />
-                      <img src="/payment/paytm.svg" alt="Paytm" className="h-7 w-9 object-contain" />
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Pay_logo.svg" alt="GPay" className="h-6 w-6 object-contain ml-1" />
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
+                      <img src="/payment/phonepe.svg" alt="PhonePe" className="h-8 w-8 object-contain" />
+                      <img src="/payment/gpay.svg" alt="GPay" className="h-8 w-8 object-contain" />
+                      <img src="/payment/paytm.svg" alt="Paytm" className="h-8 w-10 object-contain" />
                     </div>
                     <div>
                       <span className="font-bold text-gray-900 text-lg block">UPI</span>
-                      <span className="text-gray-500 text-xs">PhonePe, Paytm, GPay & more</span>
+                      <span className="text-gray-500 text-xs">PhonePe, GPay, Paytm & more</span>
                     </div>
                   </div>
                   <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
