@@ -92,13 +92,13 @@ const Product = () => {
   if (loading) return <div className="p-8 text-center">Loading product details...</div>;
   if (!product) return <div className="p-8 text-center">Product not found</div>;
 
-  const handleAddToCart = () => {
-    addToCart(product._id, 1);
+  const handleAddToCart = async () => {
+    await addToCart(product._id, 1);
     navigate('/checkout');
   };
 
-  const handleBuyNow = () => {
-    addToCart(product._id, 1);
+  const handleBuyNow = async () => {
+    await addToCart(product._id, 1);
     navigate('/checkout'); // Direct to checkout/address page
   };
 
