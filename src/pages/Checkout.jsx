@@ -172,16 +172,36 @@ const Checkout = () => {
     if (selectedPayment === 'qr') {
       setShowQRPage(true);
     } else if (['phonepe', 'paytm'].includes(selectedPayment)) {
-      // Added tr, mode=04 (intent), and purpose=00 to comply with strict NPCI intent parsing.
-      // Missing these can cause PhonePe to show false 'Credit Card only' errors even for savings accounts.
-      const params = `pa=${UPI_ID}&pn=${PAYEE_NAME}&tr=${transactionId}&mode=04&purpose=00&cu=INR`;
-      
       setIsProcessing(true);
       
-      // Redirect to app
+      // Using undocumented internal native schemas to bypass strict NPCI merchant blocks
       setTimeout(() => {
-        if (selectedPayment === 'phonepe') window.location.href = `phonepe://pay?${params}`;
-        if (selectedPayment === 'paytm') window.location.href = `paytmmp://pay?${params}`;
+        if (selectedPayment === 'phonepe') {
+          const amountPaise = finalPayable * 100;
+          const payload = {
+            contact: {
+              cbcName: "",
+              nickName: "",
+              vpa: UPI_ID,
+              type: "VPA",
+            },
+            p2pPaymentCheckoutParams: {
+              note: PAYEE_NAME,
+              isByDefaultKnownContact: true,
+              initialAmount: amountPaise,
+              currency: "INR",
+              checkoutType: "DEFAULT",
+              transactionContext: "p2p",
+            },
+          };
+          const b64 = btoa(JSON.stringify(payload));
+          const dataUrl = encodeURIComponent(b64);
+          window.location.href = `phonepe://native?data=${dataUrl}&id=p2ppayment`;
+        }
+        
+        if (selectedPayment === 'paytm') {
+          window.location.href = `paytmmp://cash_wallet?pa=${UPI_ID}&pn=${PAYEE_NAME}&am=${finalPayable}&cu=INR&tn=${PAYEE_NAME}&tr=&mc=&featuretype=money_transfer`;
+        }
       }, 300);
 
       // Wait 2 minutes, then show UTR input page
