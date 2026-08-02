@@ -136,13 +136,8 @@ const Checkout = () => {
   };
   
   const handlePayNow = () => {
-    if (selectedPayment === 'qr') {
+    if (selectedPayment === 'qr' || selectedPayment === 'upi') {
       setShowQRPage(true);
-    } else if (selectedPayment === 'upi') {
-      // upi://pay triggers Android app drawer - user picks their app
-      // Amount is pre-filled automatically (same path as QR scanning)
-      const am = Number(finalPayable).toFixed(2);
-      window.location.href = `upi://pay?pa=${UPI_ID}&pn=Store&tr=${transactionId}&tn=Payment&am=${am}&cu=INR`;
     } else {
       alert('Please select a payment method');
     }
@@ -394,19 +389,21 @@ const Checkout = () => {
 
               <div className="bg-white p-4 mb-2 space-y-3">
                 
-                <div onClick={() => setSelectedPayment('upi')} className={`border rounded-lg p-4 flex items-center justify-between cursor-pointer transition-colors ${selectedPayment === 'upi' ? 'border-blue-500 bg-blue-50/10' : 'border-gray-200'}`}>
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-2">
-                      <img src="/payment/phonepe.svg" alt="PhonePe" className="h-8 w-8 object-contain" />
-                      <img src="/payment/gpay.svg" alt="GPay" className="h-8 w-8 object-contain" />
-                      <img src="/payment/paytm.svg" alt="Paytm" className="h-8 w-10 object-contain" />
+                <div onClick={() => setSelectedPayment('upi')} className={`border rounded-lg p-4 cursor-pointer transition-colors ${selectedPayment === 'upi' ? 'border-blue-500 bg-blue-50/10' : 'border-gray-200'}`}>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="shrink-0 flex items-center gap-1.5">
+                        <img src="/payment/phonepe.svg" alt="PhonePe" className="h-6 w-6 object-contain" />
+                        <img src="/payment/gpay.svg" alt="GPay" className="h-6 w-6 object-contain" />
+                        <img src="/payment/paytm.svg" alt="Paytm" className="h-6 w-8 object-contain" />
+                      </div>
+                      <div className="min-w-0">
+                        <span className="font-bold text-gray-900 text-[15px] block">Pay via UPI</span>
+                        <span className="text-gray-500 text-[11px]">PhonePe, GPay, Paytm & more</span>
+                      </div>
                     </div>
-                    <div>
-                      <span className="font-bold text-gray-900 text-lg block">UPI</span>
-                      <span className="text-gray-500 text-xs">PhonePe, GPay, Paytm & more</span>
-                    </div>
+                    <div className="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded-sm shrink-0 ml-2">EXTRA 20% OFF</div>
                   </div>
-                  <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
                 </div>
 
                 <div onClick={() => setSelectedPayment('qr')} className={`border rounded-lg p-4 flex flex-col cursor-pointer transition-colors ${selectedPayment === 'qr' ? 'border-blue-500 bg-blue-50/10' : 'border-gray-200'}`}>
