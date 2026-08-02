@@ -1746,9 +1746,10 @@
     "oldPrice": 6814,
     "discount": 74,
     "images": [
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/microwave-new/m/c/w/-original-imaheyuszwf79q54.jpeg?q=80",
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/microwave-new/m/c/w/-original-imaheyuszwf79q54.jpeg?q=80",
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/microwave-new/m/c/w/-original-imaheyuszwf79q54.jpeg?q=80"
+      "/images/microwave_1.png",
+      "/images/microwave_2.png",
+      "/images/microwave_3.jpg",
+      "/images/microwave_4.png"
     ],
     "category": "Home Appliances",
     "brand": "Samsung",
