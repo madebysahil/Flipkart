@@ -45,6 +45,8 @@ const Checkout = () => {
   }, [cartItems, navigate]);
 
   const [step, setStep] = useState(1);
+  const [selectedAddress, setSelectedAddress] = useState(user?.addresses?.[0] || null);
+  const [transactionId, setTransactionId] = useState('');
   const [showQRPage, setShowQRPage] = useState(false);
   const [utr, setUtr] = useState('');
   
