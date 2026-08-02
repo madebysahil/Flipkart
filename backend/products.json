@@ -1982,5 +1982,46 @@
         "comment": "Value for money, works perfectly."
       }
     ]
+  },
+  {
+    "_id": "1785654528681",
+    "title": "Aquaguard Sure Delight Aquasaver ROUVUF2X 6 L RO + UV + UF Water Purifier 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification - Aquaguard : Flipkart.com",
+    "price": 599,
+    "oldPrice": 8999,
+    "discount": 79,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/water-purifier/w/v/k/-original-imagx7f9uwwcpxfz.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Aquaguard",
+    "rating": 4.3,
+    "numReviews": 2450,
+    "highlights": [],
+    "specifications": [
+      {
+        "name": "Type",
+        "value": "Water Purifier"
+      },
+      {
+        "name": "Capacity",
+        "value": "6 L"
+      },
+      {
+        "name": "Purification Features",
+        "value": "RO + UV + UF"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "Sneha",
+        "rating": 5,
+        "comment": "Excellent water purifier, water tastes sweet."
+      },
+      {
+        "user": "Manoj",
+        "rating": 4,
+        "comment": "Good service and easy installation."
+      }
+    ]
   }
 ]
