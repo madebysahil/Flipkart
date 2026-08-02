@@ -54,6 +54,7 @@ const Checkout = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   
   const UPI_ID = config.UPI_ID || 'merchant@upi';
+  const PAYEE_NAME = encodeURIComponent(config.ACCOUNT_HOLDER_NAME || 'Flipkart');
   const { register, handleSubmit, formState: { errors }, clearErrors } = useForm({
     defaultValues: selectedAddress || {}
   });
@@ -136,7 +137,7 @@ const Checkout = () => {
       // Attempt to open UPI app
       setTimeout(() => {
         const am = Number(finalPayable).toFixed(2);
-        const upiParams = `pa=${UPI_ID}&pn=Flipkart&mc=5499&mode=02&purpose=00&tr=${transactionId}&tn=Payment&am=${am}&cu=INR`;
+        const upiParams = `pa=${UPI_ID}&pn=${PAYEE_NAME}&mc=5499&mode=02&purpose=00&tr=${transactionId}&tn=Payment&am=${am}&cu=INR`;
         
         if (selectedPayment === 'phonepe') window.location.href = `phonepe://pay?${upiParams}`;
         else if (selectedPayment === 'gpay') window.location.href = `tez://upi/pay?${upiParams}`;
@@ -179,7 +180,7 @@ const Checkout = () => {
         <div className="flex-1 overflow-y-auto px-6 py-6 flex flex-col items-center">
           <h2 className="text-2xl font-bold mb-6 text-black">Scan QR Code to Pay</h2>
           <div className="mb-8 p-1">
-            <QRCodeSVG value={`upi://pay?pa=${UPI_ID}&pn=Flipkart&mc=5499&mode=02&purpose=00&tr=${transactionId}&tn=Payment&am=${Number(finalPayable).toFixed(2)}&cu=INR`} size={220} />
+            <QRCodeSVG value={`upi://pay?pa=${UPI_ID}&pn=${PAYEE_NAME}&mc=5499&mode=02&purpose=00&tr=${transactionId}&tn=Payment&am=${Number(finalPayable).toFixed(2)}&cu=INR`} size={220} />
           </div>
           <div className="text-xl font-bold text-black mb-6">
             Order Amount ₹{finalPayable}
