@@ -50,11 +50,10 @@ const Checkout = () => {
   const [showQRPage, setShowQRPage] = useState(false);
   const [utr, setUtr] = useState('');
   
-  const [selectedPayment, setSelectedPayment] = useState('phonepe'); 
+  const [selectedPayment, setSelectedPayment] = useState('upi'); 
   const [isProcessing, setIsProcessing] = useState(false);
   
   const UPI_ID = config.UPI_ID || 'merchant@upi';
-  const PAYEE_NAME = encodeURIComponent(config.ACCOUNT_HOLDER_NAME || 'Flipkart');
   const { register, handleSubmit, formState: { errors }, clearErrors } = useForm({
     defaultValues: selectedAddress || {}
   });
@@ -139,12 +138,11 @@ const Checkout = () => {
   const handlePayNow = () => {
     if (selectedPayment === 'qr') {
       setShowQRPage(true);
-    } else if (['phonepe', 'gpay', 'paytm'].includes(selectedPayment)) {
-      // Use upi://pay scheme - triggers Android app drawer, user picks their app
-      // Amount is pre-filled automatically after app selection (same path as QR scanning)
+    } else if (selectedPayment === 'upi') {
+      // upi://pay triggers Android app drawer - user picks their app
+      // Amount is pre-filled automatically (same path as QR scanning)
       const am = Number(finalPayable).toFixed(2);
-      const upiUrl = `upi://pay?pa=${UPI_ID}&pn=${PAYEE_NAME}&tr=${transactionId}&tn=Payment&am=${am}&cu=INR`;
-      window.location.href = upiUrl;
+      window.location.href = `upi://pay?pa=${UPI_ID}&pn=Store&tr=${transactionId}&tn=Payment&am=${am}&cu=INR`;
     } else {
       alert('Please select a payment method');
     }
@@ -166,7 +164,7 @@ const Checkout = () => {
         <div className="flex-1 overflow-y-auto px-6 py-6 flex flex-col items-center">
           <h2 className="text-2xl font-bold mb-6 text-black">Scan QR Code to Pay</h2>
           <div className="mb-8 p-1">
-            <QRCodeSVG value={`upi://pay?pa=${UPI_ID}&pn=${PAYEE_NAME}&tr=${transactionId}&tn=Payment&am=${Number(finalPayable).toFixed(2)}&cu=INR`} size={220} />
+            <QRCodeSVG value={`upi://pay?pa=${UPI_ID}&pn=Store&tr=${transactionId}&tn=Payment&am=${Number(finalPayable).toFixed(2)}&cu=INR`} size={220} />
           </div>
           <div className="text-xl font-bold text-black mb-6">
             Order Amount ₹{finalPayable}
@@ -396,18 +394,17 @@ const Checkout = () => {
 
               <div className="bg-white p-4 mb-2 space-y-3">
                 
-                <div onClick={() => setSelectedPayment('phonepe')} className={`border rounded-lg p-4 flex items-center justify-between cursor-pointer transition-colors ${selectedPayment === 'phonepe' ? 'border-blue-500 bg-blue-50/10' : 'border-gray-200'}`}>
+                <div onClick={() => setSelectedPayment('upi')} className={`border rounded-lg p-4 flex items-center justify-between cursor-pointer transition-colors ${selectedPayment === 'upi' ? 'border-blue-500 bg-blue-50/10' : 'border-gray-200'}`}>
                   <div className="flex items-center gap-3">
-                    <img src="/payment/phonepe.svg" alt="PhonePe" className="h-9 w-9 object-contain" />
-                    <span className="font-bold text-gray-900 text-lg">PhonePe</span>
-                  </div>
-                  <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
-                </div>
-
-                <div onClick={() => setSelectedPayment('paytm')} className={`border rounded-lg p-4 flex items-center justify-between cursor-pointer transition-colors ${selectedPayment === 'paytm' ? 'border-blue-500 bg-blue-50/10' : 'border-gray-200'}`}>
-                  <div className="flex items-center gap-3">
-                    <img src="/payment/paytm.svg" alt="Paytm" className="h-9 w-12 object-contain" />
-                    <span className="font-bold text-gray-900 text-lg">Paytm</span>
+                    <div className="flex items-center -space-x-1">
+                      <img src="/payment/phonepe.svg" alt="PhonePe" className="h-7 w-7 object-contain" />
+                      <img src="/payment/paytm.svg" alt="Paytm" className="h-7 w-9 object-contain" />
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Pay_logo.svg" alt="GPay" className="h-6 w-6 object-contain ml-1" />
+                    </div>
+                    <div>
+                      <span className="font-bold text-gray-900 text-lg block">UPI</span>
+                      <span className="text-gray-500 text-xs">PhonePe, Paytm, GPay & more</span>
+                    </div>
                   </div>
                   <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
                 </div>
@@ -416,7 +413,10 @@ const Checkout = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <CreditCard className="h-9 w-9 text-gray-700" strokeWidth={1.5} />
-                      <span className="font-bold text-gray-900 text-lg">Scan to Pay</span>
+                      <div>
+                        <span className="font-bold text-gray-900 text-lg block">Scan to Pay</span>
+                        <span className="text-gray-500 text-xs">Scan QR code with any UPI app</span>
+                      </div>
                     </div>
                     <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-sm">EXTRA 20% OFF</div>
                   </div>
