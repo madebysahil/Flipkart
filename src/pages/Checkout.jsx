@@ -45,10 +45,7 @@ const Checkout = () => {
   }, [cartItems, navigate]);
 
   const [step, setStep] = useState(1);
-  const [selectedAddress, setSelectedAddress] = useState(user?.addresses?.[0] || null);
-  const [transactionId, setTransactionId] = useState('');
   const [showQRPage, setShowQRPage] = useState(false);
-  const [showUpiDrawer, setShowUpiDrawer] = useState(false);
   const [utr, setUtr] = useState('');
   
   const [selectedPayment, setSelectedPayment] = useState('upi'); 
@@ -142,25 +139,11 @@ const Checkout = () => {
     if (selectedPayment === 'qr') {
       setShowQRPage(true);
     } else if (selectedPayment === 'upi') {
-      setShowUpiDrawer(true);
+      const am = Number(finalPayable).toFixed(2);
+      window.location.href = `upi://pay?pa=${UPI_ID}&pn=${PAYEE_NAME}&tr=${transactionId}&tn=Payment&am=${am}&cu=INR&mode=04`;
     } else {
       alert('Please select a payment method');
     }
-  };
-
-  const handleAppRedirect = (app) => {
-    const am = Number(finalPayable).toFixed(2);
-    const params = `pa=${UPI_ID}&pn=${PAYEE_NAME}&tr=${transactionId}&tn=Payment&am=${am}&cu=INR&mode=04`;
-    
-    setIsProcessing(true);
-    setShowUpiDrawer(false);
-    
-    setTimeout(() => {
-      if (app === 'phonepe') window.location.href = `phonepe://pay?${params}`;
-      else if (app === 'gpay') window.location.href = `tez://upi/pay?${params}`;
-      else if (app === 'paytm') window.location.href = `paytmmp://pay?${params}`;
-      else window.location.href = `upi://pay?${params}`;
-    }, 300);
   };
 
   const getStepTitle = () => {
@@ -568,52 +551,6 @@ const Checkout = () => {
           )}
 
         </div>
-
-        {/* UPI Apps Drawer Bottom Sheet */}
-        {showUpiDrawer && (
-          <div className="fixed inset-0 z-[60] flex items-end justify-center sm:items-center bg-black/60 backdrop-blur-sm transition-opacity">
-            <div className="bg-white w-full sm:w-[400px] rounded-t-2xl sm:rounded-2xl overflow-hidden shadow-2xl animate-[slideUp_0.3s_ease-out]">
-              <div className="p-4 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
-                <h3 className="font-bold text-gray-900 text-lg">Select UPI App</h3>
-                <button onClick={() => setShowUpiDrawer(false)} className="text-gray-400 hover:text-gray-600 p-2">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-              </div>
-              <div className="p-4 grid grid-cols-4 gap-4">
-                <div onClick={() => handleAppRedirect('phonepe')} className="flex flex-col items-center gap-2 cursor-pointer group">
-                  <div className="w-14 h-14 bg-white border border-gray-100 rounded-2xl flex items-center justify-center shadow-sm group-hover:border-blue-500 transition-colors">
-                    <img src="/payment/phonepe.svg" alt="PhonePe" className="w-8 h-8 object-contain" />
-                  </div>
-                  <span className="text-xs font-medium text-gray-700">PhonePe</span>
-                </div>
-                <div onClick={() => handleAppRedirect('gpay')} className="flex flex-col items-center gap-2 cursor-pointer group">
-                  <div className="w-14 h-14 bg-white border border-gray-100 rounded-2xl flex items-center justify-center shadow-sm group-hover:border-blue-500 transition-colors">
-                    <img src="/payment/gpay.svg" alt="GPay" className="w-8 h-8 object-contain" />
-                  </div>
-                  <span className="text-xs font-medium text-gray-700">GPay</span>
-                </div>
-                <div onClick={() => handleAppRedirect('paytm')} className="flex flex-col items-center gap-2 cursor-pointer group">
-                  <div className="w-14 h-14 bg-white border border-gray-100 rounded-2xl flex items-center justify-center shadow-sm group-hover:border-blue-500 transition-colors">
-                    <img src="/payment/paytm.svg" alt="Paytm" className="w-10 h-10 object-contain" />
-                  </div>
-                  <span className="text-xs font-medium text-gray-700">Paytm</span>
-                </div>
-                <div onClick={() => handleAppRedirect('other')} className="flex flex-col items-center gap-2 cursor-pointer group">
-                  <div className="w-14 h-14 bg-white border border-gray-100 rounded-2xl flex items-center justify-center shadow-sm group-hover:border-blue-500 transition-colors">
-                    <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>
-                    </div>
-                  </div>
-                  <span className="text-xs font-medium text-gray-700">Other</span>
-                </div>
-              </div>
-              <div className="p-4 bg-gray-50 text-xs text-gray-500 text-center border-t border-gray-100">
-                Amount to pay: <span className="font-bold text-gray-900">₹{finalPayable}</span>
-              </div>
-            </div>
-          </div>
-        )}
-
       </div>
     </div>
   );
