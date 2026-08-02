@@ -34,8 +34,15 @@ const InputField = ({ name, label, type="text", required = false, pattern, maxLe
 
 const Checkout = () => {
   const { user } = useAuth();
-  const { cartItems } = useCart();
+  const { cartItems, removeFromCart } = useCart();
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    if (cartItems.length === 0) {
+      navigate('/');
+    }
+  }, [cartItems, navigate]);
+
   const [step, setStep] = useState(1);
   const [selectedAddress, setSelectedAddress] = useState(user?.addresses?.[0] || null);
   const [transactionId, setTransactionId] = useState('');
@@ -337,7 +344,15 @@ const Checkout = () => {
                       <p className="text-gray-600 text-sm line-clamp-1">{item.product.title}</p>
                       <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="assured" className="h-4 my-1.5" />
                       
-                      <div className="mt-2 text-sm text-gray-800">Qty: {item.quantity}</div>
+                      <div className="mt-2 flex items-center gap-4">
+                        <div className="text-sm text-gray-800">Qty: {item.quantity}</div>
+                        <button 
+                          onClick={() => removeFromCart(item.product._id)} 
+                          className="text-sm font-semibold text-gray-500 hover:text-[#2874f0] uppercase tracking-wide cursor-pointer"
+                        >
+                          Remove
+                        </button>
+                      </div>
                       
                       <div className="absolute bottom-4 right-4 text-right">
                         <div className="flex items-center gap-2 justify-end">
