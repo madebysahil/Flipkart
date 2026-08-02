@@ -2215,5 +2215,80 @@
         ]
       }
     ]
+  },
+  {
+    "_id": "1785655485146",
+    "title": "Pigeon PG-KESSEL-BOTTLE-COMBI Multi Cooker Electric Kettle",
+    "price": 299,
+    "oldPrice": 1990,
+    "discount": 70,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/electric-kettle/g/o/s/-original-imah3zzbaafphzpt.jpeg?q=20",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/electric-kettle/t/g/5/-original-imahcfj7hsxquhyz.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/electric-kettle/t/g/5/-original-imahcfj7hsxquhyz.jpeg?q=90",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/electrophoresis-apartus/k/k/x/0-0-electric-cooking-pot-aadgex-original-imah8znynt9bcs3v.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/electrophoresis-apartus/k/k/x/0-0-electric-cooking-pot-aadgex-original-imah8znynt9bcs3v.jpeg?q=90"
+    ],
+    "category": "Home Appliances",
+    "brand": "Pigeon",
+    "rating": 4.2,
+    "numReviews": 4512,
+    "highlights": [
+      "Multi Cooker Electric Kettle",
+      "Capacity: 1.2 L",
+      "Stainless Steel Body",
+      "Auto Shut-off feature"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Pigeon"
+          },
+          {
+            "name": "Type",
+            "value": "Electric Kettle"
+          },
+          {
+            "name": "Material",
+            "value": "Stainless Steel"
+          },
+          {
+            "name": "Capacity",
+            "value": "1.2 L"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Boils water very quickly. Good build quality.",
+        "author": "Vikram S",
+        "title": "Very useful",
+        "date": "3 days ago",
+        "location": "Pune",
+        "likes": 78,
+        "dislikes": 2,
+        "images": [
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+        ]
+      },
+      {
+        "rating": 4,
+        "comment": "Nice product but the wire is a bit short.",
+        "author": "Riya M",
+        "title": "Good buy",
+        "date": "1 week ago",
+        "location": "Chennai",
+        "likes": 23,
+        "dislikes": 0,
+        "images": [
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+        ]
+      }
+    ]
   }
 ]
