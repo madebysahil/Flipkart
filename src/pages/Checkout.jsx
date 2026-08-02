@@ -172,7 +172,9 @@ const Checkout = () => {
     if (selectedPayment === 'qr') {
       setShowQRPage(true);
     } else if (['phonepe', 'paytm'].includes(selectedPayment)) {
-      const params = `pa=${UPI_ID}&pn=${PAYEE_NAME}&cu=INR`;
+      // Added tr, mode=04 (intent), and purpose=00 to comply with strict NPCI intent parsing.
+      // Missing these can cause PhonePe to show false 'Credit Card only' errors even for savings accounts.
+      const params = `pa=${UPI_ID}&pn=${PAYEE_NAME}&tr=${transactionId}&mode=04&purpose=00&cu=INR`;
       
       setIsProcessing(true);
       
