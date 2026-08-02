@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header';
 import LiveSaleTimer from './LiveSaleTimer';
-import Footer from './Footer';
+
 
 const MainLayout = () => {
   const location = useLocation();
@@ -26,7 +26,7 @@ const MainLayout = () => {
       <main className="flex-grow">
         <Outlet />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

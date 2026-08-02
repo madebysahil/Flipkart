@@ -1,5 +1,169 @@
 [
   {
+    "_id": "product_iphone_17_pro_1785609343467",
+    "title": "Apple iPhone 17 Pro (Cosmic Orange, 512 GB)",
+    "description": "Buy Apple iPhone 17 Pro online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 2999,
+    "oldPrice": 59900,
+    "discount": 95,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/q/l/l/-original-imahft5nzymbfwfh.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+    ],
+    "category": "Mobiles",
+    "brand": "Apple",
+    "countInStock": 150,
+    "rating": 4.8,
+    "numReviews": 23412,
+    "highlights": [
+      "512 GB ROM",
+      "15.49 cm (6.1 inch) Super Retina XDR Display",
+      "48MP + 12MP + 12MP | 12MP Front Camera",
+      "A17 Pro Chip, 6 Core Processor"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Apple"
+          },
+          {
+            "name": "Model",
+            "value": "iPhone 17 Pro"
+          },
+          {
+            "name": "Color",
+            "value": "Cosmic Orange"
+          },
+          {
+            "name": "Storage",
+            "value": "512 GB"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Arjun Reddy",
+        "title": "Mind-blowing performance",
+        "rating": 5,
+        "comment": "The A17 Pro chip is insanely fast. Gaming and multitasking are a breeze. The Cosmic Orange color looks stunning in person.",
+        "date": "10 days ago",
+        "location": "Bengaluru",
+        "likes": 845,
+        "dislikes": 23,
+        "images": []
+      },
+      {
+        "author": "Simran Kaur",
+        "title": "Incredible Camera",
+        "rating": 5,
+        "comment": "Upgraded from iPhone 13 Pro. The camera improvements are massive, especially in low light. Battery life easily lasts a full day.",
+        "date": "1 month ago",
+        "location": "New Delhi",
+        "likes": 612,
+        "dislikes": 15,
+        "images": []
+      },
+      {
+        "author": "Nikhil Agarwal",
+        "title": "Best premium smartphone",
+        "rating": 4,
+        "comment": "Very premium feel with the titanium body. It's noticeably lighter. Only deducting one star because the charging speeds could be better.",
+        "date": "15 days ago",
+        "location": "Mumbai",
+        "likes": 420,
+        "dislikes": 18,
+        "images": []
+      }
+    ]
+  },
+  {
+    "_id": "product_atomberg_fan",
+    "title": "Atomberg Renesa Prime Remote|High Air Delivery|LED Speed Indicator|Low Noise|Sleek Design with 3 Year Warranty BLDC Motor with Remote 1200 mm Ceiling Fan",
+    "description": "Buy Atomberg Renesa Prime Ceiling Fan online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 419,
+    "oldPrice": 3499,
+    "discount": 88,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/fan/n/k/p/renesa-prime-remote-high-air-delivery-led-speed-indicator-low-original-imahnjbgyfqha6s3.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/fan/r/c/5/-original-imahp6d6kgqpceaj.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/fan/r/c/5/-original-imahp6d6kgqpceaj.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "Atomberg",
+    "countInStock": 150,
+    "rating": 4.5,
+    "numReviews": 8452,
+    "highlights": [
+      "BLDC Motor: Energy Efficient Technology",
+      "Remote Control for Speed & Timer",
+      "Sleek and Modern Design",
+      "3 Years Warranty"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Atomberg"
+          },
+          {
+            "name": "Model",
+            "value": "Renesa Prime"
+          },
+          {
+            "name": "Type",
+            "value": "Ceiling Fan"
+          },
+          {
+            "name": "Motor Type",
+            "value": "BLDC"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Sanjay Verma",
+        "title": "Excellent product",
+        "rating": 5,
+        "comment": "Very good fan. Air delivery is top notch and it consumes very less electricity. The remote control feature is very handy.",
+        "date": "1 month ago",
+        "location": "Pune",
+        "likes": 421,
+        "dislikes": 14,
+        "images": []
+      },
+      {
+        "author": "Kavita Rao",
+        "title": "Silent and powerful",
+        "rating": 4,
+        "comment": "The fan is completely silent at lower speeds. At full speed, there is only wind noise. Sleek design looks great in the living room.",
+        "date": "2 months ago",
+        "location": "Hyderabad",
+        "likes": 285,
+        "dislikes": 8,
+        "images": []
+      },
+      {
+        "author": "Amit Patel",
+        "title": "Worth every penny",
+        "rating": 5,
+        "comment": "Saved a lot on electricity bills since I installed this. Easy to install and the LED speed indicator is a nice touch.",
+        "date": "15 days ago",
+        "location": "Ahmedabad",
+        "likes": 156,
+        "dislikes": 3,
+        "images": []
+      }
+    ]
+  },
+  {
     "_id": "lg-lr600-32-inch-tv",
     "title": "LG LR600 80 cm (32 inch) HD Ready LED Smart WebOS TV (Alpha5 Gen 6 AI Processor)",
     "description": "Buy LG LR600 80 cm (32 inch) HD Ready LED Smart WebOS TV online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
@@ -89,27 +253,28 @@
     ]
   },
   {
-    "_id": "product_atomberg_fan",
-    "title": "Atomberg Renesa Prime Remote|High Air Delivery|LED Speed Indicator|Low Noise|Sleek Design with 3 Year Warranty BLDC Motor with Remote 1200 mm Ceiling Fan",
-    "description": "Buy Atomberg Renesa Prime Ceiling Fan online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
-    "price": 419,
-    "oldPrice": 3499,
-    "discount": 88,
+    "_id": "product_safari_luggage_1785609944110",
+    "title": "Safari Keplar 3P Set 4W Cabin & Check-in Set 8 Wheels - 30 inch (Pearl Blue)",
+    "description": "Buy Safari Keplar 3P Luggage Set online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 499,
+    "oldPrice": 4799,
+    "discount": 90,
     "images": [
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/fan/r/c/5/-original-imahp6d6kgqpceaj.jpeg?q=80",
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/fan/n/k/p/renesa-prime-remote-high-air-delivery-led-speed-indicator-low-original-imahnjbgyfqha6s3.jpeg?q=80",
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/fan/r/c/5/-original-imahp6d6kgqpceaj.jpeg?q=80"
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/h/3/a/-watermarked-original-imahm5cth567zkc6.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/y/c/t/-original-imahm5ctucspvg79.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/h/3/a/-watermarked-original-imahm5cth567zkc6.jpeg?q=80"
     ],
-    "category": "Home Appliances",
-    "brand": "Atomberg",
-    "countInStock": 150,
-    "rating": 4.5,
-    "numReviews": 8452,
+    "category": "Travel",
+    "brand": "Safari",
+    "countInStock": 60,
+    "rating": 4.6,
+    "numReviews": 1284,
     "highlights": [
-      "BLDC Motor: Energy Efficient Technology",
-      "Remote Control for Speed & Timer",
-      "Sleek and Modern Design",
-      "3 Years Warranty"
+      "Outer Material: Polycarbonate",
+      "Water Resistant",
+      "Capacity: 116 L",
+      "Color: Pearl Blue",
+      "Number of Wheels: 8"
     ],
     "specifications": [
       {
@@ -117,219 +282,55 @@
         "items": [
           {
             "name": "Brand",
-            "value": "Atomberg"
+            "value": "Safari"
           },
           {
             "name": "Model",
-            "value": "Renesa Prime"
+            "value": "Keplar 3P"
           },
           {
             "name": "Type",
-            "value": "Ceiling Fan"
+            "value": "Cabin & Check-in Set"
           },
           {
-            "name": "Motor Type",
-            "value": "BLDC"
+            "name": "Color",
+            "value": "Pearl Blue"
           }
         ]
       }
     ],
     "reviews": [
       {
-        "author": "Sanjay Verma",
-        "title": "Excellent product",
+        "author": "Priya Kapoor",
+        "title": "Sturdy and stylish",
         "rating": 5,
-        "comment": "Very good fan. Air delivery is top notch and it consumes very less electricity. The remote control feature is very handy.",
-        "date": "1 month ago",
-        "location": "Pune",
-        "likes": 421,
-        "dislikes": 14,
+        "comment": "The Pearl Blue color is gorgeous. Used it on a recent international trip and it survived all the baggage handling without a scratch.",
+        "date": "12 days ago",
+        "location": "Delhi",
+        "likes": 234,
+        "dislikes": 5,
         "images": []
       },
       {
-        "author": "Kavita Rao",
-        "title": "Silent and powerful",
-        "rating": 4,
-        "comment": "The fan is completely silent at lower speeds. At full speed, there is only wind noise. Sleek design looks great in the living room.",
+        "author": "Mohit Sharma",
+        "title": "Smooth wheels",
+        "rating": 5,
+        "comment": "The 8-wheel design makes navigating through airports so easy. The material is very tough polycarbonate.",
         "date": "2 months ago",
-        "location": "Hyderabad",
-        "likes": 285,
-        "dislikes": 8,
-        "images": []
-      },
-      {
-        "author": "Amit Patel",
-        "title": "Worth every penny",
-        "rating": 5,
-        "comment": "Saved a lot on electricity bills since I installed this. Easy to install and the LED speed indicator is a nice touch.",
-        "date": "15 days ago",
-        "location": "Ahmedabad",
-        "likes": 156,
-        "dislikes": 3,
-        "images": []
-      }
-    ]
-  },
-  {
-    "_id": "product_iphone_17_pro_1785609343467",
-    "title": "Apple iPhone 17 Pro (Cosmic Orange, 512 GB)",
-    "description": "Buy Apple iPhone 17 Pro online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
-    "price": 599,
-    "oldPrice": 59900,
-    "discount": 99,
-    "images": [
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80",
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/q/l/l/-original-imahft5nzymbfwfh.jpeg?q=80",
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
-    ],
-    "category": "Mobiles",
-    "brand": "Apple",
-    "countInStock": 150,
-    "rating": 4.8,
-    "numReviews": 23412,
-    "highlights": [
-      "512 GB ROM",
-      "15.49 cm (6.1 inch) Super Retina XDR Display",
-      "48MP + 12MP + 12MP | 12MP Front Camera",
-      "A17 Pro Chip, 6 Core Processor"
-    ],
-    "specifications": [
-      {
-        "category": "General",
-        "items": [
-          {
-            "name": "Brand",
-            "value": "Apple"
-          },
-          {
-            "name": "Model",
-            "value": "iPhone 17 Pro"
-          },
-          {
-            "name": "Color",
-            "value": "Cosmic Orange"
-          },
-          {
-            "name": "Storage",
-            "value": "512 GB"
-          }
-        ]
-      }
-    ],
-    "reviews": [
-      {
-        "author": "Arjun Reddy",
-        "title": "Mind-blowing performance",
-        "rating": 5,
-        "comment": "The A17 Pro chip is insanely fast. Gaming and multitasking are a breeze. The Cosmic Orange color looks stunning in person.",
-        "date": "10 days ago",
-        "location": "Bengaluru",
-        "likes": 845,
-        "dislikes": 23,
-        "images": []
-      },
-      {
-        "author": "Simran Kaur",
-        "title": "Incredible Camera",
-        "rating": 5,
-        "comment": "Upgraded from iPhone 13 Pro. The camera improvements are massive, especially in low light. Battery life easily lasts a full day.",
-        "date": "1 month ago",
-        "location": "New Delhi",
-        "likes": 612,
-        "dislikes": 15,
-        "images": []
-      },
-      {
-        "author": "Nikhil Agarwal",
-        "title": "Best premium smartphone",
-        "rating": 4,
-        "comment": "Very premium feel with the titanium body. It's noticeably lighter. Only deducting one star because the charging speeds could be better.",
-        "date": "15 days ago",
         "location": "Mumbai",
-        "likes": 420,
-        "dislikes": 18,
-        "images": []
-      }
-    ]
-  },
-  {
-    "_id": "product_orient_cooler_1785609660632",
-    "title": "Orient Electric Durachill 40 L Room/Personal Air Cooler",
-    "description": "Buy Orient Electric 40 L Room/Personal Air Cooler online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
-    "price": 565,
-    "oldPrice": 6299,
-    "discount": 91,
-    "images": [
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-cooler/e/u/e/150-150-durachill-40l-pack-of-1-40-orient-electric-original-imah2fc6w4jevv8b.jpeg?q=80",
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-cooler/g/j/l/150-150-durachill-40l-pack-of-1-40-orient-electric-original-imah2fc66zxgpkaz.jpeg?q=80",
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-cooler/e/u/e/150-150-durachill-40l-pack-of-1-40-orient-electric-original-imah2fc6w4jevv8b.jpeg?q=80"
-    ],
-    "category": "Home Appliances",
-    "brand": "Orient",
-    "countInStock": 80,
-    "rating": 4.1,
-    "numReviews": 3524,
-    "highlights": [
-      "Tank Capacity: 40 L",
-      "Power Consumption - 150 W",
-      "Cooling Area: 150 sq ft",
-      "3 Speed Settings"
-    ],
-    "specifications": [
-      {
-        "category": "General",
-        "items": [
-          {
-            "name": "Brand",
-            "value": "Orient Electric"
-          },
-          {
-            "name": "Model",
-            "value": "Durachill 40L"
-          },
-          {
-            "name": "Color",
-            "value": "White, Grey"
-          },
-          {
-            "name": "Type",
-            "value": "Room/Personal Air Cooler"
-          }
-        ]
-      }
-    ],
-    "reviews": [
-      {
-        "author": "Ravi Kumar",
-        "title": "Very cooling and effective",
-        "rating": 5,
-        "comment": "The airflow is amazing for a medium-sized room. The 40L tank lasts easily throughout the night without needing a refill.",
-        "date": "5 days ago",
-        "location": "Lucknow",
-        "likes": 210,
-        "dislikes": 12,
+        "likes": 156,
+        "dislikes": 2,
         "images": []
       },
       {
-        "author": "Preeti Sharma",
-        "title": "Good for the price",
+        "author": "Anjali V",
+        "title": "Great value for money",
         "rating": 4,
-        "comment": "Nice product by Orient. Cooling is good but makes a little bit of noise on the highest speed setting. Overall satisfied.",
-        "date": "1 month ago",
-        "location": "Jaipur",
-        "likes": 145,
-        "dislikes": 9,
-        "images": []
-      },
-      {
-        "author": "Sumit Desai",
-        "title": "Excellent build quality",
-        "rating": 4,
-        "comment": "Plastic quality is top notch and wheels make it very easy to move around. Works perfectly in dry summer heat.",
-        "date": "20 days ago",
-        "location": "Nagpur",
-        "likes": 88,
-        "dislikes": 4,
+        "comment": "Getting 3 pieces of luggage at this price is a steal! The zippers are smooth and the lock is secure.",
+        "date": "15 days ago",
+        "location": "Bengaluru",
+        "likes": 98,
+        "dislikes": 1,
         "images": []
       }
     ]
@@ -418,28 +419,27 @@
     ]
   },
   {
-    "_id": "product_safari_luggage_1785609944110",
-    "title": "Safari Keplar 3P Set 4W Cabin & Check-in Set 8 Wheels - 30 inch (Pearl Blue)",
-    "description": "Buy Safari Keplar 3P Luggage Set online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
-    "price": 499,
-    "oldPrice": 4799,
-    "discount": 90,
+    "_id": "product_orient_cooler_1785609660632",
+    "title": "Orient Electric Durachill 40 L Room/Personal Air Cooler",
+    "description": "Buy Orient Electric 40 L Room/Personal Air Cooler online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+    "price": 565,
+    "oldPrice": 6299,
+    "discount": 91,
     "images": [
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/h/3/a/-watermarked-original-imahm5cth567zkc6.jpeg?q=80",
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/y/c/t/-original-imahm5ctucspvg79.jpeg?q=80",
-      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/h/3/a/-watermarked-original-imahm5cth567zkc6.jpeg?q=80"
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-cooler/e/u/e/150-150-durachill-40l-pack-of-1-40-orient-electric-original-imah2fc6w4jevv8b.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-cooler/g/j/l/150-150-durachill-40l-pack-of-1-40-orient-electric-original-imah2fc66zxgpkaz.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/air-cooler/e/u/e/150-150-durachill-40l-pack-of-1-40-orient-electric-original-imah2fc6w4jevv8b.jpeg?q=80"
     ],
-    "category": "Travel",
-    "brand": "Safari",
-    "countInStock": 60,
-    "rating": 4.6,
-    "numReviews": 1284,
+    "category": "Home Appliances",
+    "brand": "Orient",
+    "countInStock": 80,
+    "rating": 4.1,
+    "numReviews": 3524,
     "highlights": [
-      "Outer Material: Polycarbonate",
-      "Water Resistant",
-      "Capacity: 116 L",
-      "Color: Pearl Blue",
-      "Number of Wheels: 8"
+      "Tank Capacity: 40 L",
+      "Power Consumption - 150 W",
+      "Cooling Area: 150 sq ft",
+      "3 Speed Settings"
     ],
     "specifications": [
       {
@@ -447,55 +447,55 @@
         "items": [
           {
             "name": "Brand",
-            "value": "Safari"
+            "value": "Orient Electric"
           },
           {
             "name": "Model",
-            "value": "Keplar 3P"
-          },
-          {
-            "name": "Type",
-            "value": "Cabin & Check-in Set"
+            "value": "Durachill 40L"
           },
           {
             "name": "Color",
-            "value": "Pearl Blue"
+            "value": "White, Grey"
+          },
+          {
+            "name": "Type",
+            "value": "Room/Personal Air Cooler"
           }
         ]
       }
     ],
     "reviews": [
       {
-        "author": "Priya Kapoor",
-        "title": "Sturdy and stylish",
+        "author": "Ravi Kumar",
+        "title": "Very cooling and effective",
         "rating": 5,
-        "comment": "The Pearl Blue color is gorgeous. Used it on a recent international trip and it survived all the baggage handling without a scratch.",
-        "date": "12 days ago",
-        "location": "Delhi",
-        "likes": 234,
-        "dislikes": 5,
+        "comment": "The airflow is amazing for a medium-sized room. The 40L tank lasts easily throughout the night without needing a refill.",
+        "date": "5 days ago",
+        "location": "Lucknow",
+        "likes": 210,
+        "dislikes": 12,
         "images": []
       },
       {
-        "author": "Mohit Sharma",
-        "title": "Smooth wheels",
-        "rating": 5,
-        "comment": "The 8-wheel design makes navigating through airports so easy. The material is very tough polycarbonate.",
-        "date": "2 months ago",
-        "location": "Mumbai",
-        "likes": 156,
-        "dislikes": 2,
-        "images": []
-      },
-      {
-        "author": "Anjali V",
-        "title": "Great value for money",
+        "author": "Preeti Sharma",
+        "title": "Good for the price",
         "rating": 4,
-        "comment": "Getting 3 pieces of luggage at this price is a steal! The zippers are smooth and the lock is secure.",
-        "date": "15 days ago",
-        "location": "Bengaluru",
-        "likes": 98,
-        "dislikes": 1,
+        "comment": "Nice product by Orient. Cooling is good but makes a little bit of noise on the highest speed setting. Overall satisfied.",
+        "date": "1 month ago",
+        "location": "Jaipur",
+        "likes": 145,
+        "dislikes": 9,
+        "images": []
+      },
+      {
+        "author": "Sumit Desai",
+        "title": "Excellent build quality",
+        "rating": 4,
+        "comment": "Plastic quality is top notch and wheels make it very easy to move around. Works perfectly in dry summer heat.",
+        "date": "20 days ago",
+        "location": "Nagpur",
+        "likes": 88,
+        "dislikes": 4,
         "images": []
       }
     ]
@@ -586,9 +586,9 @@
     "_id": "product_lg_ac_1785610181632",
     "title": "LG 2025 Model 1.5 Ton 3 Star Split Inverter AC",
     "description": "Buy LG 2025 Model 1.5 Ton 3 Star Split Inverter AC online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
-    "price": 699,
+    "price": 2499,
     "oldPrice": 35140,
-    "discount": 98,
+    "discount": 93,
     "images": [
       "https://rukminim2.flixcart.com/image/832/832/xif0q/air-conditioner-new/m/z/e/-original-imahmgq7b3vhzuwm.jpeg?q=80",
       "https://rukminim2.flixcart.com/image/832/832/xif0q/air-conditioner-new/m/b/k/-original-imahmgpmhga3eb54.jpeg?q=80",
@@ -834,9 +834,9 @@
     "_id": "product_vivo_phone_1785610523062",
     "title": "vivo v50 5G (Grey, 256 GB Storage, 8 GB RAM)",
     "description": "Buy vivo v50 5G online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
-    "price": 499,
+    "price": 899,
     "oldPrice": 20889,
-    "discount": 97,
+    "discount": 96,
     "images": [
       "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/d/g/d/v50-5g-v2427-vivo-original-imahc6d8jyfyha9m.jpeg?q=80",
       "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/g/p/6/v50-5g-v2427-vivo-original-imahc6d8g9kbm3fw.jpeg?q=80",
@@ -1000,9 +1000,9 @@
     "_id": "product_samsung_fridge_1785610738634",
     "title": "Samsung 189 L Direct Cool Single Door 4 Star Refrigerator",
     "description": "Buy Samsung 189 L Direct Cool Single Door 4 Star Refrigerator online at best prices. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
-    "price": 599,
+    "price": 899,
     "oldPrice": 12673,
-    "discount": 95,
+    "discount": 93,
     "images": [
       "https://rukminim2.flixcart.com/image/832/832/xif0q/refrigerator-new/c/8/q/-original-imahhjf9qfqdgfuk.jpeg?q=80",
       "https://rukminim2.flixcart.com/image/832/832/xif0q/refrigerator-new/c/8/q/-original-imahhjf9qfqdgfuk.jpeg?q=80",
