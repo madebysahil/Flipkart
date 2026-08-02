@@ -1921,24 +1921,41 @@
     "highlights": [],
     "specifications": [
       {
-        "name": "Material",
-        "value": "Melamine"
-      },
-      {
-        "name": "Pack of",
-        "value": "40"
+        "category": "General",
+        "items": [
+          {
+            "name": "Material",
+            "value": "Melamine"
+          },
+          {
+            "name": "Pack of",
+            "value": "40"
+          }
+        ]
       }
     ],
     "reviews": [
       {
-        "user": "Priya",
         "rating": 5,
-        "comment": "Very beautiful dinner set, perfect for daily use."
+        "comment": "Very beautiful dinner set, perfect for daily use.",
+        "author": "Priya",
+        "title": "Good Product",
+        "date": "2 days ago",
+        "location": "India",
+        "likes": 57,
+        "dislikes": 2,
+        "images": []
       },
       {
-        "user": "Ravi",
         "rating": 4,
-        "comment": "Good quality, worth the price."
+        "comment": "Good quality, worth the price.",
+        "author": "Ravi",
+        "title": "Good Product",
+        "date": "2 days ago",
+        "location": "India",
+        "likes": 66,
+        "dislikes": 2,
+        "images": []
       }
     ]
   },
@@ -1958,28 +1975,45 @@
     "highlights": [],
     "specifications": [
       {
-        "name": "Type",
-        "value": "Ceiling Fan"
-      },
-      {
-        "name": "Motor Speed",
-        "value": "400 RPM"
-      },
-      {
-        "name": "Power Consumption",
-        "value": "50 W"
+        "category": "General",
+        "items": [
+          {
+            "name": "Type",
+            "value": "Ceiling Fan"
+          },
+          {
+            "name": "Motor Speed",
+            "value": "400 RPM"
+          },
+          {
+            "name": "Power Consumption",
+            "value": "50 W"
+          }
+        ]
       }
     ],
     "reviews": [
       {
-        "user": "Sunil",
         "rating": 4,
-        "comment": "Good airflow, silent operation."
+        "comment": "Good airflow, silent operation.",
+        "author": "Sunil",
+        "title": "Good Product",
+        "date": "2 days ago",
+        "location": "India",
+        "likes": 3,
+        "dislikes": 3,
+        "images": []
       },
       {
-        "user": "Raj",
         "rating": 5,
-        "comment": "Value for money, works perfectly."
+        "comment": "Value for money, works perfectly.",
+        "author": "Raj",
+        "title": "Good Product",
+        "date": "2 days ago",
+        "location": "India",
+        "likes": 65,
+        "dislikes": 0,
+        "images": []
       }
     ]
   },
@@ -1999,28 +2033,45 @@
     "highlights": [],
     "specifications": [
       {
-        "name": "Type",
-        "value": "Water Purifier"
-      },
-      {
-        "name": "Capacity",
-        "value": "6 L"
-      },
-      {
-        "name": "Purification Features",
-        "value": "RO + UV + UF"
+        "category": "General",
+        "items": [
+          {
+            "name": "Type",
+            "value": "Water Purifier"
+          },
+          {
+            "name": "Capacity",
+            "value": "6 L"
+          },
+          {
+            "name": "Purification Features",
+            "value": "RO + UV + UF"
+          }
+        ]
       }
     ],
     "reviews": [
       {
-        "user": "Sneha",
         "rating": 5,
-        "comment": "Excellent water purifier, water tastes sweet."
+        "comment": "Excellent water purifier, water tastes sweet.",
+        "author": "Sneha",
+        "title": "Good Product",
+        "date": "2 days ago",
+        "location": "India",
+        "likes": 6,
+        "dislikes": 3,
+        "images": []
       },
       {
-        "user": "Manoj",
         "rating": 4,
-        "comment": "Good service and easy installation."
+        "comment": "Good service and easy installation.",
+        "author": "Manoj",
+        "title": "Good Product",
+        "date": "2 days ago",
+        "location": "India",
+        "likes": 64,
+        "dislikes": 2,
+        "images": []
       }
     ]
   },
@@ -2040,24 +2091,41 @@
     "highlights": [],
     "specifications": [
       {
-        "name": "Capacity",
-        "value": "1.8 L"
-      },
-      {
-        "name": "Power",
-        "value": "500 W"
+        "category": "General",
+        "items": [
+          {
+            "name": "Capacity",
+            "value": "1.8 L"
+          },
+          {
+            "name": "Power",
+            "value": "500 W"
+          }
+        ]
       }
     ],
     "reviews": [
       {
-        "user": "Rohan",
         "rating": 4,
-        "comment": "Nice rice cooker, easy to use."
+        "comment": "Nice rice cooker, easy to use.",
+        "author": "Rohan",
+        "title": "Good Product",
+        "date": "2 days ago",
+        "location": "India",
+        "likes": 43,
+        "dislikes": 0,
+        "images": []
       },
       {
-        "user": "Pooja",
         "rating": 5,
-        "comment": "Cooks rice perfectly every time."
+        "comment": "Cooks rice perfectly every time.",
+        "author": "Pooja",
+        "title": "Good Product",
+        "date": "2 days ago",
+        "location": "India",
+        "likes": 19,
+        "dislikes": 2,
+        "images": []
       }
     ]
   }
