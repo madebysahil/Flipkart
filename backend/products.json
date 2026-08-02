@@ -2507,5 +2507,76 @@
         ]
       }
     ]
+  },
+  {
+    "_id": "1785655924218",
+    "title": "TECHNEST 260 W White Electric Whisk",
+    "price": 199,
+    "oldPrice": 599,
+    "discount": 70,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/hand-blender/w/i/5/stainless-steel-electric-egg-mixer-jmall-beater-blender-hand-original-imahhd7hazvmx97k.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/hand-blender/w/i/5/stainless-steel-electric-egg-mixer-jmall-beater-blender-hand-original-imahhd7hazvmx97k.jpeg?q=90",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/hand-blender/8/l/b/stainless-steel-electric-egg-mixer-jmall-beater-blender-hand-original-imahhd7hrbxqx4w9.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/hand-blender/8/l/b/stainless-steel-electric-egg-mixer-jmall-beater-blender-hand-original-imahhd7hrbxqx4w9.jpeg?q=90",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/hand-blender/q/g/j/coffee-milk-drink-electric-whisk-mixer-frother-foamier-egg-original-imagu5rjkgg7fthv.jpeg?q=80"
+    ],
+    "category": "Home Appliances",
+    "brand": "TECHNEST",
+    "rating": 4.1,
+    "numReviews": 245,
+    "highlights": [
+      "260 W Powerful Motor",
+      "Electric Whisk / Blender",
+      "Ergonomic handle design",
+      "Stainless Steel Beaters"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "TECHNEST"
+          },
+          {
+            "name": "Type",
+            "value": "Electric Whisk"
+          },
+          {
+            "name": "Power",
+            "value": "260 W"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Very powerful and whips cream perfectly. Value for money.",
+        "author": "Sneha P",
+        "title": "Value for money",
+        "date": "4 days ago",
+        "location": "Bengaluru",
+        "likes": 12,
+        "dislikes": 1,
+        "images": [
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+        ]
+      },
+      {
+        "rating": 4,
+        "comment": "Good blender but a bit noisy on high speed.",
+        "author": "Ravi G",
+        "title": "Good buy",
+        "date": "1 week ago",
+        "location": "Hyderabad",
+        "likes": 5,
+        "dislikes": 0,
+        "images": [
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+        ]
+      }
+    ]
   }
 ]
