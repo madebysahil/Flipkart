@@ -1,0 +1,222 @@
+{
+  "_INSTRUCTIONS": [
+    "--- HOW TO SETUP YOUR STORE ---",
+    "1. Change the UPI_ID below to your actual personal or business UPI address.",
+    "2. Inside the PRODUCTS section, you can change the sellingPrice, originalMrp, and discountPercent for any item.",
+    "3. Save the file. The changes will instantly apply to the website without needing to restart anything.",
+    "WARNING: Do not delete any commas (,) or quotation marks (\") as it will break the website."
+  ],
+  "UPI_ID": "merchant@upi",
+  "PRODUCTS": {
+    "product_iphone_17_pro_1785609343467": {
+      "_name": "Apple iPhone 17 Pro (Cosmic Orange, 512 GB)",
+      "sellingPrice": 2999,
+      "originalMrp": 154900,
+      "discountPercent": 95
+    },
+    "product_atomberg_fan": {
+      "_name": "Atomberg Renesa Prime Remote|High Air Delivery|LED Speed Indicator|Low Noise|Sleek Design with 3 Year Warranty BLDC Motor with Remote 1200 mm Ceiling Fan",
+      "sellingPrice": 419,
+      "originalMrp": 3499,
+      "discountPercent": 88
+    },
+    "lg-lr600-32-inch-tv": {
+      "_name": "LG LR600 80 cm (32 inch) HD Ready LED Smart WebOS TV (Alpha5 Gen 6 AI Processor)",
+      "sellingPrice": 599,
+      "originalMrp": 14975,
+      "discountPercent": 96
+    },
+    "product_safari_luggage_1785609944110": {
+      "_name": "Safari Keplar 3P Set 4W Cabin & Check-in Set 8 Wheels - 30 inch (Pearl Blue)",
+      "sellingPrice": 499,
+      "originalMrp": 4799,
+      "discountPercent": 90
+    },
+    "product_mivi_soundbar_1785609833491": {
+      "_name": "Mivi Fort H350 Soundbar, 350 Watts, 5.1 Channel, Multi-Input and EQ Modes",
+      "sellingPrice": 489,
+      "originalMrp": 5224,
+      "discountPercent": 90
+    },
+    "product_orient_cooler_1785609660632": {
+      "_name": "Orient Electric Durachill 40 L Room/Personal Air Cooler",
+      "sellingPrice": 565,
+      "originalMrp": 6299,
+      "discountPercent": 91
+    },
+    "product_bajaj_cooler_1785610067237": {
+      "_name": "BAJAJ 36 L Room/Personal Air Cooler",
+      "sellingPrice": 465,
+      "originalMrp": 5215,
+      "discountPercent": 91
+    },
+    "product_lg_ac_1785610181632": {
+      "_name": "LG 2025 Model 1.5 Ton 3 Star Split Inverter AC",
+      "sellingPrice": 2499,
+      "originalMrp": 35140,
+      "discountPercent": 93
+    },
+    "product_leader_cycle_1785610290685": {
+      "_name": "Leader Gladiator 21 Speed Hybrid Cycle with Front Suspension & Disc Brake 26T",
+      "sellingPrice": 499,
+      "originalMrp": 10599,
+      "discountPercent": 95
+    },
+    "product_kettle_1785610417931": {
+      "_name": "Morphy Richards Windsor Series 1.7 Litre Digital Electric Kettle",
+      "sellingPrice": 455,
+      "originalMrp": 15499,
+      "discountPercent": 97
+    },
+    "product_vivo_phone_1785610523062": {
+      "_name": "vivo v50 5G (Grey, 256 GB Storage, 8 GB RAM)",
+      "sellingPrice": 899,
+      "originalMrp": 20889,
+      "discountPercent": 96
+    },
+    "product_sony_tv_1785610630941": {
+      "_name": "SONY Bravia 2 108 cm (43 inch) Ultra HD (4K) LED Smart Google TV",
+      "sellingPrice": 599,
+      "originalMrp": 29989,
+      "discountPercent": 98
+    },
+    "product_samsung_fridge_1785610738634": {
+      "_name": "Samsung 189 L Direct Cool Single Door 4 Star Refrigerator",
+      "sellingPrice": 899,
+      "originalMrp": 12673,
+      "discountPercent": 93
+    },
+    "product_hrx_luggage_1785610850383": {
+      "_name": "HRX Kyoto Cabin & Check-in Set 8 Wheels - 30 inch White",
+      "sellingPrice": 498,
+      "originalMrp": 3500,
+      "discountPercent": 87
+    },
+    "product_prestige_airfryer_1785610954687": {
+      "_name": "Prestige Nutrifry Digital Air Fryer",
+      "sellingPrice": 489,
+      "originalMrp": 3410,
+      "discountPercent": 86
+    },
+    "product_prestige_cooker_1785611061511": {
+      "_name": "Prestige Svachh Duo 5 L Inner Lid Induction Bottom Pressure Cooker",
+      "sellingPrice": 299,
+      "originalMrp": 3011,
+      "discountPercent": 90
+    },
+    "product_crompton_mixer_1785611191885": {
+      "_name": "Crompton DS 500 W Mixer Grinder (3 Jars)",
+      "sellingPrice": 399,
+      "originalMrp": 1736,
+      "discountPercent": 77
+    },
+    "product_pigeon_induction_1785611296057": {
+      "_name": "Pigeon 2100 W Induction Cooktop Push Button",
+      "sellingPrice": 449,
+      "originalMrp": 2144,
+      "discountPercent": 79
+    },
+    "product_realme_washingmachine_1785611386718": {
+      "_name": "realme TechLife 7 kg 5 Star rating Semi Automatic Top Load Washing Machine",
+      "sellingPrice": 2449,
+      "originalMrp": 7685,
+      "discountPercent": 68
+    },
+    "product_prestige_combo_cooker_1785611491183": {
+      "_name": "Prestige Popular 2 L, 3 L, 5 L Outer Lid Pressure Cooker Combo",
+      "sellingPrice": 599,
+      "originalMrp": 1810,
+      "discountPercent": 67
+    },
+    "product_prestige_cookware_1785611599208": {
+      "_name": "Prestige Festival Pack - Build Your Kitchen Non-Stick Cookware Set",
+      "sellingPrice": 398,
+      "originalMrp": 1676,
+      "discountPercent": 76
+    },
+    "product_samsung_microwave_1785611707593": {
+      "_name": "Samsung 23 L Ceramic Cavity Keep Warm Grill Microwave Oven",
+      "sellingPrice": 1799,
+      "originalMrp": 6814,
+      "discountPercent": 74
+    },
+    "product_milton_kettle_combo_1785611935183": {
+      "_name": "MILTON GO ELE KETTLE 1500 + FLIP LID 350 Beverage Maker",
+      "sellingPrice": 397,
+      "originalMrp": 1660,
+      "discountPercent": 76
+    },
+    "1785654135039": {
+      "_name": "Flipkart SmartBuy Pack of 40 Melamin Emerald Bloom Melamine Dishwasher Safe|Stain Resistant Dinner Set",
+      "sellingPrice": 469,
+      "originalMrp": 2999,
+      "discountPercent": 66
+    },
+    "1785654374509": {
+      "_name": "Kanishka Smk Pk2 (23) | Energy Saving | Anti Dust with 2 Year Warranty Energy Saving, Anti Dust, Anti Rust, High Air Delivery, Ultra High Speed 1200 mm Ceiling Fan",
+      "sellingPrice": 649,
+      "originalMrp": 6599,
+      "discountPercent": 74
+    },
+    "1785654528681": {
+      "_name": "Aquaguard Sure Delight Aquasaver ROUVUF2X 6 L RO + UV + UF Water Purifier 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification - Aquaguard : Flipkart.com",
+      "sellingPrice": 599,
+      "originalMrp": 8999,
+      "discountPercent": 79
+    },
+    "1785654641314": {
+      "_name": "V-Guard VRC 1.8C with 2 Pots Electric Rice Cooker",
+      "sellingPrice": 498,
+      "originalMrp": 4235,
+      "discountPercent": 80
+    },
+    "1785655371287": {
+      "_name": "Wildcraft Gypsos Check-in Suitcase 4 Wheels - 27 inch Black -",
+      "sellingPrice": 399,
+      "originalMrp": 3499,
+      "discountPercent": 80
+    },
+    "1785655485146": {
+      "_name": "Pigeon PG-KESSEL-BOTTLE-COMBI Multi Cooker Electric Kettle",
+      "sellingPrice": 299,
+      "originalMrp": 1990,
+      "discountPercent": 70
+    },
+    "1785655624140": {
+      "_name": "Snapple TAG Stainless Steel Water Bottle Single Wall ISI Certified 1000 ml Steel Bottle",
+      "sellingPrice": 649,
+      "originalMrp": 1599,
+      "discountPercent": 45
+    },
+    "1785655733199": {
+      "_name": "Longway Multipurpose Portable Digital Kitchen Weighing Scale",
+      "sellingPrice": 149,
+      "originalMrp": 999,
+      "discountPercent": 62
+    },
+    "1785655836330": {
+      "_name": "NYTK RETAIL 2025 Foldable Barbeque With - 2 Spatula,1 Bbq, 10 Stick &amp; 1 Air Blower Charcoal Grill",
+      "sellingPrice": 489,
+      "originalMrp": 1999,
+      "discountPercent": 51
+    },
+    "1785655924218": {
+      "_name": "TECHNEST 260 W White Electric Whisk",
+      "sellingPrice": 199,
+      "originalMrp": 599,
+      "discountPercent": 70
+    },
+    "1785656008401": {
+      "_name": "ZROY ENTERPRISE 1 Pc Stainless Steel Knife Set of 3 black Kitchen Knife with Ergonomic Handles for Meat, Fish &amp; Vegetable",
+      "sellingPrice": 298,
+      "originalMrp": 999,
+      "discountPercent": 68
+    },
+    "1785656090212": {
+      "_name": "SKYNEST Portable USB Rechargeable Juicer Blender Mini Smoothie Maker Bottle 105 W Juicer Mixer Grinder",
+      "sellingPrice": 249,
+      "originalMrp": 999,
+      "discountPercent": 75
+    }
+  }
+}

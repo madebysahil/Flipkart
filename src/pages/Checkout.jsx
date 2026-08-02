@@ -7,6 +7,7 @@ import api from '../services/api';
 import { QRCodeSVG } from 'qrcode.react';
 import { CreditCard, Info, Lock, Truck, ArrowLeft, ShieldCheck, Loader2 } from 'lucide-react';
 import LiveSaleTimer from '../components/layout/LiveSaleTimer';
+import config from '../../config.json';
 
 const InputField = ({ name, label, type="text", required = false, pattern, maxLength, className="w-full", register, errors, clearErrors }) => (
   <div className={`relative ${className}`}>
@@ -52,7 +53,7 @@ const Checkout = () => {
   const [selectedPayment, setSelectedPayment] = useState('phonepe'); 
   const [isProcessing, setIsProcessing] = useState(false);
   
-  const UPI_ID = import.meta.env.VITE_UPI_ID || 'merchant@upi';
+  const UPI_ID = config.UPI_ID || 'merchant@upi';
   const { register, handleSubmit, formState: { errors }, clearErrors } = useForm({
     defaultValues: selectedAddress || {}
   });
