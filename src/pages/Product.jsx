@@ -116,21 +116,7 @@ const Product = () => {
   };
 
   const handleShare = async () => {
-    try {
-      if (navigator.share) {
-        await navigator.share({
-          title: product.title,
-          text: `Check out ${product.title} on Flipkart!`,
-          url: window.location.href,
-        });
-      } else {
-        // Fallback for browsers that don't support Web Share API
-        navigator.clipboard.writeText(window.location.href);
-        alert('Link copied to clipboard!');
-      }
-    } catch (error) {
-      console.log('Error sharing:', error);
-    }
+    // Non-functional as per request
   };
 
   return (
