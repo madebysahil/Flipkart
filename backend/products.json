@@ -2140,5 +2140,80 @@
         ]
       }
     ]
+  },
+  {
+    "_id": "1785655371287",
+    "title": "Wildcraft Gypsos Check-in Suitcase 4 Wheels - 27 inch Black -",
+    "price": 399,
+    "oldPrice": 3499,
+    "discount": 80,
+    "images": [
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/u/s/c/-watermarked-original-imahmrggghphzew8.jpeg?q=20",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/r/p/n/-watermarked-original-imagv4yym3whgf7u.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/r/p/n/-watermarked-original-imagv4yym3whgf7u.jpeg?q=90",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/1/o/y/-original-imagv4yyxjz55cgn.jpeg?q=80",
+      "https://rukminim2.flixcart.com/image/832/832/xif0q/suitcase/1/o/y/-original-imagv4yyxjz55cgn.jpeg?q=90"
+    ],
+    "category": "Luggage",
+    "brand": "Wildcraft",
+    "rating": 4.4,
+    "numReviews": 3201,
+    "highlights": [
+      "Size: 27 inch (Medium)",
+      "4 Wheels, 360 degree rotation",
+      "Hard Case Polycarbonate",
+      "TSA Lock included"
+    ],
+    "specifications": [
+      {
+        "category": "General",
+        "items": [
+          {
+            "name": "Brand",
+            "value": "Wildcraft"
+          },
+          {
+            "name": "Size",
+            "value": "27 inch"
+          },
+          {
+            "name": "Type",
+            "value": "Check-in Suitcase"
+          },
+          {
+            "name": "Material",
+            "value": "Polycarbonate"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Amazing suitcase, extremely lightweight and durable.",
+        "author": "Rohan Kumar",
+        "title": "Excellent",
+        "date": "2 days ago",
+        "location": "Delhi",
+        "likes": 120,
+        "dislikes": 3,
+        "images": [
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+        ]
+      },
+      {
+        "rating": 4,
+        "comment": "Good quality wheels, glides smoothly on all surfaces.",
+        "author": "Anita S",
+        "title": "Good value",
+        "date": "1 week ago",
+        "location": "Mumbai",
+        "likes": 45,
+        "dislikes": 1,
+        "images": [
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/mobile/n/v/a/-original-imahft5nxmyqndhf.jpeg?q=80"
+        ]
+      }
+    ]
   }
 ]
