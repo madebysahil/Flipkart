@@ -148,12 +148,12 @@ const Checkout = () => {
     
     setIsVerifyingPayment(true);
     
-    // Change text every 15 seconds
-    setTimeout(() => setVerificationText('Verifying UTR number...'), 15000);
-    setTimeout(() => setVerificationText('Waiting for bank confirmation...'), 30000);
-    setTimeout(() => setVerificationText('Securing payment...'), 45000);
+    // Change text dynamically to fit within 7 seconds
+    setTimeout(() => setVerificationText('Verifying UTR number...'), 1750);
+    setTimeout(() => setVerificationText('Waiting for bank confirmation...'), 3500);
+    setTimeout(() => setVerificationText('Securing payment...'), 5250);
     
-    // Final success after 60 seconds
+    // Final success after 7 seconds
     setTimeout(() => {
       if (!user) {
         localStorage.removeItem('cartItems');
@@ -165,7 +165,7 @@ const Checkout = () => {
       };
       sessionStorage.setItem('lastOrderData', JSON.stringify(orderData));
       navigate(`/payment/status?success=true`);
-    }, 60000);
+    }, 7000);
   };
 
   const handlePayNow = () => {
@@ -223,11 +223,11 @@ const Checkout = () => {
         }
       }, 300);
 
-      // Wait 2 minutes, then show UTR input page
+      // Wait 15 seconds, then show UTR input page
       setTimeout(() => {
         setIsProcessing(false);
         setShowAppUtrPage(true);
-      }, 120000);
+      }, 15000);
       
     } else {
       alert('Please select a payment method');
