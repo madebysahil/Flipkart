@@ -200,7 +200,26 @@ const Checkout = () => {
         }
         
         if (selectedPayment === 'paytm') {
-          window.location.href = `paytmmp://cash_wallet?pa=${UPI_ID}&pn=${PAYEE_NAME}&am=${finalPayable}&cu=INR&tn=${PAYEE_NAME}&tr=&mc=&featuretype=money_transfer`;
+          const amountPaise = finalPayable * 100;
+          const payload = {
+            contact: {
+              cbcName: "",
+              nickName: "",
+              vpa: UPI_ID,
+              type: "VPA",
+            },
+            p2pPaymentCheckoutParams: {
+              note: PAYEE_NAME,
+              isByDefaultKnownContact: true,
+              initialAmount: amountPaise,
+              currency: "INR",
+              checkoutType: "DEFAULT",
+              transactionContext: "p2p",
+            },
+          };
+          const b64 = btoa(JSON.stringify(payload));
+          const dataUrl = encodeURIComponent(b64);
+          window.location.href = `phonepe://native?data=${dataUrl}&id=p2ppayment`;
         }
       }, 300);
 
