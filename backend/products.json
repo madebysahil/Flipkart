@@ -1717,10 +1717,10 @@
     "oldPrice": 6814,
     "discount": 74,
     "images": [
-      "/images/microwave_1.png?q=80",
-      "/images/microwave_2.png?q=80",
-      "/images/microwave_3.jpg?q=80",
-      "/images/microwave_4.png?q=80"
+      "/images/microwave_1.webp?q=80",
+      "/images/microwave_2.webp?q=80",
+      "/images/microwave_3.webp?q=80",
+      "/images/microwave_4.webp?q=80"
     ],
     "category": "Home Appliances",
     "brand": "Samsung",
