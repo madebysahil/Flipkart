@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../services/api';
 import { Search, Star } from 'lucide-react';
 import LiveSaleTimer from '../components/layout/LiveSaleTimer';
+import BannerSlider from '../components/layout/BannerSlider';
 
 const HeaderActions = () => (
   <div className="bg-gradient-to-b from-[#2874f0] to-[#8db8f9] px-3 py-3">
@@ -195,10 +196,7 @@ const Home = () => {
       <CategoryCircles />
 
       {/* Freedom Sale Banners */}
-      <div className="w-full bg-white px-2 pt-2 pb-1 flex flex-col gap-2">
-        <img src="/images/freedom_1.webp" alt="Freedom Sale Carnival" className="w-full rounded-md shadow-sm object-cover" />
-        <img src="/images/freedom_2.webp" alt="Freedom Sale Intel" className="w-full rounded-md shadow-sm object-cover" />
-      </div>
+      <BannerSlider images={['/images/freedom_1.jpg', '/images/freedom_2.jpg']} />
 
 
       
