@@ -36,7 +36,7 @@ const Login = () => {
               {isLogin ? 'Get access to your Orders, Wishlist and Recommendations' : 'Sign up with your mobile number to get started'}
             </p>
           </div>
-          <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.webp" alt="Login" className="w-full object-contain" />
+          <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png" alt="Login" className="w-full object-contain" />
         </div>
 
         {/* Right Side */}

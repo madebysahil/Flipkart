@@ -198,7 +198,7 @@ const Product = () => {
             <span className="text-[#878787] font-medium text-sm">
               {((product.numReviews && product.numReviews > 0) ? product.numReviews : 14295).toLocaleString()} Ratings & {Math.floor(((product.numReviews && product.numReviews > 0) ? product.numReviews : 14295) / 8).toLocaleString()} Reviews
             </span>
-            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.webp" alt="f-assured" className="h-5 ml-2" />
+            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="f-assured" className="h-5 ml-2" />
           </div>
 
           <div className="mt-4 flex items-end gap-3 mb-4">
@@ -234,7 +234,7 @@ const Product = () => {
             
             <div className="flex flex-col items-center flex-1">
               <div className="h-10 flex items-center justify-center mb-1">
-                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.webp" className="h-[22px] object-contain" alt="Plus F-Assured" />
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" className="h-[22px] object-contain" alt="Plus F-Assured" />
               </div>
               <span className="text-[12px] text-center text-[#212121]">Plus (F-Assured)</span>
             </div>

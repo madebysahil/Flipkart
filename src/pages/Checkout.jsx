@@ -496,7 +496,7 @@ const Checkout = () => {
                     <div className="flex-1">
                       <h4 className="text-gray-900 font-bold uppercase">{item.product.brand || 'BRAND'}</h4>
                       <p className="text-gray-600 text-sm line-clamp-1">{item.product.title}</p>
-                      <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.webp" alt="assured" className="h-4 my-1.5" />
+                      <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="assured" className="h-4 my-1.5" />
                                            <div className="flex items-center gap-2 mt-1 mb-3">
                         <span className="text-xl font-bold">₹{livePrice}</span>
                         <span className="text-gray-400 line-through text-sm">₹{liveOldPrice}</span>

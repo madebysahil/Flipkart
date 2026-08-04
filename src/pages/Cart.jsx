@@ -22,7 +22,7 @@ const Cart = () => {
         
         {cartItems.length === 0 ? (
           <div className="flex flex-col items-center justify-center bg-white p-8 rounded-sm shadow-sm h-[60vh]">
-            <img src="https://rukminim2.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.webp?q=90" alt="Empty Cart" loading="lazy" className="h-40 mb-6" />
+            <img src="https://rukminim2.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="Empty Cart" loading="lazy" className="h-40 mb-6" />
             <h2 className="text-xl font-medium mb-2">Your cart is empty!</h2>
             <p className="text-gray-500 mb-6 text-sm">Add items to it now.</p>
             <Link to="/" className="bg-primary text-white px-16 py-3 rounded-sm font-medium shadow-sm">Shop Now</Link>
