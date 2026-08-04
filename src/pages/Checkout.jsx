@@ -491,12 +491,12 @@ const Checkout = () => {
                   return (
                   <div key={item.product._id} className="p-4 flex gap-4 border-b border-gray-100 relative">
                     <div className="w-24 h-24 shrink-0 flex items-center justify-center">
-                      <img src={item.product.images?.[0]} alt="" className="max-h-full object-contain" />
+                      <img src={item.product.images?.[0]} alt="" loading="lazy" className="max-h-full object-contain" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-gray-900 font-bold uppercase">{item.product.brand || 'BRAND'}</h4>
                       <p className="text-gray-600 text-sm line-clamp-1">{item.product.title}</p>
-                      <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="assured" className="h-4 my-1.5" />
+                      <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.webp" alt="assured" className="h-4 my-1.5" />
                                            <div className="flex items-center gap-2 mt-1 mb-3">
                         <span className="text-xl font-bold">₹{livePrice}</span>
                         <span className="text-gray-400 line-through text-sm">₹{liveOldPrice}</span>
@@ -622,7 +622,7 @@ const Checkout = () => {
               <div className="bg-white px-4 py-6 flex flex-col items-center border-t border-gray-100">
                 <div className="flex justify-between text-[#878787] text-[10px] text-center w-full mb-6 px-1 font-medium">
                   <div className="flex flex-col items-center gap-2">
-                    <img src="/payment/original-badge.jpg" alt="Original" className="h-[30px] w-[30px] object-contain mix-blend-multiply" />
+                    <img src="/payment/original-badge.webp" alt="Original" className="h-[30px] w-[30px] object-contain mix-blend-multiply" />
                     <span>Authentic Products</span>
                   </div>
                   <div className="flex flex-col items-center gap-2">
@@ -636,10 +636,10 @@ const Checkout = () => {
                 </div>
                 
                 <div className="flex gap-4 items-center justify-center mt-2 w-full px-4">
-                   <img src="/payment/visa-logo.png" alt="VISA" className="h-6 object-contain" />
+                   <img src="/payment/visa-logo.webp" alt="VISA" className="h-6 object-contain" />
                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-[18px] object-contain" />
                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/RuPay.svg" alt="RuPay" className="h-[18px] object-contain" />
-                   <img src="/payment/razorpay-logo.png" alt="Razorpay" className="h-[14px] object-contain" />
+                   <img src="/payment/razorpay-logo.webp" alt="Razorpay" className="h-[14px] object-contain" />
                 </div>
               </div>
 

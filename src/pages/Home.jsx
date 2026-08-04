@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../services/api';
 import { Search, Star } from 'lucide-react';
@@ -9,11 +9,11 @@ const HeaderActions = () => (
     {/* Top Toggle Buttons */}
     <div className="flex items-center justify-between gap-2 mb-3">
       <div className="flex-1 bg-[#ffc200] rounded-md py-1.5 flex flex-col items-center justify-center cursor-pointer shadow-sm">
-        <img src="https://rukminim1.flixcart.com/fk-p-flap/52/44/image/d2ecfddf891a3922.png" alt="Flipkart Icon" className="h-4 object-contain mb-0.5" />
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/52/44/image/d2ecfddf891a3922.webp" alt="Flipkart Icon" className="h-4 object-contain mb-0.5" />
         <span className="font-bold text-[12px] italic text-black leading-none">Flipkart</span>
       </div>
       <div className="flex-1 bg-white rounded-md py-1.5 flex flex-col items-center justify-center cursor-pointer shadow-sm">
-        <img src="https://rukminim1.flixcart.com/fk-p-flap/58/44/image/7ab4040af860941d.png" alt="Travel Icon" className="h-4 object-contain mb-0.5" />
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/58/44/image/7ab4040af860941d.webp" alt="Travel Icon" className="h-4 object-contain mb-0.5" />
         <span className="font-bold text-[12px] italic text-black leading-none">Travel</span>
       </div>
     </div>
@@ -91,7 +91,7 @@ const SvgFurniture = () => (
   </svg>
 );
 
-const CategoryCircles = () => {
+const CategoryCircles = memo(() => {
   const cats = [
     { name: 'For You', SvgIcon: SvgForYou, active: true },
     { name: 'Fashion', SvgIcon: SvgFashion },
@@ -116,7 +116,7 @@ const CategoryCircles = () => {
       </div>
     </div>
   );
-};
+});
 
 const ProductCard = ({ product }) => {
   const discountPercent = product.oldPrice 
@@ -127,7 +127,7 @@ const ProductCard = ({ product }) => {
     <Link to={`/product/${product._id}`} className="bg-white p-3 flex flex-col h-full relative border-r border-b border-gray-100">
       {/* Product Image */}
       <div className="h-[140px] w-full flex items-center justify-center mb-3 overflow-hidden">
-        <img src={product.images?.[0] || 'https://via.placeholder.com/150'} alt={product.title} className="max-h-full object-contain" />
+        <img src={product.images?.[0] || 'https://via.placeholder.com/150'} alt={product.title} loading="lazy" className="max-h-full object-contain" />
       </div>
       
       {/* Title */}
@@ -142,7 +142,7 @@ const ProductCard = ({ product }) => {
       {/* Selling Price & Badge */}
       <div className="flex items-center justify-between mb-1.5">
         <span className="font-bold text-[15px] text-black">₹{product.price.toLocaleString()}</span>
-        <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="Assured" className="h-[16px] object-contain" />
+        <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.webp" alt="Assured" className="h-[16px] object-contain" />
       </div>
 
       {/* Ratings */}

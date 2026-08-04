@@ -171,7 +171,7 @@ const Product = () => {
                   onClick={() => handleThumbnailClick(idx)}
                   className={`border-2 p-1 rounded-sm ${activeImage === idx ? 'border-primary' : 'border-transparent hover:border-gray-300'}`}
                 >
-                  <img src={img} alt="" className="h-12 w-12 object-contain" />
+                  <img src={img} alt="" loading="lazy" className="h-12 w-12 object-contain" />
                 </button>
               ))}
             </div>
@@ -198,7 +198,7 @@ const Product = () => {
             <span className="text-[#878787] font-medium text-sm">
               {((product.numReviews && product.numReviews > 0) ? product.numReviews : 14295).toLocaleString()} Ratings & {Math.floor(((product.numReviews && product.numReviews > 0) ? product.numReviews : 14295) / 8).toLocaleString()} Reviews
             </span>
-            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="f-assured" className="h-5 ml-2" />
+            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.webp" alt="f-assured" className="h-5 ml-2" />
           </div>
 
           <div className="mt-4 flex items-end gap-3 mb-4">
@@ -234,7 +234,7 @@ const Product = () => {
             
             <div className="flex flex-col items-center flex-1">
               <div className="h-10 flex items-center justify-center mb-1">
-                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" className="h-[22px] object-contain" alt="Plus F-Assured" />
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.webp" className="h-[22px] object-contain" alt="Plus F-Assured" />
               </div>
               <span className="text-[12px] text-center text-[#212121]">Plus (F-Assured)</span>
             </div>
@@ -303,17 +303,17 @@ const Product = () => {
               {/* Photo grid */}
               <div className="flex gap-2 mt-4 h-[200px]">
                  <div className="w-1/2 h-full rounded-lg overflow-hidden">
-                    <img src={product.images?.[0] || "https://placehold.co/400"} className="w-full h-full object-cover" alt="Review 1" />
+                    <img src={product.images?.[0] || "https://placehold.co/400"} loading="lazy" className="w-full h-full object-cover" alt="Review 1" />
                  </div>
                  <div className="w-1/2 h-full flex flex-col gap-2">
                     <div className="flex gap-2 h-[calc(50%-4px)]">
-                       <img src={product.images?.[1] || product.images?.[0] || "https://placehold.co/200"} className="w-1/2 h-full object-cover rounded-lg" alt="Review 2" />
-                       <img src={product.images?.[2] || product.images?.[0] || "https://placehold.co/200"} className="w-1/2 h-full object-cover rounded-lg" alt="Review 3" />
+                       <img src={product.images?.[1] || product.images?.[0] || "https://placehold.co/200"} loading="lazy" className="w-1/2 h-full object-cover rounded-lg" alt="Review 2" />
+                       <img src={product.images?.[2] || product.images?.[0] || "https://placehold.co/200"} loading="lazy" className="w-1/2 h-full object-cover rounded-lg" alt="Review 3" />
                     </div>
                     <div className="flex gap-2 h-[calc(50%-4px)]">
-                       <img src={product.images?.[3] || product.images?.[1] || "https://placehold.co/200"} className="w-1/2 h-full object-cover rounded-lg" alt="Review 4" />
+                       <img src={product.images?.[3] || product.images?.[1] || "https://placehold.co/200"} loading="lazy" className="w-1/2 h-full object-cover rounded-lg" alt="Review 4" />
                        <div className="w-1/2 h-full relative rounded-lg overflow-hidden cursor-pointer">
-                          <img src={product.images?.[4] || product.images?.[0] || "https://placehold.co/200"} className="w-full h-full object-cover brightness-50" alt="Review 5" />
+                          <img src={product.images?.[4] || product.images?.[0] || "https://placehold.co/200"} loading="lazy" className="w-full h-full object-cover brightness-50" alt="Review 5" />
                           <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">+86</div>
                        </div>
                     </div>
