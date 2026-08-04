@@ -196,7 +196,7 @@ const Home = () => {
       <CategoryCircles />
 
       {/* Freedom Sale Banners */}
-      <BannerSlider images={['/images/freedom_1.jpg', '/images/freedom_2.jpg']} />
+      <BannerSlider images={['https://rukminim2.flixcart.com/fk-p-flap/980/480/image/e7f9fa54f8589bce.jpg?q=80', 'https://rukminim2.flixcart.com/fk-p-flap/980/480/image/3f9faa2105000f4e.jpg?q=80']} />
 
 
       
